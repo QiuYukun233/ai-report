@@ -18,11 +18,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 抓取、打分、提交数据。不绑定 environment，这样 GitHub OIDC 令牌的 subject 是
+  # repo:QiuYukun233/ai-report:ref:refs/heads/main，便于 Claude 的 federation rule 按分支匹配。
   update:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -99,5 +98,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - id: deploy
         uses: actions/deploy-pages@v4

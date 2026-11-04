@@ -83,9 +83,9 @@ source: https://...    # 可选
 - **A. Workload Identity Federation（推荐，不需要长期密钥）**
   1. 打开 Claude Console 的 [Workload identity federation](https://platform.claude.com/settings/workload-identity-federation)
      设置页（需要组织的 admin / owner 角色），点 **Connect workload** → **GitHub Actions**。
-  2. 向导问到 subject 时，填 `repo:QiuYukun233/ai-report:environment:github-pages`
-     （这个 workflow 的 job 绑定了 `github-pages` environment，所以 GitHub 签发的令牌 subject 是这个格式，
-     而不是 `...:ref:refs/heads/main`）。audience 用 `https://api.anthropic.com`。
+  2. Federation rule 这一步：GitHub organization 填 `QiuYukun233`，Repository 填 `ai-report`，
+     Branch 填 `refs/heads/main`，Organization numeric ID 填 `108676239`；Allowed events **不要选 Only push**
+     （打分只在定时和手动运行时执行），改成允许任意事件，靠分支限制即可。Workspaces 只勾一个。
   3. 在仓库 **Settings → Secrets and variables → Actions → Variables** 新建这几个变量（都不是机密，放 Variables 即可）：
      `ANTHROPIC_FEDERATION_RULE_ID`（`fdrl_...`）、`ANTHROPIC_ORGANIZATION_ID`（组织 UUID）、
      `ANTHROPIC_SERVICE_ACCOUNT_ID`（`svac_...`）；规则覆盖多个 workspace 时再加 `ANTHROPIC_WORKSPACE_ID`。
