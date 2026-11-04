@@ -182,6 +182,7 @@ def test_summarize_skips_batch_on_refusal():
 
 def test_summarize_without_key_is_noop(monkeypatch):
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("ANTHROPIC_FEDERATION_RULE_ID", raising=False)
     assert sm.summarize(_items(2), {}) == 0
 
 

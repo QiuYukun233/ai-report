@@ -1,7 +1,8 @@
 """用 Claude 给条目打相关度分数（1-5）并写中文标题和摘要。
 
 只处理还没有 score 的条目，所以每天运行只会花新增条目的钱。
-没有设置 ANTHROPIC_API_KEY 时直接跳过，不影响其余流程。
+认证：ANTHROPIC_API_KEY，或 Workload Identity Federation（ANTHROPIC_FEDERATION_RULE_ID 等环境变量，
+SDK 会自动识别）。两者都没有时直接跳过，不影响其余流程。
 """
 from __future__ import annotations
 
@@ -100,8 +101,8 @@ def apply_results(items: list[dict], results: list[dict], model: str) -> int:
 def summarize(items: list[dict], cfg: dict, client=None) -> int:
     """原地给 items 打分，返回成功处理的条数。"""
     if client is None:
-        if not os.environ.get("ANTHROPIC_API_KEY"):
-            print("未设置 ANTHROPIC_API_KEY，跳过打分")
+        if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_FEDERATION_RULE_ID")):
+            print("未配置 ANTHROPIC_API_KEY 或 Workload Identity Federation，跳过打分")
             return 0
         client = anthropic.Anthropic()
 

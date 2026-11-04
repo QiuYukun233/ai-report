@@ -38,11 +38,45 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m tracker fetch
 
-      - name: Score & summarize with Claude (没有 ANTHROPIC_API_KEY 时自动跳过)
+      # 认证二选一：
+      #   A. Workload Identity Federation（推荐，无长期密钥）：在仓库 Variables 里设置
+      #      ANTHROPIC_FEDERATION_RULE_ID / ANTHROPIC_ORGANIZATION_ID / ANTHROPIC_SERVICE_ACCOUNT_ID
+      #      （以及可选的 ANTHROPIC_WORKSPACE_ID）
+      #   B. API key：在仓库 Secrets 里设置 ANTHROPIC_API_KEY
+      # 两者都没有时这一步自动跳过。
+      - name: Score & summarize with Claude
         if: github.event_name != 'push'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m tracker summarize
+          ANTHROPIC_FEDERATION_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          ANTHROPIC_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+          ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
+        run: |
+          # 未设置的 secret/variable 在这里是空字符串；空的 ANTHROPIC_API_KEY 会抢在 WIF 之前生效，所以清掉
+          for v in ANTHROPIC_API_KEY ANTHROPIC_WORKSPACE_ID; do
+            [ -z "${!v}" ] && unset "$v"
+          done
+          if [ -n "$ANTHROPIC_FEDERATION_RULE_ID" ]; then
+            echo "使用 Workload Identity Federation 认证"
+            unset ANTHROPIC_API_KEY
+            export ANTHROPIC_IDENTITY_TOKEN_FILE="$RUNNER_TEMP/gha-jwt"
+            fetch_jwt() {
+              curl -sSf -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+                "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://api.anthropic.com" \
+                | jq -r .value > "$ANTHROPIC_IDENTITY_TOKEN_FILE.tmp" \
+                && mv "$ANTHROPIC_IDENTITY_TOKEN_FILE.tmp" "$ANTHROPIC_IDENTITY_TOKEN_FILE"
+            }
+            fetch_jwt
+            # GitHub 的 OIDC 令牌约 5 分钟过期且只能兑换一次；SDK 刷新时会重读这个文件，
+            # 所以后台每 2 分钟换一个新令牌，保证长时间运行也能续上
+            ( while sleep 120; do fetch_jwt; done ) &
+            JWT_LOOP=$!
+            trap 'pkill -P $JWT_LOOP 2>/dev/null; kill $JWT_LOOP 2>/dev/null; true' EXIT
+          else
+            unset ANTHROPIC_FEDERATION_RULE_ID ANTHROPIC_ORGANIZATION_ID ANTHROPIC_SERVICE_ACCOUNT_ID
+          fi
+          python -m tracker summarize
 
       - name: Weekly digest (每周一，或手动触发时)
         if: github.event_name != 'push'
