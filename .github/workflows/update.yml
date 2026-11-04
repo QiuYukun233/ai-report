@@ -38,6 +38,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m tracker fetch
 
+      - name: Score & summarize with Claude (没有 ANTHROPIC_API_KEY 时自动跳过)
+        if: github.event_name != 'push'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m tracker summarize
+
       - name: Weekly digest (每周一，或手动触发时)
         if: github.event_name != 'push'
         run: |

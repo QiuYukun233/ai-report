@@ -35,7 +35,7 @@ pip install -r requirements.txt -r requirements-dev.txt
 ```
 
 ```bash
-python -m tracker all        # 抓取 + 周报 + 索引卡片 + 同步看板数据
+python -m tracker all        # 抓取 + Claude 打分 + 周报 + 索引卡片 + 同步看板数据
 ```
 
 ```bash
@@ -68,6 +68,18 @@ source: https://...    # 可选
 ---
 正文（Markdown）
 ```
+
+## Claude 打分与中文摘要
+
+每次抓取后，`python -m tracker summarize` 会把**还没打过分**的新条目交给 Claude：
+- 按你的兴趣打 1-5 分的相关度，写中文标题和一两句中文摘要；
+- 周报顶部出现"本周必读 Top 10"，低于 3 分的条目折叠起来；
+- 看板可以按相关度排序，或只看 ★4 以上。
+
+兴趣描述、模型、批大小都在 `config/sources.yaml` 的 `llm:` 一节，改兴趣描述就能调整打分标准。
+
+**开启方法**：在仓库 **Settings → Secrets and variables → Actions → New repository secret** 新建
+`ANTHROPIC_API_KEY`。没有这个 secret 时这一步会自动跳过，其余流程照常运行。
 
 ## 部署到 GitHub Pages
 

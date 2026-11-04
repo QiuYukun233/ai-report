@@ -58,6 +58,9 @@ input[type=search] { flex: 1 1 220px; min-width: 0; }
 .card.read { opacity: .55; }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--muted); align-items: center; }
 .meta .src { font-weight: 600; color: var(--c); }
+.score { font-weight: 700; font-size: 11.5px; padding: 0 6px; border-radius: 999px; background: var(--chip); color: var(--muted); }
+.score.hi { background: var(--accent); color: #fff; }
+.orig { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
 .card h3 { margin: 4px 0; font-size: 15.5px; line-height: 1.4; }
 .card h3 a { color: inherit; text-decoration: none; }
 .card h3 a:hover { color: var(--accent); }
@@ -111,6 +114,11 @@ input[type=search] { flex: 1 1 220px; min-width: 0; }
       <option value="all">全部条目</option>
       <option value="unread">只看未读</option>
       <option value="star">只看收藏</option>
+      <option value="hi">只看 ★4 以上</option>
+    </select>
+    <select id="sort">
+      <option value="date">按时间</option>
+      <option value="score">按相关度</option>
     </select>
   </div>
   <div class="tagbar" id="tagbar"></div>
@@ -121,7 +129,7 @@ input[type=search] { flex: 1 1 220px; min-width: 0; }
 <script>
 const TRACKS = { interp: "可解释性", "ai-coding": "AI 编程", engineering: "工程" };
 const PAGE = 50;
-const S = { tab: "feed", q: "", track: "", view: "all", tag: "", limit: PAGE, items: [], tips: [] };
+const S = { tab: "feed", q: "", track: "", view: "all", sort: "date", tag: "", limit: PAGE, items: [], tips: [] };
 
 // 已读/收藏只是本浏览器里的个人便利，存在 localStorage，读写失败时静默降级
 const store = {
@@ -163,9 +171,10 @@ function filtered() {
       const m = marks[i.id] || {};
       if (S.view === "unread" && m.read) return false;
       if (S.view === "star" && !m.star) return false;
+      if (S.view === "hi" && !((i.score || 0) >= 4)) return false;
     }
     if (q) {
-      const hay = `${i.title} ${i.summary || ""} ${i.body || ""} ${(i.authors || []).join(" ")} ${i.source}`.toLowerCase();
+      const hay = `${i.title} ${i.zh_title || ""} ${i.zh_summary || ""} ${i.summary || ""} ${i.body || ""} ${(i.authors || []).join(" ")} ${i.source}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
@@ -184,11 +193,15 @@ function renderTags() {
 function feedCard(i) {
   const m = marks[i.id] || {};
   const date = (i.published || i.fetched_at || "").slice(0, 10);
+  const score = i.score ? `<span class="score ${i.score >= 4 ? "hi" : ""}" title="Claude 评估的相关度">★${i.score}</span>` : "";
+  const title = i.zh_title || i.title;
+  const summary = i.zh_summary || i.summary;
   const authors = (i.authors || []).slice(0, 3).join(", ") + ((i.authors || []).length > 3 ? " 等" : "");
   return `<article class="card ${m.read ? "read" : ""}" style="--c:${color(i.track)}">
-    <div class="meta"><span class="src">${esc(i.source)}</span><span>${esc(date)}</span>${authors ? `<span>${esc(authors)}</span>` : ""}</div>
-    <h3><a href="${esc(i.url)}" target="_blank" rel="noopener" data-open="${esc(i.id)}">${esc(i.title)}</a></h3>
-    ${i.summary ? `<p class="sum">${esc(i.summary)}</p>` : ""}
+    <div class="meta">${score}<span class="src">${esc(i.source)}</span><span>${esc(date)}</span>${authors ? `<span>${esc(authors)}</span>` : ""}</div>
+    <h3><a href="${esc(i.url)}" target="_blank" rel="noopener" data-open="${esc(i.id)}">${esc(title)}</a></h3>
+    ${i.zh_title ? `<p class="orig">${esc(i.title)}</p>` : ""}
+    ${summary ? `<p class="sum">${esc(summary)}</p>` : ""}
     <div class="row"><div class="tags">${(i.tags || []).map(t => `<span class="tag">#${esc(t)}</span>`).join("")}</div>
       <div class="acts">
         <button data-mark="star" data-id="${esc(i.id)}" class="${m.star ? "on" : ""}">${m.star ? "★ 已收藏" : "☆ 收藏"}</button>
@@ -213,6 +226,9 @@ function tipCard(t) {
 function render() {
   renderTags();
   const rows = filtered();
+  if (S.tab === "feed") rows.sort(S.sort === "score"
+    ? (a, b) => (b.score || 0) - (a.score || 0) || (b.published || "").localeCompare(a.published || "")
+    : (a, b) => (b.published || b.fetched_at || "").localeCompare(a.published || a.fetched_at || ""));
   const shown = rows.slice(0, S.limit);
   const list = document.getElementById("list");
   list.innerHTML = shown.length ? shown.map(S.tab === "feed" ? feedCard : tipCard).join("")
@@ -221,7 +237,7 @@ function render() {
   const more = document.getElementById("more");
   more.hidden = rows.length <= S.limit;
   more.textContent = `加载更多（还有 ${rows.length - S.limit} 条）`;
-  document.getElementById("view").style.display = S.tab === "feed" ? "" : "none";
+  for (const id of ["view", "sort"]) document.getElementById(id).style.display = S.tab === "feed" ? "" : "none";
 }
 
 function toggle(id, key, value) {
@@ -250,7 +266,8 @@ document.addEventListener("click", e => {
   render();
 });
 document.getElementById("q").addEventListener("input", e => { S.q = e.target.value; S.limit = PAGE; render(); });
-document.getElementById("view").addEventListener("change", e => { S.view = e.target.value; render(); });
+document.getElementById("view").addEventListener("change", e => { S.view = e.target.value; S.limit = PAGE; render(); });
+document.getElementById("sort").addEventListener("change", e => { S.sort = e.target.value; S.limit = PAGE; render(); });
 document.getElementById("more").addEventListener("click", () => { S.limit += PAGE; render(); });
 document.getElementById("theme").addEventListener("click", () => {
   const root = document.documentElement;

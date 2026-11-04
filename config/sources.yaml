@@ -72,3 +72,16 @@ tags:
   pytorch: [pytorch, torch]
   python-tooling: [uv, ruff, pip, packaging]
   testing: [test, pytest, tdd]
+
+# 用 Claude 打分和写中文摘要（需要 ANTHROPIC_API_KEY；没有就自动跳过）
+llm:
+  model: claude-opus-5-5     # 想更省钱可以换成 claude-haiku-5-5
+  effort: low                # 打分是简单任务，low 足够
+  batch_size: 20             # 每次请求处理的条目数
+  max_items_per_run: 300     # 每次运行最多处理多少条
+  interests: |
+    - 机制可解释性（mechanistic interpretability）：SAE / transcoder、电路发现、attribution graph、
+      activation patching、probing、steering、superposition。最看重能动手复现的方法和新发现。
+    - 用 coding agent（如 Claude Code）写代码的实践：工作流、提示技巧、评测、真实使用经验。
+    - Python / PyTorch 工程实践：可复现实验、调试、工具链（uv、ruff 等）。
+    不太关心：纯产品发布新闻、融资、与上述方向无关的应用。

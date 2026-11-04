@@ -1,6 +1,7 @@
 """命令行入口。
 
     python -m tracker fetch    # 抓取所有来源 -> data/items.json
+    python -m tracker summarize  # 用 Claude 给新条目打分、写中文摘要（需 ANTHROPIC_API_KEY）
     python -m tracker digest   # 生成本周周报 -> digests/
     python -m tracker tips     # 索引 tips/ 与 notes/ -> data/tips.json
     python -m tracker site     # 把 data/ 拷到 site/data/，供看板读取
@@ -17,6 +18,7 @@ import yaml
 from . import fetchers
 from .digest import write_digest
 from .store import ROOT, load_items, merge, save_items
+from .summarize import summarize
 from .tips import write_index
 
 
@@ -63,6 +65,13 @@ def cmd_fetch() -> int:
     return 1 if failures and len(failures) == len(jobs) else 0
 
 
+def cmd_summarize() -> int:
+    items = load_items()
+    if summarize(items, load_config().get("llm", {})):
+        save_items(items)
+    return 0
+
+
 def cmd_digest() -> int:
     print(f"周报: {write_digest(load_items()).relative_to(ROOT)}")
     return 0
@@ -86,13 +95,13 @@ def cmd_site() -> int:
 
 def main() -> int:
     p = argparse.ArgumentParser(prog="tracker")
-    p.add_argument("command", choices=["fetch", "digest", "tips", "site", "all"])
+    p.add_argument("command", choices=["fetch", "summarize", "digest", "tips", "site", "all"])
     cmd = p.parse_args().command
     if cmd == "all":
         rc = cmd_fetch()
-        cmd_digest(); cmd_tips(); cmd_site()
+        cmd_summarize(); cmd_digest(); cmd_tips(); cmd_site()
         return rc
-    return {"fetch": cmd_fetch, "digest": cmd_digest, "tips": cmd_tips, "site": cmd_site}[cmd]()
+    return {"fetch": cmd_fetch, "summarize": cmd_summarize, "digest": cmd_digest, "tips": cmd_tips, "site": cmd_site}[cmd]()
 
 
 if __name__ == "__main__":
