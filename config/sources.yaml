@@ -1,0 +1,69 @@
+# 追踪源配置。增删来源只需改这个文件。
+# track: interp（可解释性） | ai-coding（AI 辅助编程） | engineering（通用工程）
+
+arxiv:
+  max_results: 40
+  queries:
+    - track: interp
+      # arXiv API 搜索语法: https://info.arxiv.org/help/api/user-manual.html
+      search: >-
+        (cat:cs.LG OR cat:cs.CL OR cat:cs.AI) AND
+        (abs:"mechanistic interpretability" OR abs:"sparse autoencoder" OR
+         abs:"activation patching" OR abs:"circuit discovery" OR
+         abs:"attribution graph" OR abs:"steering vector" OR abs:"linear probe")
+    - track: ai-coding
+      search: >-
+        (cat:cs.SE OR cat:cs.CL) AND
+        (abs:"coding agent" OR abs:"code generation" OR abs:"SWE-bench")
+
+rss:
+  - name: Alignment Forum
+    url: https://www.alignmentforum.org/feed.xml
+    track: interp
+    # 只保留标题/摘要命中这些关键词的条目（不区分大小写）；留空表示全部保留
+    require_keywords: [interpretab, SAE, sparse autoencoder, circuit, probe, feature, steering, mechanistic]
+  - name: Lil'Log
+    url: https://lilianweng.github.io/index.xml
+    track: interp
+  - name: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+    track: engineering
+    require_keywords: [interpretab, agent, code, training, inference, optimiz]
+  - name: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    track: ai-coding
+    require_keywords: [claude, agent, coding, llm, prompt, codex, cursor]
+  - name: Martin Fowler
+    url: https://martinfowler.com/feed.atom
+    track: engineering
+
+github_releases:
+  - repo: TransformerLensOrg/TransformerLens
+    track: interp
+  - repo: jbloomAus/SAELens
+    track: interp
+  - repo: ndif-team/nnsight
+    track: interp
+  - repo: safety-research/circuit-tracer
+    track: interp
+  - repo: anthropics/claude-code
+    track: ai-coding
+  - repo: astral-sh/uv
+    track: engineering
+  - repo: astral-sh/ruff
+    track: engineering
+
+# 关键词 -> 标签。在标题+摘要中命中即打标签（不区分大小写）。
+tags:
+  sae: [sparse autoencoder, "SAE", dictionary learning, transcoder]
+  circuits: [circuit, attribution graph, path patching]
+  patching: [activation patching, causal tracing, ablation]
+  probing: [probe, probing, linear representation]
+  steering: [steering, activation addition, representation engineering]
+  superposition: [superposition, polysemantic, monosemantic]
+  agents: [agent, agentic, tool use]
+  evals: [benchmark, SWE-bench, evaluation]
+  claude-code: [claude code, CLAUDE.md]
+  pytorch: [pytorch, torch]
+  python-tooling: [uv, ruff, pip, packaging]
+  testing: [test, pytest, tdd]

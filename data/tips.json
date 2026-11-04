@@ -1,0 +1,116 @@
+[
+ {
+  "id": "tips/ai-assisted-coding/explore-plan-code-commit.md",
+  "path": "tips/ai-assisted-coding/explore-plan-code-commit.md",
+  "kind": "tip",
+  "title": "Explore → Plan → Code → Commit 工作流",
+  "track": "ai-coding",
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "date": "2026-11-04",
+  "source": "https://www.anthropic.com/engineering/claude-code-best-practices",
+  "body": "适合不那么简单的改动：\n\n1. **Explore**：让 agent 先读相关文件，并明确要求\"先不要写代码\"。\n2. **Plan**：让它写出方案（改哪些文件、为什么这样改、有哪些风险）。你在这一步纠偏，代价最低。\n3. **Code**：按方案实现，每完成一部分就跑一次验证。\n4. **Commit**：让它写清楚 commit message；需要的话再开 PR。\n\n**提示词技巧**\n- 具体比含糊好：\"给 `store.merge` 加一个测试，覆盖重复 id 的情况\"，好过\"多加点测试\"。\n- 直接贴报错原文、文件路径、截图，不要转述。\n- 上下文变长、开始跑偏时，清空上下文，带着上一步的计划重新开始，往往比继续纠缠更快。\n- 研究型代码（比如可解释性实验）：让它先写一个能在小模型 / 小 batch 上**几秒内跑完**的版本，确认正确后再放大。"
+ },
+ {
+  "id": "tips/ai-assisted-coding/give-the-agent-a-verification-loop.md",
+  "path": "tips/ai-assisted-coding/give-the-agent-a-verification-loop.md",
+  "kind": "tip",
+  "title": "给 coding agent 一个\"能自我验证\"的闭环",
+  "track": "ai-coding",
+  "tags": [
+   "agents",
+   "claude-code",
+   "testing"
+  ],
+  "date": "2026-11-04",
+  "source": "https://www.anthropic.com/engineering/claude-code-best-practices",
+  "body": "Agent 的产出质量，很大程度取决于它能不能**自己检查对错**。\n\n**做法**\n1. **先写（或先让它写）失败的测试**，确认测试真的失败，再让它实现代码直到测试通过。明确告诉它\"不要修改测试\"。\n2. 在项目记忆文件（如 `CLAUDE.md`）里写清楚：怎么跑测试、怎么 lint、怎么启动项目，这样 agent 每次都知道该用什么命令验证。\n3. UI 或可视化任务：给它截图能力，或者给一张目标图，让它\"截图 → 对比 → 再改\"。\n4. 让验证命令**又快又安静**：只跑相关测试（`pytest tests/test_x.py -q`），输出简短，agent 才读得过来。\n\n**反模式**\n- \"帮我把这个功能写完\"，但没给任何验收标准 → 它会停在\"看起来能跑\"的状态。\n- 一次让它改一大片 → 难以审查。拆成小步，每步都能单独验证、单独提交。"
+ },
+ {
+  "id": "tips/engineering/reproducible-experiments.md",
+  "path": "tips/engineering/reproducible-experiments.md",
+  "kind": "tip",
+  "title": "让实验可复现：种子、配置、结果落盘",
+  "track": "engineering",
+  "tags": [
+   "pytorch",
+   "python-tooling"
+  ],
+  "date": "2026-11-04",
+  "source": "",
+  "body": "```python\nimport random, numpy as np, torch\ndef seed_all(s: int = 0):\n    random.seed(s); np.random.seed(s); torch.manual_seed(s); torch.cuda.manual_seed_all(s)\n```\n\n- **依赖锁定**：用 `uv` 管理环境（`uv add transformer-lens`，然后提交 `uv.lock`）。\n- **配置和代码分开**：超参数放在 dataclass 或 YAML 里，每次运行都把配置和 git commit hash 一起存进结果目录。\n- **结果落盘**：`runs/2026-11-04_patching_ioi/{config.json, results.pt, fig.png}`；大文件不进 git（`.gitignore` 里已经排除了 `*.pt`）。\n- **推理不要梯度**：`torch.inference_mode()` 比 `no_grad()` 更省资源；显存紧张时及时 `del cache` + `torch.cuda.empty_cache()`。\n- GPU 上的完全确定性需要 `torch.use_deterministic_algorithms(True)`，会更慢，按需开启。"
+ },
+ {
+  "id": "tips/engineering/tensor-shape-discipline.md",
+  "path": "tips/engineering/tensor-shape-discipline.md",
+  "kind": "tip",
+  "title": "张量代码的形状纪律：einops + 形状注解 + 断言",
+  "track": "engineering",
+  "tags": [
+   "pytorch",
+   "einops"
+  ],
+  "date": "2026-11-04",
+  "source": "https://einops.rocks/",
+  "body": "可解释性代码里最常见的 bug 是**维度搞错，却没有报错**（比如广播把错误悄悄吞掉了）。\n\n```python\nimport einops, torch\nfrom jaxtyping import Float\nfrom torch import Tensor\n\ndef head_contrib(z: Float[Tensor, \"batch pos head d_head\"],\n                 W_O: Float[Tensor, \"head d_head d_model\"]) -> Float[Tensor, \"batch pos head d_model\"]:\n    return einops.einsum(z, W_O, \"batch pos head d_head, head d_head d_model -> batch pos head d_model\")\n\nx = einops.rearrange(x, \"b (h d) -> b h d\", h=n_heads)   # 比 .view(b, h, -1) 更不容易出错\nassert x.shape == (B, n_heads, d_head), x.shape\n```\n\n- 变量命名带上形状提示：`resid_BPD`，或者在注释里写 `# [batch, pos, d_model]`。\n- 写完先用 `batch=2, pos=3` 这种**互不相同**的小尺寸跑一遍，维度一旦写反会立刻报错（各维相等时反而发现不了）。\n- 想要运行时检查，可以给 jaxtyping 配上 beartype / typeguard。"
+ },
+ {
+  "id": "tips/interp-experiments/activation-patching-recipe.md",
+  "path": "tips/interp-experiments/activation-patching-recipe.md",
+  "kind": "tip",
+  "title": "Activation patching 标准流程（clean / corrupted / logit diff）",
+  "track": "interp",
+  "tags": [
+   "patching",
+   "circuits",
+   "transformerlens"
+  ],
+  "date": "2026-11-04",
+  "source": "https://arxiv.org/abs/2309.16042",
+  "body": "**目的**：找出\"哪个组件的激活对模型行为是因果重要的\"。\n\n**流程**\n1. 构造一对**长度相同**的 prompt：\n   - clean：`\"When John and Mary went to the store, John gave a drink to\"` → 答案 ` Mary`\n   - corrupted：把关键信息换掉（比如换成另外一组名字），使正确答案改变\n2. 定义指标，推荐用 **logit diff** = `logit[正确] - logit[错误]`，它比概率更线性、更稳定。\n3. 用 corrupted 输入跑前向，把**某一个位置的激活换成 clean 时的值**，看指标恢复了多少：\n   `score = (patched - corrupted) / (clean - corrupted)`，1 表示完全恢复。\n4. 依次扫描 层 × 位置（resid）或 层 × head（attn），画热力图。\n\n```python\nfrom functools import partial\n_, clean_cache = model.run_with_cache(clean_tokens)\n\ndef patch_resid(resid, hook, pos):\n    resid[:, pos] = clean_cache[hook.name][:, pos]\n    return resid\n\nfor layer in range(model.cfg.n_layers):\n    for pos in range(clean_tokens.shape[1]):\n        logits = model.run_with_hooks(corrupt_tokens, fwd_hooks=[\n            (f\"blocks.{layer}.hook_resid_pre\", partial(patch_resid, pos=pos))])\n        ...  # 计算 logit diff 并记录\n```\n\n**要点**\n- 方向有两种：denoising（clean 补到 corrupted 上，看\"什么是充分的\"）和 noising（反过来，看\"什么是必要的\"），两者结论可能不同。\n- corrupted 尽量只改变一个变量；高斯噪声式的 corruption 容易产生分布外的激活。\n- 层和 head 多时，先用 attribution patching（梯度线性近似）粗筛，再对候选组件做精确 patch。\n- 参考：Zhang & Nanda, *Towards Best Practices of Activation Patching* (2023)。"
+ },
+ {
+  "id": "tips/interp-experiments/logit-lens.md",
+  "path": "tips/interp-experiments/logit-lens.md",
+  "kind": "tip",
+  "title": "Logit lens：看每一层\"此刻想输出什么\"",
+  "track": "interp",
+  "tags": [
+   "logit-lens",
+   "transformerlens"
+  ],
+  "date": "2026-11-04",
+  "source": "https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens",
+  "body": "把中间层的残差流直接送进最后的 `ln_final` + `unembed`，就能看到预测是怎样逐层成形的。\n\n```python\nlogits, cache = model.run_with_cache(prompt)\nresid_stack, labels = cache.accumulated_resid(layer=-1, incl_mid=False,\n                                              pos_slice=-1, return_labels=True)\nresid_stack = cache.apply_ln_to_stack(resid_stack, layer=-1, pos_slice=-1)\nlayer_logits = resid_stack @ model.W_U          # [n_layers+1, batch, d_vocab]\ntarget = model.to_single_token(\" Paris\")\nprint(layer_logits[:, 0, target])\n```\n\n**注意**\n- 一定要先过 `ln_final`（上面的 `apply_ln_to_stack`），否则不同层的数值没法比较。\n- 在早期层效果差，因为那时的表示还没对齐到 unembedding 空间。**Tuned lens**（为每层单独训练一个仿射变换）通常更可靠。\n- 完整可运行版本见 `experiments/01_logit_lens.py`。"
+ },
+ {
+  "id": "tips/interp-experiments/sae-feature-checklist.md",
+  "path": "tips/interp-experiments/sae-feature-checklist.md",
+  "kind": "tip",
+  "title": "解读 SAE feature 的检查清单",
+  "track": "interp",
+  "tags": [
+   "sae",
+   "superposition"
+  ],
+  "date": "2026-11-04",
+  "source": "https://transformer-circuits.pub/2023/monosemantic-features",
+  "body": "找到一个\"看起来像某概念\"的 SAE feature 后，在下结论之前逐项检查：\n\n- [ ] **Top activations 之外**：再看不同激活强度分位（比如 25%、50%、75%）上的样本，确认含义在弱激活时还成立。\n- [ ] **反例**：自己构造应该激活、不应该激活的输入，各测一遍。\n- [ ] **重建质量**：检查 SAE 在这一层的 reconstruction loss / 把 SAE 输出替换回模型后的 CE loss 增量。重建差的 SAE，其 feature 不可信。\n- [ ] **L0 / 死 feature 比例**：L0 太大 → feature 偏稠密、难解释；死 feature 太多 → 字典没训好。\n- [ ] **因果验证**：沿 decoder 方向做 steering 或 ablation，行为是否按预期变化？\n- [ ] **Feature splitting**：换一个更大字典的 SAE，这个概念可能会裂成好几个更细的 feature。\n- [ ] **Auto-interp 只当参考**：LLM 生成的解释要用 detection/fuzzing 打分，不要直接采信。\n\n**工具**：SAELens（加载预训练 SAE、训练）、Neuronpedia（在线浏览 feature）。SAELens 不同大版本的 `SAE.from_pretrained` 返回值不一样（老版本返回 `(sae, cfg, sparsity)` 元组），按你安装的版本查文档。"
+ },
+ {
+  "id": "tips/interp-experiments/transformerlens-hooks-and-cache.md",
+  "path": "tips/interp-experiments/transformerlens-hooks-and-cache.md",
+  "kind": "tip",
+  "title": "TransformerLens：用 run_with_cache 和 hooks 读写激活",
+  "track": "interp",
+  "tags": [
+   "transformerlens",
+   "hooks"
+  ],
+  "date": "2026-11-04",
+  "source": "https://transformerlensorg.github.io/TransformerLens/",
+  "body": "**一句话**：`run_with_cache` 用来\"读\"激活，`run_with_hooks` 用来\"改\"激活。\n\n```python\nfrom transformer_lens import HookedTransformer\nmodel = HookedTransformer.from_pretrained(\"gpt2-small\")\n\nlogits, cache = model.run_with_cache(\"The Eiffel Tower is in\")\nresid = cache[\"resid_post\", 5]          # 等价于 cache[\"blocks.5.hook_resid_post\"]\nattn  = cache[\"pattern\", 3]             # [batch, head, q_pos, k_pos]\n\n# 修改激活：把第 3 层 head 7 置零（zero-ablation）\ndef kill_head(z, hook, head=7):\n    z[:, :, head, :] = 0                # hook_z 形状 [batch, pos, head, d_head]\n    return z\n\nablated = model.run_with_hooks(\n    \"The Eiffel Tower is in\",\n    fwd_hooks=[(\"blocks.3.attn.hook_z\", kill_head)],\n)\n```\n\n**容易踩的坑**\n- 只关心少数激活时用 `names_filter=lambda n: n.endswith(\"resid_post\")`，能省大量显存。\n- `model.to_str_tokens(prompt)` 先看清分词结果：GPT-2 的 token 往往带前导空格（`\" Paris\"` 和 `\"Paris\"` 是不同的 token）。\n- 做大批量实验时套一层 `torch.inference_mode()`。\n- `hook_z`、`hook_result`、`hook_attn_out` 是不同的位置，`model.hook_dict.keys()` 能列出所有 hook 点。"
+ }
+]

@@ -1,0 +1,63 @@
+name: Fetch & publish
+
+on:
+  schedule:
+    - cron: "17 1 * * *"     # 每天 UTC 01:17（北京时间 09:17）
+  workflow_dispatch:          # 支持在 Actions 页面手动触发
+  push:
+    branches: [main]
+    paths: ["tips/**", "notes/**", "site/**", "tracker/**", "config/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tracker
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: python -m pytest -q
+
+      - name: Fetch sources
+        if: github.event_name != 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m tracker fetch
+
+      - name: Weekly digest (每周一，或手动触发时)
+        if: github.event_name != 'push'
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python -m tracker digest
+          fi
+
+      - run: python -m tracker tips && python -m tracker site
+
+      - name: Commit data
+        run: |
+          git config user.name "tracker-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data digests
+          git diff --cached --quiet || git commit -m "chore: update tracker data $(date -u +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
