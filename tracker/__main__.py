@@ -24,6 +24,16 @@ def load_config() -> dict:
     return yaml.safe_load((ROOT / "config" / "sources.yaml").read_text(encoding="utf-8"))
 
 
+def prune(items: list[dict], cfg: dict) -> list[dict]:
+    """按当前配置重新过滤已存的 RSS 条目，这样改了过滤规则后旧数据也会跟着清理。"""
+    rules = {f["name"]: f for f in cfg.get("rss", [])}
+    kept = [i for i in items if i["source"] not in rules or fetchers.passes_filter(
+        i, rules[i["source"]].get("require_keywords"), rules[i["source"]].get("max_age_days"))]
+    if len(kept) < len(items):
+        print(f"按当前过滤规则清理旧条目 {len(items) - len(kept)} 条")
+    return kept
+
+
 def cmd_fetch() -> int:
     cfg = load_config()
     jobs = []
@@ -33,7 +43,7 @@ def cmd_fetch() -> int:
                      lambda q=q: fetchers.fetch_arxiv(q["search"], q["track"], ax.get("max_results", 40))))
     for f in cfg.get("rss", []):
         jobs.append((f["name"], lambda f=f: fetchers.fetch_feed(
-            f["name"], f["url"], f["track"], f.get("require_keywords"))))
+            f["name"], f["url"], f["track"], f.get("require_keywords"), f.get("max_age_days"))))
     for g in cfg.get("github_releases", []):
         jobs.append((g["repo"], lambda g=g: fetchers.fetch_github_releases(g["repo"], g["track"])))
 
@@ -47,7 +57,7 @@ def cmd_fetch() -> int:
             print(f"  ✗ {name}: {e.__class__.__name__}: {e}", file=sys.stderr)
             failures.append(name)
 
-    items, added = merge(load_items(), collected, cfg.get("tags", {}))
+    items, added = merge(prune(load_items(), cfg), collected, cfg.get("tags", {}))
     save_items(items)
     print(f"新增 {len(added)} 条，共 {len(items)} 条；失败来源 {len(failures)}/{len(jobs)}")
     return 1 if failures and len(failures) == len(jobs) else 0

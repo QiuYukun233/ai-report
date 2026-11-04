@@ -9,7 +9,7 @@ import html
 import os
 import re
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from typing import Any
 
@@ -138,16 +138,33 @@ def parse_feed(xml_text: str, name: str, track: str) -> list[Item]:
     return items
 
 
+def matches(keyword: str, text: str) -> bool:
+    """短关键词（<=4 个字符，如 SAE、uv）按整词匹配（允许复数 s）；全大写的还区分大小写。其余按子串、不区分大小写。"""
+    if len(keyword) <= 4 and keyword.replace(".", "").isalnum():
+        flags = 0 if keyword.isupper() else re.IGNORECASE
+        return re.search(rf"\b{re.escape(keyword)}s?\b", text, flags) is not None
+    return keyword.lower() in text.lower()
+
+
+def passes_filter(item: Item, keywords: list[str] | None = None,
+                  max_age_days: int | None = None, now: datetime | None = None) -> bool:
+    if keywords and not any(matches(k, f"{item['title']} {item['summary']}") for k in keywords):
+        return False
+    if max_age_days and item.get("published"):
+        now = now or datetime.now(timezone.utc)
+        if datetime.fromisoformat(item["published"]) < now - timedelta(days=max_age_days):
+            return False
+    return True
+
+
 def keep_by_keywords(items: list[Item], keywords: list[str] | None) -> list[Item]:
-    if not keywords:
-        return items
-    kws = [k.lower() for k in keywords]
-    return [i for i in items if any(k in f"{i['title']} {i['summary']}".lower() for k in kws)]
+    return [i for i in items if passes_filter(i, keywords)]
 
 
-def fetch_feed(name: str, url: str, track: str, require_keywords=None) -> list[Item]:
+def fetch_feed(name: str, url: str, track: str, require_keywords=None, max_age_days=None) -> list[Item]:
     resp = _get(url)
-    return keep_by_keywords(parse_feed(resp.text, name, track), require_keywords)
+    return [i for i in parse_feed(resp.text, name, track)
+            if passes_filter(i, require_keywords, max_age_days)]
 
 
 # ---------------------------------------------------------------- GitHub

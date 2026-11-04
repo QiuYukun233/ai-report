@@ -1,5 +1,8 @@
 # 追踪源配置。增删来源只需改这个文件。
 # track: interp（可解释性） | ai-coding（AI 辅助编程） | engineering（通用工程）
+# RSS 源可选过滤项（修改后，已存的旧条目也会在下次 fetch 时按新规则清理）：
+#   require_keywords: 标题/摘要至少命中其一。<=4 字符的词按整词匹配，全大写的区分大小写
+#   max_age_days:     丢弃发布时间早于 N 天的条目
 
 arxiv:
   max_results: 40
@@ -20,15 +23,17 @@ rss:
   - name: Alignment Forum
     url: https://www.alignmentforum.org/feed.xml
     track: interp
-    # 只保留标题/摘要命中这些关键词的条目（不区分大小写）；留空表示全部保留
-    require_keywords: [interpretab, SAE, sparse autoencoder, circuit, probe, feature, steering, mechanistic]
+    # 整站都是对齐相关内容，不做关键词过滤；由 tags 规则自动打标签
   - name: Lil'Log
     url: https://lilianweng.github.io/index.xml
     track: interp
   - name: Hugging Face Blog
     url: https://huggingface.co/blog/feed.xml
-    track: engineering
-    require_keywords: [interpretab, agent, code, training, inference, optimiz]
+    track: ai-coding
+    # 这个 feed 包含 2020 年至今的全部文章且主题很杂：只取近 90 天、与可解释性/编程 agent 相关的
+    max_age_days: 90
+    require_keywords: [interpretab, mechanistic, sparse autoencoder, SAE, steering,
+                       coding agent, coding model, code generation, SWE-bench, MCP]
   - name: Simon Willison
     url: https://simonwillison.net/atom/everything/
     track: ai-coding

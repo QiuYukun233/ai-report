@@ -103,3 +103,29 @@ def test_tips_index_reads_repo_cards():
     assert cards, "仓库里应至少有一张种子卡片"
     assert all({"title", "track", "body"} <= c.keys() for c in cards)
     assert {c["track"] for c in cards} <= {"interp", "ai-coding", "engineering"}
+
+
+def test_passes_filter_age_and_whole_word():
+    now = datetime(2026, 11, 4, tzinfo=timezone.utc)
+    new = {"title": "Using MCP with coding agents", "summary": "", "published": "2026-10-20T00:00:00+00:00"}
+    old = dict(new, published="2021-01-01T00:00:00+00:00")
+    assert fetchers.passes_filter(new, ["MCP"], 90, now)
+    assert not fetchers.passes_filter(old, ["MCP"], 90, now)
+    # 全大写短词整词且区分大小写："SAE" 不命中 "Saeed"
+    assert not fetchers.passes_filter({"title": "Interview with Saeed", "summary": ""}, ["SAE"])
+
+
+def test_prune_reapplies_current_rss_rules():
+    from tracker.__main__ import prune
+    cfg = {"rss": [{"name": "HF", "require_keywords": ["interpretab"]}]}
+    items = [
+        {"source": "HF", "title": "Interpretability tools", "summary": ""},
+        {"source": "HF", "title": "Diffusion news", "summary": ""},
+        {"source": "arXiv", "title": "Diffusion paper", "summary": ""},
+    ]
+    assert [i["title"] for i in prune(items, cfg)] == ["Interpretability tools", "Diffusion paper"]
+
+
+def test_short_keyword_allows_plural():
+    assert fetchers.matches("llm", "Running LLMs locally")
+    assert not fetchers.matches("uv", "fluvial")

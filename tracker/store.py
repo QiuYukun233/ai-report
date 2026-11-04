@@ -2,9 +2,10 @@
 from __future__ import annotations
 
 import json
-import re
 from datetime import datetime, timezone
 from pathlib import Path
+
+from .fetchers import matches
 
 ROOT = Path(__file__).resolve().parent.parent
 ITEMS_PATH = ROOT / "data" / "items.json"
@@ -27,17 +28,9 @@ def save_items(items: list[dict], path: Path = ITEMS_PATH) -> None:
     path.write_text(json.dumps(items[:MAX_ITEMS], ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
-def _matches(keyword: str, text: str) -> bool:
-    # 短的全大写缩写（如 SAE、uv）按整词、区分大小写匹配，避免误伤
-    if len(keyword) <= 4 and keyword.replace(".", "").isalnum():
-        flags = 0 if keyword.isupper() else re.IGNORECASE
-        return re.search(rf"\b{re.escape(keyword)}\b", text, flags) is not None
-    return keyword.lower() in text.lower()
-
-
 def auto_tag(item: dict, rules: dict[str, list[str]]) -> list[str]:
     text = f"{item['title']} {item['summary']}"
-    return sorted(tag for tag, kws in rules.items() if any(_matches(k, text) for k in kws))
+    return sorted(tag for tag, kws in rules.items() if any(matches(k, text) for k in kws))
 
 
 def merge(existing: list[dict], new: list[dict], tag_rules: dict) -> tuple[list[dict], list[dict]]:
