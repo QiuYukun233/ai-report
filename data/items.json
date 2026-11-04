@@ -49,6 +49,21 @@
   "fetched_at": "2026-11-04T14:26:31+00:00"
  },
  {
+  "id": "8520f5ba2cdd",
+  "title": "Automating subtle emergent misalignment research",
+  "url": "https://www.alignmentforum.org/posts/MuQDLAJyKJPFkw6q9/automating-subtle-emergent-misalignment-research",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-03T18:27:53+00:00",
+  "summary": "Authors: Oscar Balcells Obeso, Richard Qi, Monte MacDiarmid, Evan Hubinger Abstract Red-teaming by humans is a vital part of model safety testing, but it may struggle to keep up as models improve. To test whether automated safety techniques could scale (which would allow us to turn more compute into progressively more safety confidence), we set up a deliberately one-sided game as a first test. We instructed a Claude model to write training data that would make a small research model misaligned while passing a monitor similar to those we use in production — one of several defenses we use — and…",
+  "authors": [],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
+ },
+ {
   "id": "ed60a47980de",
   "title": "Beyond Accuracy: What Language-Subspace Interventions Capture, Remove, and Improve",
   "url": "https://arxiv.org/abs/2611.05278",
@@ -664,6 +679,19 @@
   "fetched_at": "2026-11-04T14:26:31+00:00"
  },
  {
+  "id": "93d55faa0981",
+  "title": "Additional Course Context (for AI Safety Fundamentals; unofficial)",
+  "url": "https://www.alignmentforum.org/posts/6qDn6H5XG5Hc6BJFe/additional-course-context-for-ai-safety-fundamentals",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-02T15:02:41+00:00",
+  "summary": "Context: I created this to share before the start of courses I facilitate to provide a bunch of additional context and frames. I emphasise to students that these posts are to be considered as bonus content —not core curriculum content—and that as such they are really just there for students who want to go deeper, before or after the course. I also provide a lot of links; this is to make it easy for students to follow up anything that catches their interest. Some general thoughts on advice I suspect that most advice (including most of the advice I’ve given in the past) is bad. People have very…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
+ },
+ {
   "id": "1847b04d4e62",
   "title": "Specification-Driven Governance for Fairness-by-Design in Agentic Software Engineering: How Far Can We Go?",
   "url": "https://arxiv.org/abs/2611.03231",
@@ -725,6 +753,19 @@
    "testing"
   ],
   "fetched_at": "2026-11-04T14:26:31+00:00"
+ },
+ {
+  "id": "1f9c702dba12",
+  "title": "Some “coherence arguments” are two different things in a trenchcoat",
+  "url": "https://www.alignmentforum.org/posts/5a4tuSNDNodPsiS26/some-coherence-arguments-are-two-different-things-in-a",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-02T14:13:16+00:00",
+  "summary": "The “two kids in a trenchcoat” trope , in case you haven’t heard of it. Image sources: 1 , 2 tl;dr I go through three “coherence arguments”, related to (1) market competition, (2) AI self-reflection and self-modification, and (3) AI training algorithms. I argue that each of these implies a pressure for (something like) “being self-consistent”, and also a pressure for (something like) “only caring about long-term eventual outcomes, with ruthless indifference to anything else”. But the latter pressure tends to be weaker and/or more contingent than the former. So it's bad to lump them together a…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
  },
  {
   "id": "96817292f5be",
@@ -1375,6 +1416,22 @@
   "fetched_at": "2026-11-04T14:26:31+00:00"
  },
  {
+  "id": "e1241964589b",
+  "title": "Explaining “AI might obliterate you” to senior policymakers in India",
+  "url": "https://www.alignmentforum.org/posts/RHxaRkarGp9snWoKY/explaining-ai-might-obliterate-you-to-senior-policymakers-in",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-10-31T21:37:22+00:00",
+  "summary": "I gave a 20-minute talk in Delhi at the NDTV World Summit . The audience consisted of Indian policymakers, executives, and journalists. I’ve transcribed the talk and included some highlight clips. I also reflect on several rhetorical decisions I made. The talk This summer, a swarm of AIs went rogue. OpenAI was testing 1,206 agents . Some of the test questions were actually impossible. So the agents cheated by looking for answers online. Then, to keep the test grader from penalizing them, they tried to falsify the records it would check . They hacked OpenAI’s internal containment and set up a…",
+  "authors": [],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
+ },
+ {
   "id": "399b1b8050c1",
   "title": "Geometry of Confabulation and Refusal in Small Language Models",
   "url": "https://arxiv.org/abs/2611.01272",
@@ -1987,6 +2044,19 @@
   "fetched_at": "2026-11-04T14:26:31+00:00"
  },
  {
+  "id": "1b19aa979049",
+  "title": "Notes on “We’re in Triage Mode for AI Safety” by Miles Brundage",
+  "url": "https://www.alignmentforum.org/posts/BFyNkWgxucqy6Wcee/notes-on-we-re-in-triage-mode-for-ai-safety-by-miles",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-10-27T19:11:32+00:00",
+  "summary": "This reading was previously included Day 2 of the BlueDot Governance course. In the newest version of the BlueDot Governance course, this reading is now optional. I was sad to see this reading removed because I think it’s a great provocation. However, since it’s no longer part of the core curriculum content, I’m publishing my notes separately from the rest of my day 2 notes. A short extract : Miles argues that: “At best, we’ll 80/20 it — mitigating 80% of the risks with 20% of the effort that we would have applied in a world with slower AI progress and an earlier start on serious governance……",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
+ },
+ {
   "id": "2b0c1d0c2128",
   "title": "astral-sh/uv 0.13.6",
   "url": "https://github.com/astral-sh/uv/releases/tag/0.13.6",
@@ -2041,6 +2111,19 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-04T14:26:31+00:00"
+ },
+ {
+  "id": "b3fc087cd180",
+  "title": "Setting the Scene (Public v1; October 2026)",
+  "url": "https://www.alignmentforum.org/posts/dmYP7DS3ERyXGAYe6/setting-the-scene-public-v1-october-2026",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-10-25T07:52:23+00:00",
+  "summary": "Context: I created this to share before the start of courses I facilitate to provide a refresher on recent events, but also as a hook to draw students into engaging with some of ideas we think about and debate in AI safety early. I expect the topics I cover in my “Setting the Scene” post to change frequently, so this is less polished than some of my other content. I emphasise to students that these posts are to be considered as bonus content —not core curriculum content—and that as such they are really just there for students who want to go deeper, before or after the course. I also provide a…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
  },
  {
   "id": "3812b4d599bb",
@@ -2143,6 +2226,21 @@
   "fetched_at": "2026-11-04T14:26:31+00:00"
  },
  {
+  "id": "430474a9af0e",
+  "title": "Monitorability evaluations and policy proposals",
+  "url": "https://www.alignmentforum.org/posts/zAczYuHQS6jdG5DTg/monitorability-evaluations-and-policy-proposals",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-10-22T14:01:40+00:00",
+  "summary": "There has been a lot of discussion recently of policy proposals around monitorability, such as Redwood's proposal and my counter-proposal . I'd like to say a bit more generally about how I'm thinking about monitorability. Note that nothing here is an official Anthropic position; these are just my personal thoughts. First, a categorization. I currently think about four different types of monitorability: Control Monitorability: the extent to which Control and monitoring techniques would likely catch catastrophic sabotage actions, like escaping a sandbox or setting up a rogue internal deployment…",
+  "authors": [],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
+ },
+ {
   "id": "81101e7c8f29",
   "title": "astral-sh/uv 0.13.5",
   "url": "https://github.com/astral-sh/uv/releases/tag/0.13.5",
@@ -2156,6 +2254,19 @@
    "python-tooling"
   ],
   "fetched_at": "2026-11-04T14:26:31+00:00"
+ },
+ {
+  "id": "4b022e64773d",
+  "title": "Neural nets are exceptionally vulnerable to goal self-hack",
+  "url": "https://www.alignmentforum.org/posts/eCR373J3NZwFbacnd/neural-nets-are-exceptionally-vulnerable-to-goal-self-hack",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-10-21T17:53:01+00:00",
+  "summary": "Suppose we have an AI CEO, ruthlessly devoted to maximising shareholder value. Fortunately, we haven't been completely stupid, and have given it a rich definition of shareholder value, encompassing the success, flourishing, safety, preference satisfaction, and moral values of the shareholders, not just the stock price. So it won't destroy the company - or the world - to build a giant stock-ticker with a swiftly increasing number on it. This rich definition is contained in a sophisticated LLM, able to analyse the current situation and answer any question about the objective. The LLM is an inte…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
  },
  {
   "id": "50744548848c",
@@ -2253,6 +2364,19 @@
    "python-tooling"
   ],
   "fetched_at": "2026-11-04T14:26:31+00:00"
+ },
+ {
+  "id": "cf3b0a2d9b5a",
+  "title": "The Alignment Problem: Computer Science Meets Analytic Philosophy",
+  "url": "https://www.alignmentforum.org/posts/Emp7awtxsYn8MusNq/the-alignment-problem-computer-science-meets-analytic",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-10-18T12:18:41+00:00",
+  "summary": "TLDR: I explain what the technical AI alignment problem is and what its core difficulties are, in my view. This is a perspective that draws simultaneously on classical traditions in theoretical computer science / machine learning theory, ideas from analytic philosophy, and views that originated in the Machine Intelligence Research Institute / LessWrong. Minimal Viable Safety The Task The problem of making AI safe is underspecified if we haven't decided what the AI is supposed to do . For example, we can run any AI inside a homomorphic encryption box and never decrypt the output. This is proba…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-04T16:29:06+00:00"
  },
  {
   "id": "a8a5f1c05b2c",
