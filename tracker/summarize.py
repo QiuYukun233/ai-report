@@ -12,6 +12,11 @@ import sys
 
 import anthropic
 
+# WorkloadIdentityError（WIF 令牌兑换失败）直接继承 AnthropicError，不属于 APIError / CredentialsError
+WorkloadIdentityError = anthropic.WorkloadIdentityError
+AUTH_ERRORS = (anthropic.AuthenticationError, anthropic.PermissionDeniedError,
+               anthropic.CredentialsError, WorkloadIdentityError)
+
 SCHEMA = {
     "type": "object",
     "properties": {
@@ -98,13 +103,24 @@ def apply_results(items: list[dict], results: list[dict], model: str) -> int:
     return n
 
 
+def _warn(msg: str) -> None:
+    """打印到日志；在 GitHub Actions 里同时生成一条警告注释，方便在运行概览页直接看到原因。"""
+    print(f"  ✗ {msg}", file=sys.stderr)
+    if os.environ.get("GITHUB_ACTIONS"):
+        print(f"::warning title=Claude 打分::{msg.replace(chr(10), ' ')}")
+
+
 def summarize(items: list[dict], cfg: dict, client=None) -> int:
-    """原地给 items 打分，返回成功处理的条数。"""
+    """原地给 items 打分，返回成功处理的条数。任何失败都只告警、不抛出，不影响后续发布。"""
     if client is None:
         if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_FEDERATION_RULE_ID")):
             print("未配置 ANTHROPIC_API_KEY 或 Workload Identity Federation，跳过打分")
             return 0
-        client = anthropic.Anthropic()
+        try:
+            client = anthropic.Anthropic()
+        except anthropic.AnthropicError as e:
+            _warn(f"创建客户端失败: {e.__class__.__name__}: {e}")
+            return 0
 
     todo = pending(items, cfg.get("max_items_per_run", 300))
     size = cfg.get("batch_size", 20)
@@ -113,11 +129,12 @@ def summarize(items: list[dict], cfg: dict, client=None) -> int:
         batch = todo[start:start + size]
         try:
             done += apply_results(items, score_batch(client, batch, cfg), cfg.get("model", ""))
-        except anthropic.AuthenticationError:
-            print("  ✗ API key 无效，停止打分", file=sys.stderr)
+        except AUTH_ERRORS as e:
+            # 认证问题（含 WIF 令牌兑换失败）换下一批也不会好，直接停
+            _warn(f"认证失败，停止打分: {e.__class__.__name__}: {e}")
             break
-        except (anthropic.APIError, RuntimeError, ValueError, KeyError, StopIteration) as e:
+        except (anthropic.AnthropicError, RuntimeError, ValueError, KeyError, StopIteration) as e:
             # 单批失败不影响其他批；没打上分的条目下次运行会重试
-            print(f"  ✗ 第 {start // size + 1} 批失败: {e.__class__.__name__}: {e}", file=sys.stderr)
+            _warn(f"第 {start // size + 1} 批失败: {e.__class__.__name__}: {e}")
     print(f"打分 {done}/{len(todo)} 条")
     return done

@@ -198,3 +198,17 @@ def test_digest_top_section_and_low_score_fold():
     assert "本周必读 Top 1" in text
     assert "- [ ] ★5 [高分](u1)" in text and "  很重要" in text
     assert text.index("低相关度 1 条") < text.index("[低分](u2)")
+
+
+def test_summarize_stops_on_wif_error_without_raising(capsys, monkeypatch):
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+
+    class Boom(FakeClient):
+        def create(self, **kw):
+            self.calls.append(kw)
+            raise sm.WorkloadIdentityError("jwt-bearer exchange failed: rule did not match")
+
+    client = Boom()
+    assert sm.summarize(_items(45), {"batch_size": 20}, client=client) == 0
+    assert len(client.calls) == 1  # 认证错误后不再尝试后续批次
+    assert "::warning title=Claude 打分::认证失败" in capsys.readouterr().out
