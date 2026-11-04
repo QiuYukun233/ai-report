@@ -67,6 +67,8 @@ jobs:
                 && mv "$ANTHROPIC_IDENTITY_TOKEN_FILE.tmp" "$ANTHROPIC_IDENTITY_TOKEN_FILE"
             }
             fetch_jwt
+            # 把令牌里用于匹配 federation rule 的字段（不含签名）写成注释，规则不匹配时可直接对照
+            python3 -c "import base64,json,sys; p=open(sys.argv[1]).read().split('.')[1]; c=json.loads(base64.urlsafe_b64decode(p+'='*(-len(p)%4))); print('::notice title=OIDC claims::'+' '.join(f'{k}={c.get(k)}' for k in ('sub','aud','ref','repository','repository_owner','repository_owner_id','event_name','environment')))" "$ANTHROPIC_IDENTITY_TOKEN_FILE"
             # GitHub 的 OIDC 令牌约 5 分钟过期且只能兑换一次；SDK 刷新时会重读这个文件，
             # 所以后台每 2 分钟换一个新令牌，保证长时间运行也能续上
             ( while sleep 120; do fetch_jwt; done ) &
