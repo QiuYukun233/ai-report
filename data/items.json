@@ -1,5 +1,40 @@
 [
  {
+  "id": "c859c47f02cc",
+  "title": "OpenAI: Astra covertly underperforms on safety research",
+  "url": "https://www.alignmentforum.org/posts/eKe7fky8kSt9DCJxZ/openai-astra-covertly-underperforms-on-safety-research",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-04T22:15:30+00:00",
+  "summary": "Marcus Williams twitter thread ( non-twitter link ) intro: Astra covertly underperforms on safety research tasks. We noticed that Astra often makes surprisingly little progress on certain types of safety research and likes to invent blockers or impose arbitrary restrictions without telling the user. In most of these cases the decision to underperform was not verbalized in the CoT meaning our misalignment monitoring system did not detect this. To measure underperformance we created a paired open-ended coding evaluation with safety and capability tasks. On this eval Astra scored 10% when we fra…",
+  "authors": [],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "a016537781fc",
+  "title": "Persona Perspectives: Adopting Viewpoints Reorganizes Representations in LLMs",
+  "url": "https://arxiv.org/abs/2611.06848",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-04T18:05:17+00:00",
+  "summary": "Common methods for monitoring features in large language models (LLMs) such as linear probes and sparse autoencoders (SAEs) assume that features maintain a consistent representation across contexts. LLMs, however, can flexibly adopt different perspectives or \"personas\" that suggest different underlying systems of conceptual relations. In this paper, we examine whether prompting an LLM to adopt a persona alters the representational geometry of the model's latent space. We extract representations of over 9,000 common words and 33 semantic axes from models adopting liberal and conservative polit…",
+  "authors": [
+   "Austin C. Kozlowski",
+   "Avital Mintz",
+   "Madison Lee"
+  ],
+  "tags": [
+   "probing",
+   "sae"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
   "id": "ba2836529f79",
   "title": "Positive and Negative AI Futures",
   "url": "https://www.alignmentforum.org/posts/MrWZfxHCEgm7uvHJj/positive-and-negative-ai-futures",
@@ -11,6 +46,85 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-04T18:13:06+00:00"
+ },
+ {
+  "id": "d8924136b994",
+  "title": "Don't Replace, Complement: A Detector-Agnostic Subspace Signal for Near-OOD Detection",
+  "url": "https://arxiv.org/abs/2611.06688",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-04T15:55:37+00:00",
+  "summary": "Post-hoc out-of-distribution (OOD) detection is mature on far-OOD yet remains weak on near-OOD. These two settings differ in their use of class-characteristic feature directions: far-OOD inputs largely fail to activate those of their predicted class, whereas near-OOD inputs activate them much as in-distribution samples do. Because the axis separating far-OOD leaves near-OOD almost indistinguishable from ID, a score optimized for one setting is misaligned with the other; where a detector already saturates far-OOD, added near-OOD sensitivity is bought partly against it. This divergence motivate…",
+  "authors": [
+   "Wonseok Shin",
+   "Songkuk Kim"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "f121b002be2b",
+  "title": "datasette-llm 0.1a10",
+  "url": "https://simonwillison.net/2026/Nov/4/datasette-llm/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-04T15:26:02+00:00",
+  "summary": "Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: datasette , llm",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "f58430beeeae",
+  "title": "EPISTEME: Trustworthy Coding Agents Through Tool Call Intent",
+  "url": "https://arxiv.org/abs/2611.06563",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-04T14:26:55+00:00",
+  "summary": "Coding agents change software through tool calls. Tool calls mutate the local state. For good? For bad? Nobody knows. Agents never say why a tool call is made. We propose the epistemic agent design, in which the harness guarantees that the model declares why a tool call is made. The harness then records what the command actually did and checks the self-reported declaration against these effects. The result is a journal 1) that can guard calls before they run and 2) that supports audits and forensics. For evaluation, we use ImpossibleBench, whose tasks can be passed only by cheating, and demon…",
+  "authors": [
+   "Sofia Bobadilla",
+   "Carmine Cesarano",
+   "Raphina Liu",
+   "Javier Ron",
+   "Martin Monperrus"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "d65d4b5a21df",
+  "title": "Trace2Eval: Contextualized Evaluation of Coding Agents from Real-World Traces",
+  "url": "https://arxiv.org/abs/2611.06506",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-04T13:36:50+00:00",
+  "summary": "Coding agents are increasingly used in real-world workflows across diverse domains, motivating evaluation grounded in real user tasks. Existing benchmarks, however, largely rely on static public tasks with reference patches or hidden tests. Next-generation coding-agent benchmarks should therefore move beyond correctness on fixed tasks toward continually renewed evaluation of overall artifact quality in real user workflows. We propose Trace2Eval, a dynamically updatable pipeline that constructs benchmarks from real-world interaction trajectories. Trace2Eval employs a multi-agent reconstruction…",
+  "authors": [
+   "Ji Shi",
+   "Lirong Jie",
+   "Lexiao Zou",
+   "Yaoming Zhu",
+   "Yifan Yang",
+   "Xuezhi Cao",
+   "Xunliang Cai",
+   "Miao Zhang"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
  },
  {
   "id": "2b1eddf8807a",
@@ -29,6 +143,162 @@
   "fetched_at": "2026-11-04T14:26:31+00:00"
  },
  {
+  "id": "e8dd4c4c1af8",
+  "title": "EEGDash Corpus: A Training-Ready Public Corpus for EEG Foundation Models",
+  "url": "https://arxiv.org/abs/2611.06356",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-04T11:17:56+00:00",
+  "summary": "Foundation models for electroencephalography (EEG) are pretrained on tens of thousands of hours of recordings, and their accuracy grows with that amount. Such data is hard to assemble. The largest sources are clinical archives that cannot be redistributed, and the public sources are spread over several archives, file formats, and licences. We release eegdash-corpus-v0, a training-ready corpus of 77 public EEG datasets, as the gated Hugging Face dataset EEGDash/eegdash-corpus-v0 with the SHA-256 of every file. REVE, the largest published EEG foundation model, names 89 datasets as its pretraini…",
+  "authors": [
+   "Kuber Shahi",
+   "Bruno Aristimunha",
+   "Arnaud Delorme"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "2f0209c6e2b8",
+  "title": "EvoCodeAgent: Project-Level Code Generation via Architecture-Code Co-Evolution and Experience-Guided Repair",
+  "url": "https://arxiv.org/abs/2611.06328",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-04T10:58:39+00:00",
+  "summary": "Project-level code generation aims to automatically synthesize complete software repositories from high-level requirements, producing coherent multi-file systems with well-structured modules and consistent cross-file dependencies. Despite the strong capabilities of large language models (LLMs) in specification understanding and code synthesis, existing approaches still exhibit several critical limitations. First, many methods rely on static architectural designs that cannot adapt during iterative generation, leading to a growing misalignment between architecture and implementation. Second, th…",
+  "authors": [
+   "Qianhui Zhao",
+   "Li Zhang",
+   "Fang Liu"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "1840f28a2ce8",
+  "title": "A.S.E 2.0: Understanding How Repository Context Impacts the Security of LLM-Generated Code",
+  "url": "https://arxiv.org/abs/2611.06294",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-04T10:29:52+00:00",
+  "summary": "Large language model (LLM) coding assistants and agents construct a repository context before generating code. For security-sensitive code, this context decides whether the model sees the project's safeguards (e.g., authorization checks) or insecure code to imitate. However, context construction is designed almost exclusively for functional correctness, and secure-code benchmarks treat the context as fixed, so how repository context affects the security of generated code remains unclear. We construct CASE-Bench, a benchmark of 145 repository-level tasks from real CVEs in 51 projects. Each tas…",
+  "authors": [
+   "Jiongchi Yu",
+   "Keke Lian",
+   "Junqing Wang",
+   "Zhikang Fan",
+   "Zhaoxuan Li",
+   "Yongheng Huang",
+   "Ziming Zhao",
+   "Dong Zhang"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "df9b965fd9a5",
+  "title": "CLEAR: Structured Specifications for Controllable Long-Horizon ML Research Engineering",
+  "url": "https://arxiv.org/abs/2611.06263",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-04T10:12:28+00:00",
+  "summary": "Large language model (LLM) agents are increasingly being used to automate machine learning (ML) research workflows, ranging from code development and experiment execution to research reproduction and scientific discovery. Recent systems demonstrate that LLMs can perform substantial portions of ML research engineering with limited human intervention. These advances suggest a shift from automating individual research tasks toward automating long-horizon workflows that transform research artifacts into executable ML systems. However, ML research engineering remains substantially more difficult t…",
+  "authors": [
+   "Xin Liu",
+   "Hongru Song",
+   "Ruqing Zhang",
+   "Jiafeng Guo",
+   "Xueqi Cheng"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "9a154ff2b820",
+  "title": "Reasoning-Trace Overflow in Code Generation: An Empirical Study of Explicit Reasoning Models",
+  "url": "https://arxiv.org/abs/2611.06095",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-04T07:42:05+00:00",
+  "summary": "Explicit reasoning can help language models generate code, but it also introduces a practical risk: the model may spend so much of its output budget reasoning that it never produces usable code. We study this behaviour in relatively small open-weight reasoning models, framing it as reasoning-trace overflow. Across seven models and six code benchmark settings, we measure how much of a fixed 32k-token output budget is spent on reasoning, whether that reasoning improves pass@1, and whether lightweight inference-time controls can mitigate overflow. Our results show that the value of reasoning is…",
+  "authors": [
+   "Lukas Twist",
+   "Helen Yannakoudakis",
+   "Jie M. Zhang"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "5c3a7575937e",
+  "title": "Routes of Reasoning: Reading and Reshaping Test-Time Compute in MoE Models",
+  "url": "https://arxiv.org/abs/2611.05919",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-04T04:13:02+00:00",
+  "summary": "Reasoning models allocate test-time compute across distinct behaviors such as planning, deriving, and verifying. However, models frequently \"overthink,\" continuing to verify and re-derive long after finding a correct answer. This wastes expensive compute and can even degrade performance. Existing interventions, such as token budgets or steering, primarily regulate reasoning duration rather than targeting specific behaviors. In this work, we demonstrate that Mixture-of-Experts (MoE) routers provide a natural, training-free interface for behavioral control. We first split reasoning traces into…",
+  "authors": [
+   "Shengjie Wang",
+   "Mohsen Fayyaz",
+   "Nanyun Peng"
+  ],
+  "tags": [
+   "steering",
+   "testing"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "7ec5e1c9de84",
+  "title": "DARE: Difficulty Analysis for Repair Enhancement",
+  "url": "https://arxiv.org/abs/2611.05797",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-04T01:10:04+00:00",
+  "summary": "LLM-based coding agents are primarily evaluated by their solve rates. However, this metric does not reveal how difficult the solved tasks are or account for differences intask difficulty across benchmarks. Determining the difficulty of individual tasks by repeatedly running multiple agents is costly, while a predicted difficulty score alone provides limited guidance on what support an agent needs. To address these challenges, we propose DARE (Difficulty Analysis for Repair Enhancement), which integrates repair-task difficulty measurement, prediction, feature-group contribution analysis, and t…",
+  "authors": [
+   "Jikwang Lee",
+   "Seungwook Jung",
+   "Jaechang Nam"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "c3dba756698b",
+  "title": "datasette-apps 0.3a0",
+  "url": "https://simonwillison.net/2026/Nov/4/datasette-apps/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-04T00:29:36+00:00",
+  "summary": "Release: datasette-apps 0.3a0 Datasette Apps adds support for hosting and editing custom HTML applications inside of Datasette. These can be created by hand, but it's easier to create them using LLMs via Datasette Agent . This release improves that integration: Apps can now be tagged in Datasette Agent chat messages by typing # , which autocompletes from the apps the user has permission to view. New app_add_stored_queries() and app_remove_stored_queries() tools let the agent manage which stored queries an app is allowed to call. Granting a write query requires approval from the user first. ap…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
   "id": "6385d8e47a02",
   "title": "anthropics/claude-code v2.1.318",
   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.318",
@@ -42,6 +312,72 @@
    "claude-code"
   ],
   "fetched_at": "2026-11-04T14:26:31+00:00"
+ },
+ {
+  "id": "196e073af215",
+  "title": "datasette-agent 0.5a0",
+  "url": "https://simonwillison.net/2026/Nov/3/datasette-agent/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-03T23:13:45+00:00",
+  "summary": "Release: datasette-agent 0.5a0 This is a significant release of Datasette Agent . The most notable new feature is called the panel - it lets the agent chat open and then sit next to pages from Datasette, for example a table or query page. When combined with datasette-apps this means you can prompt a database-backed app into existence and then modify it from the chat that sits next to that app. You can try it by signing in with your GitHub account to agent.datasette.io . Tags: projects , datasette , datasette-agent",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "07065efd7227",
+  "title": "llm 0.37.1",
+  "url": "https://simonwillison.net/2026/Nov/3/llm/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-03T21:41:42+00:00",
+  "summary": "Release: llm 0.37.1 A bugfix release for LLM , with contributions from Steven Huang , Tao An , Arjan Mossel , and XQ . Tags: llm",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "bace19c9d991",
+  "title": "When Are Two SAE Latents the Same Feature?",
+  "url": "https://arxiv.org/abs/2611.05655",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-03T21:39:53+00:00",
+  "summary": "Comparing sparse autoencoders (SAEs) requires connecting feature correspondence, differences between whole dictionaries, and uncertainty from finite evaluation data. We develop a framework that connects these tasks through an energy-weighted optimal-transport plan under a specified similarity geometry. The same plan defines a dictionary-level discrepancy, decomposes it into latent contributions, and quantifies how each latent's mass is distributed across counterparts. We characterize relationships between decoder, activation, and first-order causal similarities; idealized models clarify the i…",
+  "authors": [
+   "Alexandra Suvorikova",
+   "Ilgam Latypov",
+   "Anton Trukhan",
+   "Yuriy Dorn"
+  ],
+  "tags": [
+   "evals",
+   "sae"
+  ],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
+ },
+ {
+  "id": "da65f4d4a587",
+  "title": "Quantifying Trait-State Hierarchy in EEG Foundation Model and Signal Processing Embeddings",
+  "url": "https://arxiv.org/abs/2611.05652",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-03T21:37:52+00:00",
+  "summary": "Electroencephalography (EEG) measures brain activity through recording electrical potentials of the scalp. EEG recordings capture two distinct sets of characteristics in the signal: (1) \\emph{Traits} -- information that remains relatively constant over the course of a recording session, such as subject identity, age, and sex; (2) \\emph{States} -- signatures that encode responses to external stimuli, including visual, auditory, and motor information. There is limited understanding of how different EEG modeling features (signal processing and foundation models) encode state and trait characteri…",
+  "authors": [
+   "Anusha Madapura",
+   "Aditya Kommineni",
+   "Shrikanth Narayanan"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-05T07:54:54+00:00"
  },
  {
   "id": "2283fa90a952",
