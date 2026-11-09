@@ -1,5 +1,141 @@
 [
  {
+  "id": "5b851a302334",
+  "title": "The Web Is More Than Enough, by Paul Ford",
+  "url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-09T04:32:33+00:00",
+  "summary": "My comment on The Web Is More Than Enough, by Paul Ford — Hacker News. OK, this comment convinced me to give that a shot. Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (77KB) I just asked Claude (Opus 5.5 Medium running in regular Claude Chat) to port that to Vanilla JS, in the same thread where it had built it, and got this: https://static.simonwillison.net/static/2026/Hidden-Reef-Egg... (98KB) They aren't identical - you can see what Claude said about that in the transcript (I don't fully und…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "a92667754bb1",
+  "title": "Hide your slop PR descriptions behind",
+  "url": "https://simonwillison.net/2026/Nov/9/details-summary/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-09T04:25:05+00:00",
+  "summary": "Most of the changes I make to my projects these days come in the form of PRs opened for me by Claude Code or Codex. The PR is my unit of work - I use them to bundle commits together, iterating on them until a feature is complete, document decisions and then merge the finished result. Today's coding agents are great at writing PR descriptions. They're too good at describing the work The problem is that they are too good. An agent-written PR description is accurate and comprehensive. It describes the problem, the detailed solution, and the steps taken to verify it. That's a lot of information t…",
+  "authors": [],
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "9572242cc9fc",
+  "title": "parse_number() as a SQLite extension: C vs Rust",
+  "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-08T22:26:00+00:00",
+  "summary": "Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and '%', handles a leading '-', and returns 'NULL' for anything it can’t parse Explore the difference between building this as a SQLite extensio…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "48dc8896e3fc",
+  "title": "Ajeya: AI is dramatically accelerating AI research right now",
+  "url": "https://www.alignmentforum.org/posts/8tL9f5HZxsTvn2LHp/ajeya-ai-is-dramatically-accelerating-ai-research-right-now",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-08T17:15:13+00:00",
+  "summary": "Earlier this week, Anthropic stated in their S1 that they “may imminently meet” the threshold of “dramatically accelerated progress due to AI” as defined in their Responsible Scaling Policy. In their latest RSP (effective July 2026) , say this threshold will be met when: They observe or expect overall capabilities progress to be going twice as fast as the fastest sustained rate before AI was contributing much to AI R&D. This is plausibly attributable to AI automating AI R&D, rather than acceleration in compute or other inputs. For the last few months, some of my colleagues at METR have been w…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "ce57cf7dbe46",
+  "title": "Notes on Take-Off Speeds and RSI",
+  "url": "https://www.alignmentforum.org/posts/ft9hzw82v7FRDKmpn/notes-on-take-off-speeds-and-rsi",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-08T13:39:02+00:00",
+  "summary": "I created these notes for use when I facilitate AI safety courses. I'm sharing these notes early because this issue is topical and I suspect it is better to make an imperfect version available early rather than a much more polished version available later. Please note: some of this content was taken from Additional Course Context . I decided recently that the content on take-off speeds really belonged in the same document as the content on RSI, so I'll be releasing an new version of Additional Course Context at some point (to avoid spamming LW, it'll probably be Substack only ; none of my wor…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "e05034179347",
+  "title": "Agents on the Patch Path: Mining AI-Associated Security Remediation in GitHub Security Advisories",
+  "url": "https://arxiv.org/abs/2611.09808",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-06T17:57:59+00:00",
+  "summary": "Autonomous coding agents are increasingly involved in software development, but their participation in real-world security remediation remains poorly understood. We investigate observable evidence of coding-agent involvement in commits referenced by reviewed GitHub Security Advisories (GHSAs), characterize the associated vulnerabilities, and examine review timing in relation to advisory disclosure routes. We develop a local-Git mining pipeline that identifies agent evidence through known agent accounts, explicit commit-message attribution, repository instruction files, and agent configuration…",
+  "authors": [
+   "Claudio Segal",
+   "Paulo Segal",
+   "Hudson Silva Borges",
+   "Paulo Silveira",
+   "Daniel S. Menasché",
+   "Eduardo Santana de Almeida",
+   "Felipe de Sant'Anna Paixão",
+   "Joanna C. S. Santos"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "94ccb6e8136c",
+  "title": "When Instruction Files Go Stale: Documentation Debt and Hidden Cost in Coding Agents",
+  "url": "https://arxiv.org/abs/2611.09802",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-06T17:54:01+00:00",
+  "summary": "LLM-based coding agents such as Claude Code are guided by repository instruction files (also called context files or agent configuration files) like AGENTS.md and CLAUDE.md, which are read in every agent session. As any documentation artifact, these files can fall behind the code and become stale (e.g., a test folder moves, but the file still points to the old one). In technical debt terms, such a stale instruction is documentation debt, and its interest is the cost it adds to every later agent session. Evaluations that check only task success can miss this cost, and the stale file can persis…",
+  "authors": [
+   "Tural Mehtiyev",
+   "Biruk Tadesse",
+   "Lawrence Arkoh",
+   "Wesley Assunção"
+  ],
+  "tags": [
+   "agents",
+   "claude-code",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "44f098b92903",
+  "title": "AnimWeb-Bench: Benchmarking Animated Webpage Code Generation from Videos",
+  "url": "https://arxiv.org/abs/2611.09769",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-06T17:31:09+00:00",
+  "summary": "Animation is pervasive on the Web, the CSS animation property alone appears on over three-quarters of webpages. Yet existing webpage code generation benchmarks target static screenshots, user-triggered interactions, or isolated motion graphics, leaving the ability of multimodal large language models (MLLMs) and coding agents to reconstruct complete animated webpages largely unexplored. To fill this gap, we introduce AnimWeb-Bench, the first benchmark for animated webpage code generation from videos. It comprises 124 real-world webpages spanning 7 application domains and 33 animation types, wi…",
+  "authors": [
+   "Zhongyi Zhang",
+   "Jingyu Xiao",
+   "Shuqing Li",
+   "Michael R. Lyu"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
   "id": "04ff5155f606",
   "title": "Quoting Nilay Patel",
   "url": "https://simonwillison.net/2026/Nov/6/nilay-patel/",
@@ -26,6 +162,234 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-07T07:10:21+00:00"
+ },
+ {
+  "id": "5cb6c8093aee",
+  "title": "Tracybot: Preserving Developer Intent by Tracing Agent-Generated Code to Prompts",
+  "url": "https://arxiv.org/abs/2611.09395",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-06T12:34:02+00:00",
+  "summary": "Large language models (LLMs) are now widely used in software development, and LLM-based coding agents are given increasing autonomy. With coding agents, many design decisions are made in the conversation between the developer and the agent. Typically, the developer starts a conversation with an agent and states their intent, the agent proposes options if needed, and the developer plans the change accordingly. Then, the resulting code is committed. However, in such scenarios, the decisions and the intent behind the changes remain in the conversation, with no link to the code they produced. In…",
+  "authors": [
+   "Răzvan Albu",
+   "Aliaksei Khval",
+   "Maxine Orlova",
+   "Danis Music",
+   "Filipe Araújo Veras Rosa",
+   "Lirong Yi",
+   "Ranim Khojah"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "ba0d276f17df",
+  "title": "Asymmetric Correspondence Learning for Lexical and Style Embeddings: Interpreting Latent Space via Acoustic Features",
+  "url": "https://arxiv.org/abs/2611.09313",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-06T11:04:58+00:00",
+  "summary": "Self-supervised speech embeddings jointly encode lexical, speaker, and prosodic information, complicating feature isolation. We introduce Asymmetric Correspondence Learning (ACL), distilling HuBERT features into separate Acoustic Word Embeddings (AWEs) and Acoustic Style Embeddings (ASEs) via a split-latent correspondence bottleneck. Through probing and clustering evaluations on single-word utterances, we demonstrate that substantial variance from extrinsic sources remains encoded within each latent space, despite linear probing indicating the information has been stripped. Whilst the AWE spa…",
+  "authors": [
+   "Michael Whealing",
+   "Robert Gaizauskas",
+   "Thomas Hain"
+  ],
+  "tags": [
+   "evals",
+   "probing"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "51f786e5d330",
+  "title": "Cross-Layer TopK: Dynamically Allocating Sparsity Across Layers in Transcoders",
+  "url": "https://arxiv.org/abs/2611.09233",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-06T09:53:10+00:00",
+  "summary": "Cross-Layer Transcoders (CLTs) decompose the activations of large language models into human-interpretable features and trace how these features interact across layers to form circuits, making them a key tool for mechanistic interpretability. However, training CLTs effectively and efficiently is hard. Beyond the usual trade-off between sparsity and reconstruction quality, a CLT has to model all layers at once, which adds a further challenge. The common JumpReLU recipe controls sparsity only indirectly through a penalty, while the direct extension of TopK selects a fixed number of latents in e…",
+  "authors": [
+   "Anyuan Zhuo",
+   "Shaohua Zhang",
+   "Tianle Li",
+   "Yuan Lin",
+   "Diandian Gu",
+   "Jun Wang",
+   "Pinyan Lu"
+  ],
+  "tags": [
+   "circuits",
+   "sae"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "a03aa6b62b54",
+  "title": "Calibrated concept profiles: making the reading of a model's neurons a measurement",
+  "url": "https://arxiv.org/abs/2611.09196",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-06T09:17:39+00:00",
+  "summary": "Interpretability has largely moved from reading a model's neurons directly to reading a second model trained on the first: a probe, a sparse autoencoder, a crosscoder. The move answered real faults -- mixed meanings, thresholds without a unit, readings that did not transfer from one study to the next -- but gave up what a direct reading alone provides: nothing trained in between, the neurons themselves named, and a reading that can be repeated and compared. Here the direct reading is made a measurement. A neuron's activation varies with the prompt, so its reading is a distribution over a popu…",
+  "authors": [
+   "Piotr Wilam"
+  ],
+  "tags": [
+   "probing",
+   "sae"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "adb39c840880",
+  "title": "Analyzing Code Provenance in LLMs for Programming Education",
+  "url": "https://arxiv.org/abs/2611.09177",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-06T08:59:27+00:00",
+  "summary": "Large language models (LLMs) play an increasing role in programming education, challenging traditional assessment methods as they can generate fully functional code instantly. This disrupts the reliability of student submissions as indicators of learning and effort. To address this issue, code provenance is essential for tracing the origins of code and distinguishing student-authored, AI-generated, and externally sourced components. We extend the Min-K% probability approach by incorporating synthetic non-member code generation and apply it to Python code for membership inference and provenanc…",
+  "authors": [
+   "Subhankar Maity",
+   "Faiza Belbachir",
+   "Omar Boucelma",
+   "Guilherme Medeiros Machado"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "476525fb7302",
+  "title": "BrainCoT: A Multi-Task Zero-Shot Brain Signal Foundation Model with Neurometric-Anchored Chain-of-Thought Reasoning",
+  "url": "https://arxiv.org/abs/2611.09082",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-06T07:13:18+00:00",
+  "summary": "Brain signals exhibit substantial multi-center heterogeneity, strong inter-subject variability, and highly diverse task settings, which makes it difficult to build models that generalize beyond a single task. While recent brain signal foundation models leverage large-scale pretraining to learn generalizable representations, they often fall short in practice because they still require target-data-specific supervised adaptation, lack multi-task zero-shot capability, and rarely provide verifiable evidence to support their predictions. In this work, we present BrainCoT, a multi-task zero-shot Bra…",
+  "authors": [
+   "Yiyu Gui",
+   "Mingzhi Chen",
+   "Guibo Luo",
+   "Yuchao Yang"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "ef9dac0c4fa3",
+  "title": "Glyph: An Interpretability Engine for AI-Driven Scientific Discovery in Clinical Data",
+  "url": "https://arxiv.org/abs/2611.08922",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-06T03:08:38+00:00",
+  "summary": "Automated scientific discovery has the potential to advance understanding of disease mechanisms and accelerate identification of early disease markers. Manual data annotation is infeasible at population scale, motivating methods that automatically extract pre-defined phenotypes in multimodal and unstructured clinical data. Such pre-defined feature sets determine and limit which associations these approaches can discover. This limitation extends to agentic AI systems that use these tools to query population-scale data. In contrast, foundation models (FMs) trained on large volumes of clinical d…",
+  "authors": [
+   "Robbie Holland",
+   "Ashwin Kumar",
+   "Mateus A. Esmeraldo",
+   "David Le",
+   "Andrea Fisher",
+   "Jiazhen Pan",
+   "Louisa Fay",
+   "Magdalini Paschali"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "5eacc277de25",
+  "title": "SteerGR: Steering Generative Recommendation via Sparse Autoencoders for Controllable Game Discovery",
+  "url": "https://arxiv.org/abs/2611.08790",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-05T23:25:08+00:00",
+  "summary": "Generative recommendation aims to predict item identifiers from user interaction histories, but explicit control over the properties of recommended items remains underexplored. A key challenge is to connect human-readable concepts to internal features whose interventions effectively change the recommended items. To address this, we propose Steerable Generative Recommender (SteerGR), a framework that uses sparse autoencoders for concept-level control in game discovery. SteerGR proceeds through three stages: (i) Concept Definition and Grounding for defining play concepts with an LLM; (ii) Featu…",
+  "authors": [
+   "Sunkyung Lee",
+   "Xiaokai Wei",
+   "Da Long",
+   "Hyunsik Jeon",
+   "Jiajun Wu",
+   "Rithwik Seth",
+   "Jongwuk Lee",
+   "Michelle Gong"
+  ],
+  "tags": [
+   "sae",
+   "steering"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "8e332e1e45e3",
+  "title": "Compression of Emotion in Language Model Representations",
+  "url": "https://arxiv.org/abs/2611.08683",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-05T20:42:47+00:00",
+  "summary": "Large language models (LLMs) have been evaluated on their ability to identify emotions expressed in text and produce fluent emotional language. However, output predictions alone do not reveal how fine-grained emotion distinctions are organized internally. We study seven LLMs on GoEmotions, an English Reddit dataset annotated with 27 fine-grained emotion categories plus neutral. We compare model predictions and emotion-prompted final-token representations with the 28 GoEmotions categories and with coarser emotion-family and sentiment groupings. We find a consistent pattern of $\\textit{overcomp…",
+  "authors": [
+   "Laya Iyer",
+   "Sanmi Koyejo",
+   "Chen Shani"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "70a34b87aec6",
+  "title": "Pdb or Not to Be: Comparing Debugging Interfaces With Pass$_{X}$@$k$",
+  "url": "https://arxiv.org/abs/2611.08666",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-05T20:24:07+00:00",
+  "summary": "Interactive debuggers are indispensable to human software development, yet coding agents overwhelmingly rely on edit-execute-observe loops, using common bash tools, test scripts, and print statements to debug via repeated shell commands. Stepping through a debugger provides live access to runtime state, which may enable different problem-solving capabilities. However, prior work typically introduces the debugger as an additional tool or through a new subagent, making its individual contribution difficult to isolate from the associated scaffold changes. To address this, we compare a debugger-o…",
+  "authors": [
+   "Ryan Magnuson",
+   "Ellie Kitanidis",
+   "Ariel Lee"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "8da2a52ba0fe",
+  "title": "JEPAhead: From Inpainting to Causal Forecasting for Urban Driving",
+  "url": "https://arxiv.org/abs/2611.08657",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-05T20:06:13+00:00",
+  "summary": "We fine-tune a pre-trained V-JEPA1 predictor from bidirectional latent inpainting to action-free causal forecasting while keeping the encoder frozen. Using contiguous past observations, horizon-aligned targets, and group-level causal attention, the model forecasts eight future token groups, corresponding to sixteen frames, in one forward pass. On CARLA Town12, it retrieves the correct future among 591 candidates in 69.0% of cases, compared with 55.3% for persistence, with greater gains at longer horizons and on tokens exhibiting greater change. It also outperforms a compact predictor trained…",
+  "authors": [
+   "Daniel G. P. Petrini",
+   "Davi Pincinato",
+   "Fabio Grassiotto",
+   "Pedro L. F. Prado",
+   "Alexandre F. S. Osorio",
+   "Raphael V. Ramos",
+   "Felipe Pamboukian"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
  },
  {
   "id": "fa9308248d30",
@@ -235,6 +599,24 @@
   ],
   "tags": [],
   "fetched_at": "2026-11-06T07:55:28+00:00"
+ },
+ {
+  "id": "94c9010483a6",
+  "title": "How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training",
+  "url": "https://arxiv.org/abs/2611.08551",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-05T10:09:19+00:00",
+  "summary": "To train a sparse autoencoder (SAE), you need a massive cache of model activations. We look into the effects that compression has on an SAE in two ways: we keep the original fp32-trained SAE and pass the compressed cache into the same SAE to see how many feature activations stay the same (the frozen-SAE test), and we retrain an SAE on the compressed cache and see how many of the original features still exist (the retraining test). We found that in the retraining test, there is no clear scale for retained features. On a GPT-2 cache, rounding everything to fp16 keeps 60.6% of features, but chan…",
+  "authors": [
+   "Abraham Yeung"
+  ],
+  "tags": [
+   "sae",
+   "testing"
+  ],
+  "fetched_at": "2026-11-09T07:58:24+00:00"
  },
  {
   "id": "6457e3925b29",
