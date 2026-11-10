@@ -1,5 +1,275 @@
 [
  {
+  "id": "fabe838d73f5",
+  "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+  "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-10T07:28:21+00:00",
+  "summary": "Introducing Our Smallest, Most Efficient Model: Muse Ember Meta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as: [...] our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing. For shorter prompts it's priced the same as GPT-6 Luna and Claude Haiku 5.5 - both are $0.10/million input tokens and $0.50/million output. Today's other big model release, Claude Fable 5.2, is 80x that price at $8/$40. The pricing i…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "c8bf0b8e918f",
+  "title": "Quoting Prompting Claude Fable 5.2",
+  "url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-10T05:34:14+00:00",
+  "summary": "Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing structure, even when that repeated existing code. [...] If you want the model to improve the structure as it works, say that the code is its own: This codebase is yours: what it's for and how it's built are your call, and you'll keep building on it. In Anthropic’s testing on small coding tasks, the model merged repeated code in…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "75546f2ae879",
+  "title": "Yonkers Rises",
+  "url": "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-10T03:53:04+00:00",
+  "summary": "Tool: Yonkers Rises I realized I didn't know where Yonkers was, so I looked it up on Google Maps and then, to help embed its location and shape in my head (and to try out Claude Fable 5.2's 3D modeling and animation skills), I prompted Fable 5.2 Medium to: Make a three js animation where yonkers stands up as a big mech (cool stand up motion) and átomos around manhattan and queens and Brooklyn, use openstreetmap mapping data It correctly deduced that \"átomos\" was a mobile keyboard typo for \"stomps\": Tags: three-js , llms , ai , generative-ai , claude-mythos-fable",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "f7d3d2f1a893",
+  "title": "anthropics/claude-code v2.1.322",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-10T02:29:43+00:00",
+  "summary": "## What's changed - Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "6c8dab99840b",
+  "title": "jbloomAus/SAELens v6.55.1",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.1",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-10T00:53:27+00:00",
+  "summary": "# v6.55.1 (2026-11-10) ## Fix * fix: load sparsify SAEs with the correct W_dec orientation and d_sae (#778) ([`6758b12`](https://github.com/decoderesearch/SAELens/commit/6758b120543cf22fc697196b16bd282d3c766406)) * fix: include decoder norm in Llama Scope JumpReLU threshold (#782) ([`8d0dd11`](https://github.com/decoderesearch/SAELens/commit/8d0dd11b62f468c71994348c4482e43d0ea911bd)) * fix: keep top-k decoding finite for zero-norm decoder rows (#783) ([`1ba1c8b`](https://github.com/decoderesearch/SAELens/commit/1ba1c8bf968a5e12165e9841b14d9d9f43f25b8d)) * fix: average eval metrics in float64…",
+  "authors": [],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "c93c64172e07",
+  "title": "llm-anthropic 0.31",
+  "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-09T23:58:46+00:00",
+  "summary": "Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. Fable 5.2 is currently ranked first on Artificial Analysis . Anthropic say it \"solved two open problems in the physics of black holes\", so clearly their internal benchmarks have become more ambitious! I've added the new models to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium ,…",
+  "authors": [],
+  "tags": [
+   "evals",
+   "python-tooling"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "d363b026f0d9",
+  "title": "Locating the source of a mysterious beep with Claude",
+  "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-09T23:57:21+00:00",
+  "summary": "Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started intermittently beeping . The beeps were far enough apart that standing in the room and trying to determine the source of the noise was frustrating, and I really didn't want to dig through every one of those boxes. So I had Claude Code build Beep Locator , a software system for triangulating the source of a mysterious beep using multiple devices scattered around the room. Here's what Beep Locator looks like after it has been running for a while: You ru…",
+  "authors": [],
+  "tags": [
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "13932435604d",
+  "title": "anthropics/claude-code v2.1.321",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-09T19:22:30+00:00",
+  "summary": "## What's changed - Added Claude Fable 5.2 (`claude-fable-5-2`), now the default Fable model — 1M context, $8/$40 per Mtok with $0.20/Mtok cache reads - Added `--settings ` to `claude remote-control`, which applies a settings file to every session it starts; if the file changes, no new session starts until you restart `claude remote-control` - Fixed MCP OAuth requests sending secrets such as refresh tokens to another host when a server redirected them - Fixed a case where a read-only Bash command ran outside the sandbox without a permission prompt - Fixed a case where Bash permission checks j…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "58815a9ec2e0",
+  "title": "Coding Agents in KVM: Practical Containment and User Control with Limited Resources",
+  "url": "https://arxiv.org/abs/2611.12823",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T18:24:46+00:00",
+  "summary": "Coding agents often need broad authority for productive development work, but granting that authority can expose users' data and infrastructure. Off-the-shelf cloud workspaces can help contain agent activity, but reliance on provider-specific platforms can lead to vendor lock-in and reduced user control. Researchers and engineers must therefore balance agent autonomy, enforced containment, and user control within available financial, computational, and human resources. We analyze these trade-offs and present KVM-Agent, an open-source implementation that automates most setup and provisioning s…",
+  "authors": [
+   "Yutaka Nagashima"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "455ff3cd0b11",
+  "title": "Where is all the AI safety research uplift?",
+  "url": "https://www.alignmentforum.org/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-09T18:02:01+00:00",
+  "summary": "(Thanks to @Goutham Nalagatla for discussion and for sitting with me and talking about it while I wrote it.) METR recently released a report estimating that Anthropic is getting an overall 1.7x acceleration in AI capability progress as a result of AI accelerating their work. As many have noted (see e.g. Ajeya’s post ), this 1.7x acceleration implies that research is being sped up by much more than 1.7x; Ajeya speculates 10x (which is similar to the ~12x uplift estimated by Anthropic staff). That is, this result implies that researchers are producing about 10 times as many quality-adjusted res…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "b73deb95ad71",
+  "title": "Interpretability Is Not Model-Specific",
+  "url": "https://arxiv.org/abs/2611.12675",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-09T16:43:26+00:00",
+  "summary": "Interpretability tools are usually built for one model at a time: a refusal direction, a truthfulness probe, or a steering vector is found with labeled data inside the model it explains. We ask whether such tools can be carried to other models through a map between residual streams fit only on unlabeled prompts. We transfer a refusal direction, tested causally by addition and ablation, and two read-out tools, a correctness direction and a sentiment probe, across 110 pairs of models from five families and 1B to 72B parameters and between base and instruction-tuned models, with controls for spe…",
+  "authors": [
+   "Marcus Armstrong",
+   "Navid Ayoobi",
+   "Pradham Mummaleti",
+   "Alexander Chulzhanov",
+   "Arjun Mukherjee"
+  ],
+  "tags": [
+   "patching",
+   "probing",
+   "steering"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "137f23f3ae3b",
+  "title": "A Geometric Invariant of Attention Predicts Head Specialization from Weights Alone",
+  "url": "https://arxiv.org/abs/2611.12206",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-09T11:02:51+00:00",
+  "summary": "Transformers are built with continuous symmetries in the attention mechanism. We derive $ρ$, a scalar invariant that measures each head's capacity to couple to rotary positional encodings. This framework allows us to analyze heads without forward passes, opening a new research direction into data-independent analysis of modern LLMs. Empirically, we find that $ρ$ predicts induction heads, the most-studied circuit type in mechanistic interpretability, with Spearman correlation between $-0.55$ and $-0.74$ across four bias-free RoPE models spanning $135$M to $7$B parameters. As a preliminary proo…",
+  "authors": [
+   "Miguel P. Bento"
+  ],
+  "tags": [
+   "circuits"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "5a38f0936b0c",
+  "title": "Let the Fixer Decide: Training a Code Localizer from the Fixer's Likelihood",
+  "url": "https://arxiv.org/abs/2611.12164",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T10:18:59+00:00",
+  "summary": "Code localizers are usually trained to predict the files a reference patch edits, but the code a fixer needs to read is not the same as the code it changes. We propose Fixer-Guided Localization (FGL): the localizer proposes several localizations, a frozen fixer scores each by how likely it makes a verified patch, and the localizer is trained on these scores with weighted supervised fine-tuning, without running tests and without reinforcement learning. We build the full pipeline on Gemma 4 E4B for the Kaggle Gemma-4 Developer Agent competition, from 1,629 test-verified Kimi K3 trajectories. Th…",
+  "authors": [
+   "Khalil Hennara",
+   "Muhammad Hreden",
+   "Zeina Aldallal",
+   "Sara Chrouf",
+   "Safwan AlModhayan"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "d545e17f2d3c",
+  "title": "LiveWorkspace: Externalizing Visual Understanding as Persistent Shared State for Screenshot-to-Code Agents",
+  "url": "https://arxiv.org/abs/2611.12112",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T09:25:06+00:00",
+  "summary": "Screenshot-to-Code requires coding agents to sustain visual understanding across code generation, execution, and revision. We introduce LiveWorkspace, a visual coding harness that externalizes this understanding as Shared Visual State (Shared VS), an implementation-independent representation of visual hierarchy, node attributes, and layout relations. LiveWorkspace constructs and retains \\textit{Target} from screenshots and recovers \\textit{Current} from browser execution in the same schema. Structured Diff and implementation bindings guide code modifications; user edits update \\textit{Target}…",
+  "authors": [
+   "Shijun Xiao",
+   "Zonghui Yang",
+   "Xinrong Chen",
+   "Hao Liu",
+   "Wensheng Zhang",
+   "Yongqiang Tang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "25ad634019f4",
+  "title": "SWE-Time: Benchmarking Temporal Repository Understanding",
+  "url": "https://arxiv.org/abs/2611.12083",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T09:01:27+00:00",
+  "summary": "Repository-level code-understanding benchmarks have progressively expanded the spatial scope of reasoning, from local code to entire repositories, while largely treating each repository as a static snapshot. However, how models reason about repository evolution over time remains largely unexplored. We introduce SWE-Time, a benchmark for temporal repository understanding that makes repository evolution itself the reasoning target. SWE-Time evaluates two complementary temporal directions: retrospective understanding of repository evolution through historical regression analysis and prospective…",
+  "authors": [
+   "Shijun Xiao",
+   "Xinrong Chen",
+   "Hao Liu",
+   "Wensheng Zhang",
+   "Yongqiang Tang"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "bd19567f2378",
+  "title": "Robust Domain-Mixture Scheduling for Multi-Teacher On-Policy Distillation",
+  "url": "https://arxiv.org/abs/2611.12012",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T07:51:00+00:00",
+  "summary": "Multi-teacher on-policy distillation (MOPD) merges the capabilities of multiple domain-expert teachers, such as mathematical reasoning, code generation, and instruction following, into a single compact student. Since all domains share a limited training budget, how to allocate it across domains directly determines the quality of distillation. Existing methods allocate the budget by each domain's learning progress, but offer no guarantee for lagging domains. We therefore introduce distributionally robust optimization (DRO) into MOPD to prioritize the worst-performing domain. However, the per-d…",
+  "authors": [
+   "Yankai Chen",
+   "Sida Lin",
+   "Yifan Li",
+   "Hanjun Luo",
+   "Hanrong Zhang",
+   "Zhuohan Xie",
+   "Bowei He",
+   "Wei-Chieh Huang"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
   "id": "5b851a302334",
   "title": "The Web Is More Than Enough, by Paul Ford",
   "url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
@@ -29,6 +299,42 @@
   "fetched_at": "2026-11-09T07:58:24+00:00"
  },
  {
+  "id": "a07105827634",
+  "title": "Silinx: An Open, Browser-Based HDL Design Platform for Teaching Digital Systems on FPGA Boards",
+  "url": "https://arxiv.org/abs/2611.11741",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T01:28:43+00:00",
+  "summary": "Many digital systems courses teach on FPGA boards whose vendor tool is no longer maintained: the Digilent Basys2 and Nexys2 (Xilinx Spartan-3E) and Nexys3 and Atlys (Spartan-6) need Xilinx ISE 14.7, discontinued since 2013 and hard to install on the computers and tablets students use today. The author presents Silinx, a free (AGPL-3.0) HDL design platform for teaching that keeps ISE's Project Navigator workflow but runs in a web browser with nothing to install. A module can be written in VHDL or Verilog, in C or C++ through Silinx HLS, which is compatible with AMD's Vitis HLS and passes all 7…",
+  "authors": [
+   "Pedro Malo"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "3fc9c805c485",
+  "title": "Decalage: Uncovering the Gap Between Model-Generated Reasoning and Actual Code Implementation in Small Language Models",
+  "url": "https://arxiv.org/abs/2611.11721",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T00:34:39+00:00",
+  "summary": "Agentic code generation often asks a model to explain its reasoning before it writes code, and a common way to make such a workflow safer is to add a security instruction to the prompt. We test what that instruction does in small language models, which are attractive because they run locally and cheaply. Four open code models of 1.5B to 3B parameters generate C++ from 166 sections of eleven public requirements documents, once with a general prompt and once with a secure prompt. The secure prompt more than doubles the share of reasoning about validation, resource handling and threats, and we f…",
+  "authors": [
+   "Saif Uddin Mahmud",
+   "Afsana Tasnim",
+   "Ahmed Ryan",
+   "Md Rayhanur Rahman"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
   "id": "9572242cc9fc",
   "title": "parse_number() as a SQLite extension: C vs Rust",
   "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
@@ -40,6 +346,90 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "a421ed201e7a",
+  "title": "Beyond the Transcript: Measuring and Improving the Use of Acoustic Information in Audio Language Models",
+  "url": "https://arxiv.org/abs/2611.11573",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T19:37:55+00:00",
+  "summary": "Audio language model benchmarks provide comprehensive evaluation across diverse tasks. However, some tasks can be answered from the transcript or even the question alone, and benchmark scores can therefore confound acoustic understanding with language modeling ability. We distinguish lexical tasks, for which the transcript usually suffices, from global-attribute and within-recording-structure tasks, which require the model to analyse the recording beyond its words, either as a whole, for properties such as the speaker and emotion, or within it, for patterns such as stress and intonation. We e…",
+  "authors": [
+   "Linkai Peng",
+   "Baorian Nuchged",
+   "Yuyang Yao"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "2b452edc6e7c",
+  "title": "When Should Diffusion Language Models Reconsider Their Commitments?",
+  "url": "https://arxiv.org/abs/2611.11551",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-08T18:49:48+00:00",
+  "summary": "Masked Diffusion Models (MDMs) are well known for fast text generation via parallel decoding. However, independent parallel sampling can commit to inconsistent predictions, and less is known about how to selectively revise these early token commitments. In this work, we introduce $\\underline{\\mathrm{P}}$lanned $\\underline{\\mathrm{U}}$nmasking-and-$\\underline{\\mathrm{R}}$evision Joint $\\underline{\\mathrm{L}}$earning (PURL) for MDMs, a training-based framework that seamlessly unifies parallel generation with selective token revision. We derive a normalized joint transition whose likelihood fact…",
+  "authors": [
+   "Haoyang Zheng",
+   "Yidong Ouyang",
+   "Blake Jianhang Chen",
+   "Tian Tan",
+   "Ziqian Lin",
+   "Liqian Peng",
+   "Alec Go",
+   "Guang Lin"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "f0f410038b7d",
+  "title": "Probing Transformer Representations Layer by Layer, Module by Module",
+  "url": "https://arxiv.org/abs/2611.11531",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T18:16:49+00:00",
+  "summary": "Which representation should be probed in a transformer-based foundation model? Recent work shows that the standard practice of probing the final layer is often suboptimal, as intermediate layers can provide better features. Yet, representations are still largely studied along depth alone, treating each transformer block as an atomic unit. In this work, we analyze transformer representations layer by layer, module by module. Through more than 144,000 linear probing evaluations of vision foundation models (VFMs) and large language models (LLMs), we show that layer and module choices should be c…",
+  "authors": [
+   "Ambroise Odonnat",
+   "Theo Gnassounou",
+   "Laetitia Chapel",
+   "Romain Tavenard",
+   "Ievgen Redko"
+  ],
+  "tags": [
+   "evals",
+   "probing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "e70c50cb98c2",
+  "title": "Boundary Mass in Feature Space as a Label-Budget Diagnostic for Representations",
+  "url": "https://arxiv.org/abs/2611.11525",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T17:58:44+00:00",
+  "summary": "Low-label transfer is often decided by a practical question: after a representation looks useful, how many labels are still needed to learn the downstream boundary? Transferability and probe-quality scores characterize global alignment, likelihood, margins, and calibration. Boundary-near target mass complements these diagnostics by measuring the ambiguous regions where scarce labels are most costly. We propose effective boundary complexity, a label-budget diagnostic for frozen representations and linear probes. It measures mass in a thin strip around the learned boundary and normalizes it by…",
+  "authors": [
+   "Siming Zhang",
+   "Zhehui Shen",
+   "Shijie Chen",
+   "Yansen Yu",
+   "Hang Yu"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
  },
  {
   "id": "48dc8896e3fc",
@@ -55,6 +445,68 @@
   "fetched_at": "2026-11-09T07:58:24+00:00"
  },
  {
+  "id": "a6732d9cad32",
+  "title": "RealEmbedBench: Benchmarking LLMs on Real-World Application-Layer Embedded Software Tasks",
+  "url": "https://arxiv.org/abs/2611.11469",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-08T16:05:31+00:00",
+  "summary": "Large language models (LLMs) perform well on general coding tasks, but their capabilities in application-layer embedded software development remain underexplored. Existing embedded benchmarks primarily focus on hardware-in-the-loop validation in simulated environments. We introduce RealEmbedBench, a benchmark of 5,142 samples covering three application-layer tasks: code generation and completion, state machine modeling and implementation, and cross-OS code translation. We evaluate six representative LLMs and find substantial performance differences across tasks and models. Project context, es…",
+  "authors": [
+   "Yujun Huang",
+   "Yuwei Zhang",
+   "Yi Zhou",
+   "Shanshan Wu",
+   "Xiang Chen",
+   "Lina Gong"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "507fb02f0018",
+  "title": "Decomposing Earth Embeddings with Sparse Autoencoders",
+  "url": "https://arxiv.org/abs/2611.11398",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T14:07:08+00:00",
+  "summary": "Earth observation foundation models produce global metre-resolution embeddings that underpin work across agriculture, ecology, hydrology, and beyond. Yet these embeddings are opaque: each dimension entangles unrelated physical concepts, which makes them difficult to interpret and their robustness hard to assess. Here, we propose sparse autoencoders (SAEs) as a principled way to decompose Earth embeddings into sparse, approximately monosemantic features over an overcomplete dictionary. Because LLM judges of interpretations do not transfer to satellite pixels, and spatial autocorrelation matter…",
+  "authors": [
+   "Vitus Benson",
+   "Fanny Yang",
+   "Markus Reichstein"
+  ],
+  "tags": [
+   "sae",
+   "superposition"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "f5e395bf872b",
+  "title": "Self-Supervised Collapse Prevention with Score-Based Entropy Maximization",
+  "url": "https://arxiv.org/abs/2611.11379",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T13:40:24+00:00",
+  "summary": "Diffusion models have demonstrated the effectiveness of score-based objectives for generative modeling, yet their potential for self-supervised representation learning remains underexplored. We introduce Entropy-Based Regularization (EBReg), a framework that uses latent score estimation to regularize the latent distribution during self-supervised training. EBReg jointly learns an encoder and a latent score model, and utilizes the learned score to provide a diversity-preserving signal that prevents representational collapse. Motivated by a mutual-information lower bound, we formulate the objec…",
+  "authors": [
+   "Adarsh Kappiyath",
+   "Silpa Vadakkeeveetil Sreelatha",
+   "Xiatian Zhu",
+   "Yann LeCun",
+   "Lu Yin",
+   "Amir Bar"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
   "id": "ce57cf7dbe46",
   "title": "Notes on Take-Off Speeds and RSI",
   "url": "https://www.alignmentforum.org/posts/ft9hzw82v7FRDKmpn/notes-on-take-off-speeds-and-rsi",
@@ -66,6 +518,259 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "5803f77e87cf",
+  "title": "TEAM: Topology-Aware, Semantic-Sensitive, General Transformer for Multimodal-Attributed Graphs",
+  "url": "https://arxiv.org/abs/2611.11189",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T07:07:19+00:00",
+  "summary": "Multimodal-Attributed Graphs (MAGs) organize heterogeneous data in graphs whose nodes are characterized by modalities such as text and images rather than traditional unimodal attributes. However, many representative MAG methods organize propagation around node-level states and topology-defined neighborhoods, which can obscure fine-grained modality contributions: a bounded neighborhood may contain semantically weak evidence, while compatible context need not be confined to it. To address both limitations, we propose TEAM, a modality-centric framework that constructs and encodes graph context w…",
+  "authors": [
+   "Yushuo Li",
+   "Xunkai Li",
+   "Zhengyu Wu",
+   "Ronghua Li",
+   "Guoren Wang"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "5e7d47206f67",
+  "title": "When gene summaries reveal the answers: Gene Ontology circularity in gene embedding benchmarks",
+  "url": "https://arxiv.org/abs/2611.11118",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T04:05:52+00:00",
+  "summary": "A gene summary can contain the very annotations used to evaluate an embedding of its text. The Alliance of Genome Resources converts Gene Ontology (GO) annotations into sentences, which NCBI Gene displays and GenePT includes in its input. These summaries covered 6,172 of 19,256 human protein-coding genes (32.1%), including 58% of genes with one to ten linked publications. We embedded the same corpus with and without the generated summaries and refitted a function-prediction probe on each version. Among genes with one to ten publications, removal reduced the reported per-gene area under the re…",
+  "authors": [
+   "Jiawei Wu",
+   "Huishu Wang",
+   "Junlin Chen",
+   "Hongyi Wang"
+  ],
+  "tags": [
+   "evals",
+   "probing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "eb3d6a8c8627",
+  "title": "SWEET: Mitigating Spurious Feature Reliance in LLM Reasoning via Weight Editing",
+  "url": "https://arxiv.org/abs/2611.10974",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T21:25:52+00:00",
+  "summary": "Reasoning in large language models can be disrupted by simple input perturbations (e.g. adding irrelevant distractors), suggesting reliance on spurious correlations. Identifying and suppressing the spurious features involved in long chain-of-thought reasoning remains challenging. We introduce Spurious-feature WEight EdiTing (SWEET), a training-free method that combines counterfactual interventions with mechanistic interpretability to identify and suppress spurious-features. SWEET extracts token- and sequence-level behavioral directions from activation contrasts between original problems and t…",
+  "authors": [
+   "Zhizhang Fu",
+   "Lucas Zhao",
+   "Michalis Korakakis",
+   "Mengru Ding",
+   "Lukasz Szpruch",
+   "Yue Zhang"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "925b9e6255f8",
+  "title": "Can small transformers learn the language of Coxeter groups?",
+  "url": "https://arxiv.org/abs/2611.10936",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T19:56:09+00:00",
+  "summary": "The field of mechanistic interpretability is well-suited to collaborative projects between mathematicians and AI researchers. This work describes one such project. We trained a small transformer to learn the language of the Coxeter group affine A2, best known as the symmetries of the tiling of the Euclidean plane by equilateral triangles. We then formulated and proved a word-theoretic conjecture about affine A2 after observing the attention patterns of the trained model.",
+  "authors": [
+   "J. Elisenda Grigsby",
+   "Yiyao Huang",
+   "Arushi Katyal",
+   "Ryan Lin",
+   "Pranav Ramakrishnan",
+   "Weiya Wang"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "0fc5d07a42e2",
+  "title": "Simple Test-Time Refinement for Plot-to-Code Generation via Visual-Code Diagnostics",
+  "url": "https://arxiv.org/abs/2611.10840",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-07T16:37:29+00:00",
+  "summary": "Plot-to-code generation has been greatly advanced by recent multimodal large language models (MLLMs). However, existing studies mainly focus on one-pass generation or iterative sampling guided by verifier-based filtering, which does not align with the typical human programming workflow of generate first, then iteratively error-location and fix. This naturally motivates a test-time refinement paradigm for plot-to-code generation. In this work, we present the first study on plot-to-code generation via iterative test-time refinement. We propose a Visual-Code Diagnostics framework that enables re…",
+  "authors": [
+   "Peiming Guo",
+   "Jinpeng Huang",
+   "Yangbin Sun",
+   "Gaoxiong Cao",
+   "Ensheng Shi",
+   "Yuchi Ma",
+   "Yu Zhang",
+   "Meishan Zhang"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "53dad22649da",
+  "title": "Patch correctness in automated program repair: A five-dimensional evidence framework and cross-benchmark audit from classical repair to coding agents",
+  "url": "https://arxiv.org/abs/2611.10837",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-07T16:30:54+00:00",
+  "summary": "Tests guide automated program repair and determine which candidate patches are reported as successful. Repository-level coding agents extend this feedback loop by generating tests and revising code after observing execution results. This technical report introduces a five-dimensional evidence profile and reporting protocol to audit how test observations support patch-correctness claims across classical repair systems and coding agents. We assemble an audit dataset of 39 benchmark and evaluation artifacts: 32 primary empirical studies, one institutional technical audit, and six prior taxonomic…",
+  "authors": [
+   "Shuai Wu",
+   "Yanna Feng",
+   "Yufang Li",
+   "Xue Li",
+   "Zhijun Wang",
+   "Bolun Liu",
+   "Weilin Cai"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "2ff2c2862038",
+  "title": "How reliable is an embedding of the seabed? Repeat-look measurement of frozen encoders on synthetic aperture sonar",
+  "url": "https://arxiv.org/abs/2611.10770",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T14:59:15+00:00",
+  "summary": "Pretrained encoders from self-supervised representation learning are increasingly applied to sonar imagery of the seafloor, where they are evaluated with protocols that take one embedding per target. A target patch of seabed, by contrast, is re-imaged from an alternate look on overlapping survey passes, so each embedding is one measurement of that target. Standard protocols cannot say how consistent those measurements are, or how much of their spread belongs to the patch and how much to the acquisition geometry. We treat this as a measurement-reliability problem. Using a synthetic-aperture so…",
+  "authors": [
+   "Harold Horsley",
+   "Oscar Pizarro",
+   "Hayat Rajani",
+   "Morten Omholt Alver"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "a34eebd84a00",
+  "title": "ConwayNet: Interpretability, Activation Coherence, and Noise Resilience via a Game-of-Life-Inspired Lateral Inhibition in Artificial Neural Networks",
+  "url": "https://arxiv.org/abs/2611.10760",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T14:30:51+00:00",
+  "summary": "Deep neural networks achieve universal function approximation by stacking interconnected nonlinearities, but as a consequence they are sensitive to noise and resist mechanistic interpretation. In contrast, the local update rules of cellular automata, such as Conway's Game of Life, give rise to not merely interpretable but programmable dynamics. We explore a bridge between these worlds: a lateral inhibition in neural networks based on continuous Game-of-Life rules that derives inhibitory and excitatory responses from the layer input and blends them into the activation map in a state-conditione…",
+  "authors": [
+   "Yair Cohen",
+   "Scott M. Gilmore"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "7acab801c82c",
+  "title": "Seeing Isn't Enough: Unlocking Visual Reasoning by Bridging the Reasoning-Access Gap with TIGER",
+  "url": "https://arxiv.org/abs/2611.10552",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T07:41:50+00:00",
+  "summary": "Multimodal Large Language Models (MLLMs) inherit strong textual reasoning capabilities from their language backbones and text pretraining, but often fail to apply the same level of competency to visual inputs. We show that this degradation cannot be attributed to only perception failures, by evaluating models on semantically-equivalent text and rendered-text image inputs: models can accurately read text in the images and recover near-text performance when provided their own transcriptions, but just cannot reason well on the images directly. We characterize this discrepancy as a modality reaso…",
+  "authors": [
+   "Gregory Kang Ruey Lau",
+   "Minh Huynh Nguyen",
+   "Bryan Kian Hsiang Low"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "d2dbeb06af2a",
+  "title": "Action Transfer Across Character Body Plans in Latent-Action World Models: An Empirical Study of Animated Characters",
+  "url": "https://arxiv.org/abs/2611.10523",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T06:47:48+00:00",
+  "summary": "Latent-action world models learn actions from video without labels, and recent methods aim to share these actions across bodies. Transfer between 2D characters with different body structures remains underexplored. In this paper, we study whether an action learned from one character can make a character with a different body perform the same action. A cat, a blob and a human can all jump, but each moves its body in its own way. The usual transfer gain mixes body motion with screen movement and can assign a perfect score to a model that ignores its action. To address this, we introduce a transf…",
+  "authors": [
+   "Amarnath R"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "9ede891953ef",
+  "title": "Learning a Unified Cross-Model Semantic Dictionary via Gated Bottleneck Sparse Autoencoders",
+  "url": "https://arxiv.org/abs/2611.10503",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T06:11:39+00:00",
+  "summary": "Foundation models pretrained on similar data distributions tend to learn overlapping semantic structure, but their representations are distinct due to different model architecture, pretraining objectives and protocols. This prevents unified interpretability and cross-model feature reuse. Existing approaches extract interpretable concepts from individual models and align these concepts in a shared coordinate system using cross-reconstruction objectives, but the alignment only applies to latent coordinates while the concepts themselves remain model-specific and cannot be shared or reused. This…",
+  "authors": [
+   "Jinchi Zhu",
+   "Tie Luo"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "02bc89351351",
+  "title": "Represented but Not Used: Value-Policy Dissociation in LLM Agents",
+  "url": "https://arxiv.org/abs/2611.10457",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-07T04:17:31+00:00",
+  "summary": "Large language model (LLM) agents need to choose actions whose consequences unfold over multiple future steps, yet poor decisions do not reveal whether the model failed to represent those consequences or failed to use them. Mechanistic interpretability has studied internal representations of environment state and plans, but sequential decision making also requires evaluating how candidate actions change future outcomes. Reinforcement learning formalizes this as action value. We study this computation in Qwen2.5-7B-Instruct, Qwen2.5-32B-Instruct, and GPT-OSS-20B across a partially observed Gri…",
+  "authors": [
+   "Yuzhang Luo",
+   "Mohamed Aghzal",
+   "Liangming Pan",
+   "Ziyu Yao"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "890f02202932",
+  "title": "Uncertainty, Not Concealment: A Mechanistic Reappraisal of Sycophancy in Vision-Language Models",
+  "url": "https://arxiv.org/abs/2611.10297",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-06T22:46:30+00:00",
+  "summary": "Vision-language models (VLMs) in medical retrieval-augmented generation must be able to say when a retrieved report contradicts the X-ray, so understanding whether they can detect such conflicts is important for safe deployment. The sycophancy mask hypothesis holds that these models internally detect conflicts but refuse to report them, concealing a detected contradiction. We introduce a three-part diagnostic that separates concealment from uncertainty: representation probing, activation steering, and two-way forced choice. Across four instruction-tuned VLMs on chest X-rays, we confirm behavi…",
+  "authors": [
+   "Mohamed I. Eldagla",
+   "Zeyad H. ElShafei",
+   "Ahmed M. Anter"
+  ],
+  "tags": [
+   "probing",
+   "steering"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
  },
  {
   "id": "e05034179347",
@@ -309,6 +1014,27 @@
   "fetched_at": "2026-11-09T07:58:24+00:00"
  },
  {
+  "id": "325c2b6fa8ac",
+  "title": "From Delegation to Action Approval: An Exploratory Study of Developers' Practices in Collaborating with AI Coding Agents",
+  "url": "https://arxiv.org/abs/2611.10058",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-06T03:07:08+00:00",
+  "summary": "Developers now collaborate with AI coding agents that write code and take actions on their behalf. Beyond reviewing this code, developers decide what to delegate and which agent actions to approve. Some of these actions, such as running shell commands or reading files, can have effects that never appear in the resulting code. How developers make these decisions and how much effort this requires are not well understood. To better understand this collaboration, we surveyed 203 developers who use AI coding agents. We found that careful code review does not necessarily extend to action approval:…",
+  "authors": [
+   "Yinan Wu",
+   "Dominik Wermke",
+   "Ze Shi Li",
+   "Kathryn Thomasset Stolee",
+   "Bowen Xu"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
   "id": "5eacc277de25",
   "title": "SteerGR: Steering Generative Recommendation via Sparse Autoencoders for Controllable Game Discovery",
   "url": "https://arxiv.org/abs/2611.08790",
@@ -332,6 +1058,45 @@
    "steering"
   ],
   "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "4707aecf960e",
+  "title": "Language Defaults Before Content: A Causal Layer Map of Multilingual Generation",
+  "url": "https://arxiv.org/abs/2611.12538",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-05T22:09:03+00:00",
+  "summary": "Multilingual generation requires large language models (LLMs) to determine both what to say and in what language to say it, yet these two commitments are difficult to disentangle from model outputs alone. We use translation as a controlled probe: for multi-parallel segments that a model translates well in one language direction but poorly in another, content is held fixed while language varies. Using activation patching, we write residual-stream states from successful runs into failing ones and compare content-matched states with content-independent controls, allowing us to trace content-spec…",
+  "authors": [
+   "Shenbin Qian",
+   "Yves Scherrer"
+  ],
+  "tags": [
+   "patching",
+   "probing"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "a144563512ca",
+  "title": "Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training",
+  "url": "https://arxiv.org/abs/2611.10045",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-05T21:56:29+00:00",
+  "summary": "AI sycophancy, the tendency of large language models (LLMs) to flatter users and affirm their beliefs, can undermine accuracy and contribute to misinformation, dependence, and overconfidence. Although prior work has benchmarked sycophancy in released models and proposed mitigations, its origins during training remain poorly understood. Preference alignment methods such as RLHF and DPO are often blamed, but their effects are rarely compared with earlier training stages. We investigate sycophancy across the training pipelines of three model families and three benchmarks. We find that sycophancy…",
+  "authors": [
+   "Chao Peter Yang",
+   "Catherine Zehr",
+   "Pranav Bijith",
+   "Brandon Fain"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-10T08:26:04+00:00"
  },
  {
   "id": "8e332e1e45e3",
