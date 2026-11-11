@@ -1,5 +1,272 @@
 [
  {
+  "id": "dc677be26cbb",
+  "title": "Delaying Internal Deployments Until After X Days of Safety Testing",
+  "url": "https://www.alignmentforum.org/posts/XNLhpWgzhF8GYZ4Er/delaying-internal-deployments-until-after-x-days-of-safety",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-11T00:18:16+00:00",
+  "summary": "This post reflects my own takes, and not that of my employer's. This is a simple idea: before a new model can be deployed internally, you must first test it for a minimum, fixed period. You can adjust various axes of this proposal: Duration of the wait: in calendar time, or until you fulfill some condition. What it blocks: external deployment, internal deployment, or the training of future checkpoints. When the fixed period starts: from the first checkpoint, the final checkpoint, or any checkpoint that is “sufficiently similar / representative” to the one that is ultimately deployed. One conc…",
+  "authors": [],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "c1fbfe2e3fcb",
+  "title": "llm-gemini 0.36",
+  "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-10T20:09:44+00:00",
+  "summary": "Release: llm-gemini 0.36 Gemini 4 Carbon was announced two weeks ago for \"a subset of cyber defenders\", but today it's available to everyone else . This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet 5.5 prices) but scheduled to double in price to $4/$20 on December 1st (same as Opus 5.5). Here are three pelicans for the low, medium and high thinking efforts (it defaults to medium). This is the pelican I got for high: Gemini pelicans have all been great for a while now, so I also tested it out using Google's Antigr…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "ea61eec504dd",
+  "title": "Mechanistic Interpretability Needs a Logic of Inference",
+  "url": "https://arxiv.org/abs/2611.14483",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-10T18:45:07+00:00",
+  "summary": "Neural networks are increasingly studied not merely as predictive systems, but as complex systems whose internal computations are themselves objects of scientific inquiry. Recent progress in mechanistic interpretability (MI) has made it possible to identify neurons, features, circuits, population structures, and dynamical patterns associated with model behavior. As these tools improve, attention is shifting from what can be observed inside a model to how those observations support mechanistic explanations. We examine the parallel efforts of neuroscience and MI to address this question and ide…",
+  "authors": [
+   "Zhimin Hu",
+   "Chen Jiang",
+   "Hanbo Xie",
+   "N. Apurva Ratan Murty",
+   "Sashank Varma"
+  ],
+  "tags": [
+   "circuits"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "e700096f78e0",
+  "title": "EngineAgent: Agentizing On-Device LLM Inference Engines with Inference Stack Hierarchy Awareness and Hardware Abilities",
+  "url": "https://arxiv.org/abs/2611.14356",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-10T17:16:47+00:00",
+  "summary": "Rapidly evolving LLM architectures and heterogeneous mobile hardware make supporting new models in on-device inference engines a recurring and costly system challenge. Each model may require coordinated changes across conversion, graph construction, operators, and hardware backends. Existing coding agents often miss these cross-layer dependencies and struggle to diagnose failures across host--device execution paths. We present EngineAgent, an agentic system for automating on-device LLM model enablement. Its key insight is to separate reusable engine and hardware knowledge from model-specific…",
+  "authors": [
+   "Zhengxiang Huang",
+   "Yujie Sun",
+   "Shengheng Chen",
+   "Zhaode Wang",
+   "Chaoyue Niu",
+   "Zeyu Zhao",
+   "Chengfei Lv",
+   "Fan Wu"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "13ac1f50918f",
+  "title": "Multimodal Abstention That Preserves Acquired Correct Answers",
+  "url": "https://arxiv.org/abs/2611.14311",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-10T16:41:49+00:00",
+  "summary": "Adding abstention to a task-adapted multimodal model can discard correct answers, including capabilities acquired during adaptation. We formulate abstention repair as maximizing correct abstention on unanswerable questions under a budget on newly lost correct answers. We propose ReFrain (Regression-Free Abstention), which combines a linear probe on first-token logits, threshold calibration on held-out image clusters, and a deterministic veto that replaces rejected outputs with the displayed \"none of the above\" option while preserving all other responses. \"Regression-free\" denotes zero loss on…",
+  "authors": [
+   "Jinyuan Zhang"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "d93819079092",
+  "title": "Q3.5 Timelines Update: Looks Like the Intelligence Explosion Will Happen in 2027 After All",
+  "url": "https://www.alignmentforum.org/posts/f9PajMLmBYzmWzyDv/q3-5-timelines-update-looks-like-the-intelligence-explosion",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-10T16:30:09+00:00",
+  "summary": "We want to get this post out quickly given the urgency of the topic. It’s possible that there are some errors in the modeling, but we think it’s very unlikely that they undermine the high level conclusions. We would love to be corrected on any mistakes we made. METR recently estimated that Anthropic is now making AI progress about twice as fast as its historical rate (they would not be surprised by anything from 1.3x to 3x), and guessed that “perhaps ≈80%” of the current acceleration is due to AI. If they’re right, that implies an AI-driven acceleration that is 5 months ahead of the AI 2027 s…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "cbe15bc380a4",
+  "title": "Representational Atoms in Neural Networks",
+  "url": "https://arxiv.org/abs/2611.14168",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-10T14:56:23+00:00",
+  "summary": "Understanding the internal representations of neural networks and characterizing their relationship with human conceptual structure are two critical questions for elucidating model mechanisms. The former reveals how learned knowledge is organized in internal representations, whereas the latter provides a basis for interpreting these representations through human conceptual structure. Here, we formally define fundamental representational units (FRUs) and establish two evaluation criteria: fidelity and stability. We further prove that threshold-activated sparse autoencoders (TSAEs) can identify…",
+  "authors": [
+   "Chenhui Hu",
+   "Pengfei Cao",
+   "Kang Liu",
+   "Jun Zhao"
+  ],
+  "tags": [
+   "evals",
+   "sae"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "8b899abbd7c8",
+  "title": "Fragments: November 10",
+  "url": "https://martinfowler.com/fragments/2026-11-10.html",
+  "source": "Martin Fowler",
+  "source_type": "blog",
+  "track": "engineering",
+  "published": "2026-11-10T14:30:00+00:00",
+  "summary": "It’s that time of the year when the November Thoughtworks Technology Radar appears. Again my colleagues have taken a sweep of the technologies that our teams have used in the field, and pulled together a summary of what’s popped up in the last six months. It’s been a busy half-year, one that again has been dominated by AI, and that’s reflected in the many AI blips on the radar. The mass of blips makes it hard to develop a coherent story around trends, but Chris Ford has done a fine job of the writing the accompanying article on macro trends . One team of passionate people experimenting with a…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "75af9aae359d",
+  "title": "Long-horizon agents and durable execution",
+  "url": "https://martinfowler.com/articles/durable-execution-agents.html",
+  "source": "Martin Fowler",
+  "source_type": "blog",
+  "track": "engineering",
+  "published": "2026-11-10T14:10:00+00:00",
+  "summary": "Long-horizon agents can automate complex tasks that take days or weeks to complete and involve multiple exchanges with people and external systems. Many things can go wrong during this time, including process crashes, network failures, and unanticipated real-world behavior. Kiran Prakash explains durable execution: an emerging pattern that helps agents recover from these failures and move towards their goal. In this programming model, the runtime keeps a record of the result of each step that interacts with the outside world so that, when a failure occurs, the program runs again, completed st…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "e928ea2fce83",
+  "title": "ProofCoder: Continuous Reasoning for Automated Software Verification",
+  "url": "https://arxiv.org/abs/2611.14106",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-10T13:59:49+00:00",
+  "summary": "Formal verification using proof assistants provides strong correctness guarantees for software, but constructing proofs remains labor-intensive and requires significant expertise. Recent approaches based on large language models (LLMs) have shown promise in automating proof synthesis. However, these approaches typically constrain the model to a rigid tactic-generation loop, in which the surrounding system controls premise retrieval, proof-state management, and backtracking. We introduce ProofCoder, an agentic proof-synthesis system for Rocq that approaches theorem proving from a coding-agent…",
+  "authors": [
+   "Martim Afonso",
+   "Inês Lynce",
+   "Maurizio Morisio",
+   "João F. Ferreira"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "f0b298ef0026",
+  "title": "Coding Agent Memory Post-Training II: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via On-Policy Distillation",
+  "url": "https://arxiv.org/abs/2611.14009",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-10T12:49:24+00:00",
+  "summary": "Language-model agents increasingly tackle long-horizon tasks whose interaction histories exceed the model's active context. They must therefore decide what to write down and what to read back, and when to do either. Recent work has begun to use on-policy distillation (OPD) to make memory control part of the policy, relying on memory tools and compaction protocols that lie outside either model's pre-training. However, this weakens the distillation on both sides: the teacher cannot give useful guidance on an interface it has never used, and the student samples too few meaningful memory actions…",
+  "authors": [
+   "Lirui Luo",
+   "Kelong Mao",
+   "Xinwei Yang",
+   "Rongqing Li",
+   "Luyu Chen",
+   "Kieran Wong",
+   "Yudong Guo",
+   "Xinrui Wang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "660368d6ac5b",
+  "title": "Mechanistic Interpretability of Deep Neural Networks: Methods, Frameworks, and Perspectives",
+  "url": "https://arxiv.org/abs/2611.13868",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-10T10:29:14+00:00",
+  "summary": "Deep neural networks underpin fundamental tasks in a wide range of signal domains, such as image, audio, and language processing. However, their internal mechanisms are notably difficult to interpret. Internal activations are structured signals transformed across layers that may encode a multitude of interdependent relationships, as individual neurons frequently represent multiple underlying concepts. Mechanistic interpretability aims to uncover the internal mechanisms of neural networks by identifying components whose activations are causally responsible for specific behaviors. In such a con…",
+  "authors": [
+   "Lorenzo Cirillo",
+   "Irene Amerini",
+   "Andrea Cavallaro"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "ddbc41fc1cf2",
+  "title": "Satellite Pretraining Is Not One Thing: A Matched-Pair Study of Generic and Earth-Observation Foundation Models for Scene Classification",
+  "url": "https://arxiv.org/abs/2611.13849",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-10T10:10:29+00:00",
+  "summary": "Geospatial foundation models are pretrained on satellite and aerial imagery, but whether such an encoder beats a strong generic one for few-label land-use/land-cover mapping remains unclear, as prior comparisons rarely isolate the pretraining data. We study five matched pairs of Earth-observation (EO) and generic encoders sharing objective and architecture (DINO/SatDINO, DINOv3/DINOv3-SAT, MAE/SatMAE, MAE/Scale-MAE, CLIP/RemoteCLIP) within a benchmark of 14 frozen encoders on five RGB scene-classification datasets (0.06-30 m GSD). With native preprocessing, we evaluate k-NN, linear and attent…",
+  "authors": [
+   "Sandarbh Agrawal",
+   "Rakshith Sathish",
+   "Ashwathi Nambiar"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "537796687706",
+  "title": "Deterministic, Reproducible Inference in Exact Integer Arithmetic, and Verifiable Distributed Inference as Its Consequence",
+  "url": "https://arxiv.org/abs/2611.13730",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-10T08:32:34+00:00",
+  "summary": "Optimized floating-point inference is not reproducible across environments: the same model on different hardware, compilers or thread counts can produce different bits. We present tritify, an open-source runtime that executes the forward pass of real models -- decoder-only language models, Mixture-of-Experts decoders, and the Segment Anything 2.1 image/video stack -- with the entire run-time path in exact integer arithmetic; floating point is confined to offline quantization and the float reference used for verification. We make three separate claims and verify each. (1) Cross-hardware reprod…",
+  "authors": [
+   "Sayed Amir Karim"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "d0944f477a34",
+  "title": "Do They Do as They Are Told? Investigating Coding Agents' Adherence to Explicit Instructions in Context Files",
+  "url": "https://arxiv.org/abs/2611.13709",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-10T08:01:51+00:00",
+  "summary": "Developers increasingly rely on agent context files (ACFs), persistent, project-scoped artifacts such as AGENTS.md, to steer the behavior of autonomous coding agents without renegotiating expectations at every interaction. Yet this governance mechanism rests on an untested assumption: that instructions written into an ACF are actually carried out, rather than ignored or loosely followed. Existing studies describe what ACFs contain, but not whether individual instructions are followed, leaving open which guidance can be trusted. We address this gap through an empirical study of real-world ACF…",
+  "authors": [
+   "Gianmario Voria",
+   "Yutaro Kashiwa",
+   "Gemma Catolino",
+   "Fabio Palomba"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
   "id": "fabe838d73f5",
   "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
   "url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
@@ -26,6 +293,26 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "5e58811dbf74",
+  "title": "Massive Activations Confound Sparse Autoencoders",
+  "url": "https://arxiv.org/abs/2611.13548",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-10T04:08:55+00:00",
+  "summary": "Sparse autoencoders (SAEs) are commonly evaluated by variance explained and ablation damage. We show how massive activations undermine both evaluations, and propose a correction. Massive activations cause up to 99.9% of activation variance to lie along the first principal component (PC1). Because the PC1 component has no unique sparse decomposition, each SAE run rebuilds it from a different set of features. These features dominate importance rankings: an average of 47 of the 50 most important features are unmatched in a separate run, compared with about 27 of a random 50. A dictionary can als…",
+  "authors": [
+   "Nathan Delisle",
+   "Chenhao Tan"
+  ],
+  "tags": [
+   "evals",
+   "patching",
+   "sae"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
  },
  {
   "id": "75546f2ae879",
@@ -69,6 +356,51 @@
   "fetched_at": "2026-11-10T08:26:04+00:00"
  },
  {
+  "id": "a26bef10376d",
+  "title": "SPARK: Semantic-preserving Prompt Mutation for Code Generation using Consensus-based Verification Framework",
+  "url": "https://arxiv.org/abs/2611.13401",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-10T00:29:00+00:00",
+  "summary": "Automated code generation with large language models (LLMs) has improved in recent years. With the lack of test cases in real-world usages, generated code is not automatically verifiable and often requires manual validation. Previous studies have leveraged consensus verification, where code solutions and corresponding test cases are generated and evaluated based on functional consistency. Building on this, SPARK incorporates semantic-preserving mutations to problem descriptions such as paraphrasing, grammatical adjustments, function renaming, and other alterations to enhance the robustness an…",
+  "authors": [
+   "Alireza Daghigh",
+   "Chung-Yu Wang",
+   "Luca Filippelli",
+   "Hamed Taherkhani",
+   "Hadi Hemmati",
+   "Hung Viet Pham"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "7936e5709c62",
+  "title": "The AI Era's Lines of Code? A Case Study on What an Engineer's Token Spend Measures",
+  "url": "https://arxiv.org/abs/2611.13396",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-10T00:17:26+00:00",
+  "summary": "Organizations use engineers' token spend to monitor AI adoption, set budgets, and measure productivity, but the metric's relationship with engineering output is unclear. We link five weeks of token usage in coding agents to the commits of 404 engineers at JetBrains, and analyze a company survey of 412 employees. We find that token spend varied mostly between engineers, and which engineers spent the most stayed largely the same over the five weeks. Among weeks with similar commit counts, the 90th percentile of spend was 39 to 240 times the 10th. Within an engineer, doubling spend was associate…",
+  "authors": [
+   "Shyam Agarwal",
+   "Olga Lvova",
+   "Agnia Sergeyuk",
+   "Anastasiia Serova",
+   "Timofey Bryksin",
+   "Thomas Zimmermann",
+   "Bogdan Vasilescu"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
   "id": "c93c64172e07",
   "title": "llm-anthropic 0.31",
   "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
@@ -98,6 +430,100 @@
    "claude-code"
   ],
   "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "f1f493aee5db",
+  "title": "PegasusAI Studio: Legible Cyberinfrastructure and Accountable AI Agents for Scientific Workflows",
+  "url": "https://arxiv.org/abs/2611.13309",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T22:22:25+00:00",
+  "summary": "AI coding agents can now construct scientific workflows, but operating them on shared cyberinfrastructure (CI) raises problems that code generation does not solve. Agents need current knowledge of the workflow system and its execution sites and access to the runtime state of distributed executions, while facilities need to attribute every agent action to a user and bound it by that user's privileges. We present PegasusAI Studio, an AI-assisted science gateway built on the Pegasus and HTCondor stack. Studio makes CI legible to agents by projecting one facility-curated knowledge base into the n…",
+  "authors": [
+   "Komal Thareja",
+   "Mats Rynge",
+   "Berent Aldikacti",
+   "Angelina Ju",
+   "Ian Lumsden",
+   "Anirban Mandal",
+   "Rajiv Mayani",
+   "Kin Wai Ng"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "33512b9a0d6a",
+  "title": "Project Progress Desk: Know Where All Your Claude Code and Codex Projects Stand at a Glance",
+  "url": "https://arxiv.org/abs/2611.13287",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T21:53:26+00:00",
+  "summary": "Codex and Claude Code let developers work on many projects in parallel, but keeping track of them still means switching between chats, terminal sessions and providers. We present Project Progress Desk, a local desktop interface that brings overall progress, blockers and pending decisions into one view. Users can see which projects need attention, inspect what remains, and compare earlier approaches before choosing how to continue. Agent receipts link reported outcomes to each project's weighted acceptance checklist; the overview distinguishes receipt-supported progress from dated estimates. W…",
+  "authors": [
+   "Wanghao Ye",
+   "Yiting Wang",
+   "Shwai He",
+   "Guoheng Sun",
+   "Ziyao Wang",
+   "Yexiao He",
+   "Zheyu Shen",
+   "Zhaoyi Liu"
+  ],
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "ee5c244e19b2",
+  "title": "ExpertCrowd-SWE: Measuring Frontier Coding Agents on Expert-Authored Engineering Tasks in Unfamiliar Codebases",
+  "url": "https://arxiv.org/abs/2611.13246",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T21:20:57+00:00",
+  "summary": "ExpertCrowd-SWE (EC-SWE) is a benchmark of 100 expert-authored, multi-file software engineering tasks for evaluating autonomous coding agents in large, unfamiliar codebases. Each task is a change request written by a practising engineer against a pinned commit of a real repository, paired with a sealed reference solution and a task-specific grader whose weighted, mostly executable criteria award partial credit; must-pass blockers and pass/fail gates encode what a maintainer would refuse to merge. The tasks span 87 open-source projects and 11 languages. The median ticket is 148 words, while th…",
+  "authors": [
+   "Josip Vrdoljak",
+   "Akash Singh",
+   "Bas Steunebrink",
+   "Alex Yarotsky",
+   "John Lorenzo",
+   "Achille Nicoletti",
+   "Sam Pigott"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "8c1fa5a8b9e4",
+  "title": "FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification",
+  "url": "https://arxiv.org/abs/2611.13241",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T21:11:29+00:00",
+  "summary": "LLM-based coding agents such as Claude Code can resolve real-world repository issues, but their iterative interaction loop can be expensive. Existing approaches reduce this cost primarily by limiting, compressing, or selectively avoiding information and actions within the repair process. We investigate a complementary question: Can an agent reason about a repair at an abstract program level, rather than repeatedly operating over raw source code, to reduce both the exploration needed to identify a repair and the repeated checking needed to verify it afterward? We present FlowPlan, an abstracti…",
+  "authors": [
+   "Melika Sepidband",
+   "Jiho Shin",
+   "Song Wang",
+   "Hadi Hemmati"
+  ],
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
  },
  {
   "id": "13932435604d",
@@ -246,6 +672,27 @@
    "evals"
   ],
   "fetched_at": "2026-11-10T08:26:04+00:00"
+ },
+ {
+  "id": "7c1fdbc6eae7",
+  "title": "Repository-Context-Guided Image Understanding for Agentic Software Development",
+  "url": "https://arxiv.org/abs/2611.13026",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-09T08:33:52+00:00",
+  "summary": "Coding agents increasingly receive UI screenshots as part of bug reports, yet degraded image quality - caused by low resolution, compression artifacts, or small rendered text - can prevent them from identifying the relevant UI elements and source files. Vision-language models become less reliable as image quality deteriorates, while OCR-assisted approaches may propagate recognition errors from degraded inputs. Both approaches are limited when the visual evidence required for localization is no longer clearly observable in the query screenshot. We propose augmenting coding agents with reposito…",
+  "authors": [
+   "Fumiki Yohena",
+   "Toshiaki Sota",
+   "Shota Suzuki",
+   "Tomoko Okamoto",
+   "Michiaki Tatsubori"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
  },
  {
   "id": "bd19567f2378",
@@ -467,6 +914,27 @@
   "fetched_at": "2026-11-10T08:26:04+00:00"
  },
  {
+  "id": "acac66a92edd",
+  "title": "Linear Probes to Bayesian Manifolds: Geometry of Arithmetic in Large Language Models",
+  "url": "https://arxiv.org/abs/2611.12998",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T14:13:26+00:00",
+  "summary": "Linear probes are a standard method to study geometric structures, such as helices and circles, from the activations of large language models (LLMs), and such structure is often taken as evidence that the model computes with it. Probe accuracy alone cannot establish this, because it conflates four separate claims. These are (1) that the concept is decodable from the activations, (2) that they form a specific shape, (3) that the shape belongs to the probed concept rather than to a related concept the model also represents, and (4) that the output of the model depends on the shape. We call thes…",
+  "authors": [
+   "Anshul Kumar",
+   "Neha Prasad",
+   "Manoj Kumar",
+   "Barnabás Póczos",
+   "Deeksha Varshney"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
   "id": "507fb02f0018",
   "title": "Decomposing Earth Embeddings with Sparse Autoencoders",
   "url": "https://arxiv.org/abs/2611.11398",
@@ -518,6 +986,24 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "0253f3e33a67",
+  "title": "Multimodal Graph Learning: A Survey of Models, Benchmarks, and Frontiers",
+  "url": "https://arxiv.org/abs/2611.12990",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-08T10:29:16+00:00",
+  "summary": "Multimodal attributed graphs (MAGs), in which nodes carry text, images, and other modalities while edges encode relations among entities, underlie e-commerce, social media, content platforms, and creative applications. Learning on MAGs has developed along two complementary lines: graph-centric methods redesign how modalities are fused, propagated, and connected within message passing, while foundation-model-centric methods pretrain transferable multimodal graph encoders or bring graph context into multimodal large language models for prediction and generation. In parallel, several benchmarks…",
+  "authors": [
+   "Rui Xue",
+   "Tianfu Wu"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
  },
  {
   "id": "5803f77e87cf",
@@ -890,6 +1376,24 @@
    "agents"
   ],
   "fetched_at": "2026-11-09T07:58:24+00:00"
+ },
+ {
+  "id": "541a6d047468",
+  "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+  "url": "https://arxiv.org/abs/2611.12935",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-06T11:33:35+00:00",
+  "summary": "Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes. We introduce TopicScope, a framework for training causal topic classifiers on SAE features that assign a topic to every token, so that the label can change partway through a response. We train three detector architectures on synthetic multi-topic conversations covering seven topics. Across Gemma-3 1B and 4B, monitors trained on features extract…",
+  "authors": [
+   "Rishikesh Mallagundla",
+   "Pranav Patel"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-11T07:44:53+00:00"
  },
  {
   "id": "ba0d276f17df",
