@@ -1,5 +1,130 @@
 [
  {
+  "id": "df0f6b524117",
+  "title": "TransformerLensOrg/TransformerLens v4.4.0",
+  "url": "https://github.com/TransformerLensOrg/TransformerLens/releases/tag/v4.4.0",
+  "source": "TransformerLensOrg/TransformerLens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-11T22:30:02+00:00",
+  "summary": "## What's Changed * fix(moe): avoid incorrect Granite grouped expert execution on MPS by @janmenjayap in https://github.com/TransformerLensOrg/TransformerLens/pull/1887 * Fork the CUDA RNG explicitly in deterministic_rng by @YHC66 in https://github.com/TransformerLensOrg/TransformerLens/pull/1943 * fix: honor in-place edits on native normalization hooks by @emerardd in https://github.com/TransformerLensOrg/TransformerLens/pull/1947 * Updating internal-testing Qwen 3.5 model by @jlarson4 in https://github.com/TransformerLensOrg/TransformerLens/pull/1950 * Whisper adapter by @dipo101 in https:/…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "9113d4e328ba",
+  "title": "jbloomAus/SAELens v6.55.4",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.4",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-11T22:30:00+00:00",
+  "summary": "# v6.55.4 (2026-11-11) ## Fix * fix: return SAETransformerBridge from boot_native and boot_tl_legacy (#787) ([`d3025c5`](https://github.com/decoderesearch/SAELens/commit/d3025c5f0966feafa341421b707273a5dbeb35ad))",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "c5c81f534358",
+  "title": "jbloomAus/SAELens v6.55.3",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.3",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-11T21:51:41+00:00",
+  "summary": "# v6.55.3 (2026-11-11) ## Fix * fix: keep hooks working after an SAE is removed from SAETransformerBridge (#786) ([`03e8b8c`](https://github.com/decoderesearch/SAELens/commit/03e8b8c37ad09fb0becff8b125d35e8cda2e4125))",
+  "authors": [],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "69e880bca1ba",
+  "title": "jbloomAus/SAELens v6.55.2",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.2",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-11T21:34:42+00:00",
+  "summary": "# v6.55.2 (2026-11-11) ## Fix * fix: accept weight processing kwargs in SAETransformerBridge.boot_transformers (#785) ([`361d141`](https://github.com/decoderesearch/SAELens/commit/361d141fdd03fd56b6a1e3e358880e774da70184))",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "02f705171aa9",
+  "title": "aws-emulator",
+  "url": "https://simonwillison.net/2026/Nov/11/aws-emulator/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-11T21:18:30+00:00",
+  "summary": "aws-emulator Finally, an official emulator from AWS to run tests against a local clone of their many different services without having to provision a paid API key to do so. It's written in Rust by a huge swarm of agents - 29,684 commits in the first three weeks of the project. Swaminathan (Swami) Sivasubramanian wrote about how it came to be in a guest post on Werner Vogels' blog. It currently requires Docker to run on macOS or Windows. I'm hoping they fix that in the future - it would be great if you could download a single binary and use that as part of a standard test suite in other langua…",
+  "authors": [],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "d7c77ea971b9",
+  "title": "llm 0.37.2",
+  "url": "https://simonwillison.net/2026/Nov/11/llm/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-11T17:19:52+00:00",
+  "summary": "Release: llm 0.37.2 Fixes a security issue reported by Daniel de Araujo in GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w . LLM has a mechanism called extra-openai-models.yaml - now managed by the new-in-0.37 llm openai endpoint add command - for using LLM with OpenAI-compatible API endpoints from other providers. Daniel reported two ways this could accidentally send your configured OpenAI API key to one of those providers: if the key named by api_key_name had never been stored, or if a responses: true model was run with -o chat_completions 1 . Tags: projects , security , llm , releases",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "18d4d40cfb35",
+  "title": "Tests as data: ensuring AI-generated code does what we want",
+  "url": "https://martinfowler.com/articles/tests-as-data.html",
+  "source": "Martin Fowler",
+  "source_type": "blog",
+  "track": "engineering",
+  "published": "2026-11-11T15:17:00+00:00",
+  "summary": "Automated testing in the age of AI coding assistants is problematic: when AI agents write both production and test code, developers risk losing the assurance that automated tests protect against functional errors. Matteo Vaccari makes three claims: (1) when AI writes the code, developers become its customers; (2) therefore customer tests, not developer tests, become the primary contract between humans and AI; (3) moving that contract into test data rather than test code makes it easier to protect it from unexpected modifications by coding agents. All of this optimizes for human-readable tests…",
+  "authors": [],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "a19ce5d70afc",
+  "title": "Anthropic's IPO roadshow video",
+  "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-11T15:11:59+00:00",
+  "summary": "Anthropic's IPO roadshow video Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and serve Claude across AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs. I'm not sure why there's no official video transcript, but here's one that I extracted using MacWhisper. Highlights below: We train and serve Claude now across all four major chip families. That's only possible becau…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "42170f0b7e95",
+  "title": "How I'm thinking about different types of automated alignment",
+  "url": "https://www.alignmentforum.org/posts/NFkj9J2BBLSjNuH5G/how-i-m-thinking-about-different-types-of-automated",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-11T09:49:37+00:00",
+  "summary": "I used to think of \"automating alignment\" as a natural category. But when I tried to think through the strategic implications, I realised that it depends a lot on the type of work. I'm now thinking of it in three buckets: Empirical alignment research : design and execution of alignment-relevant experiments (for a given notion of what we’re aiming for) Conceptual alignment research: theoretical or judgement-driven work to improve our understanding of what we’re aiming for and how to achieve it (including how to measure it) Direct alignment work : making particular AI systems more aligned (incl…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
   "id": "dc677be26cbb",
   "title": "Delaying Internal Deployments Until After X Days of Safety Testing",
   "url": "https://www.alignmentforum.org/posts/XNLhpWgzhF8GYZ4Er/delaying-internal-deployments-until-after-x-days-of-safety",
