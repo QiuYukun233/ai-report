@@ -1,5 +1,334 @@
 [
  {
+  "id": "0a77842a138b",
+  "title": "jbloomAus/SAELens v6.55.5",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.5",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-13T00:38:16+00:00",
+  "summary": "# v6.55.5 (2026-11-13) ## Fix * fix: load old TransformerLens-format models with TransformerBridge (#789) ([`bc9f655`](https://github.com/decoderesearch/SAELens/commit/bc9f6550bbcf6e892cf5c90f378b0c4961ed7456))",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "8d30336b14bf",
+  "title": "llm-gemini 0.37",
+  "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-12T22:55:19+00:00",
+  "summary": "Release: llm-gemini 0.37 Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing really confusing. Here's the pricing scheme: Model Dates Input ($/M) Cached input Output Gemini 4 Carbon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20 $20.00 Gemini 4 Argon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20 $20.00 Gemini 4 Hydrogen $1.50 $0.075 $7.50 Carbon and Argon are the same price , and both are schedul…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "1e1f91e95e92",
+  "title": "anthropics/claude-code v2.1.323",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-12T22:12:13+00:00",
+  "summary": "## What's changed - Added Code Mode, an experimental opt-in in which Claude writes JavaScript to call its tools; see https://code.claude.com/docs/en/code-mode to turn it on, or to turn it off for an organization - Added `engines[\"claude-code\"]` to `plugin.json`: plugins outside their stated Claude Code version range are not installed, updated or loaded, and install and update pick the newest version that fits - Added type checking of a plugin's TypeScript hooks module to `claude plugin validate`; each finding is a warning, and `--strict` fails on it - Added to `claude plugin validate` the `$`…",
+  "authors": [],
+  "tags": [
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "0e01cb2c129d",
+  "title": "CoReMem: Cost-Internalizing Memory for Successive Coding Tasks with Prospective Valuation",
+  "url": "https://arxiv.org/abs/2611.17316",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-12T18:58:22+00:00",
+  "summary": "Coding agents tackle successive tasks on an evolving repository, carrying forward edits and writing memory before the next task is known. Selecting memory for unknown next tasks requires balancing future usefulness against the costs of writing and reading it. The actor must also decide when acting on available memory saves effort as the task unfolds. We introduce Coding-Repository Memory (CoReMem), a cost-internalizing framework that guides memory design and actor adaptation through measured memory value on the next task. Prospective segment valuation compares runs of the next task with and w…",
+  "authors": [
+   "Peiwen Li",
+   "Harshit Verma",
+   "Sophia Zhou",
+   "Haiwen Wang",
+   "Ngoc Bui",
+   "Heng Chang",
+   "Fei Fei",
+   "David van Dijk"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "a6b7063e4cab",
+  "title": "Where LLM Agents Get Stuck Debugging Databases: Access More Than Reasoning",
+  "url": "https://arxiv.org/abs/2611.17304",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-12T18:56:22+00:00",
+  "summary": "Large language model (LLM) coding agents are increasingly asked not only to write code but to debug running systems from live runtime data. We report a field observation of one such agent (Claude Code) as it diagnosed eight database incidents in a production message-dispatch engine. In every incident whose root cause depended on runtime concurrency, the agent announced a cause, shipped a fix, and later walked it back, and each wrong guess cost a deploy-and-observe cycle. Mapping each incident to what the agent lacked, we find that access to production state was the most pervasive bottleneck.…",
+  "authors": [
+   "Gustavo Pinto"
+  ],
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "5ff3cb778b9a",
+  "title": "astral-sh/ruff 0.17.5",
+  "url": "https://github.com/astral-sh/ruff/releases/tag/0.17.5",
+  "source": "astral-sh/ruff",
+  "source_type": "release",
+  "track": "engineering",
+  "published": "2026-11-12T17:55:55+00:00",
+  "summary": "## Release Notes Released on 2026-11-12. ### Preview features - Redirect renamed rules ([#30081](https://github.com/astral-sh/ruff/pull/30081)) - \\[`flake8-async`\\] Implement `pytest-raises-exception-group` (`ASYNC401`) ([#28772](https://github.com/astral-sh/ruff/pull/28772)) - \\[`flake8-logging-format`\\] Mark `G004` fix as unsafe ([#30087](https://github.com/astral-sh/ruff/pull/30087)) - \\[`pylint`\\] Implement `no-method-argument` (`PLE0211`) ([#29748](https://github.com/astral-sh/ruff/pull/29748)) - \\[`refurb`\\] Do not offer fix when `write` is nested in an expression (`FURB103`) ([#29789](…",
+  "authors": [],
+  "tags": [
+   "python-tooling",
+   "testing"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "8a25da7ad508",
+  "title": "Paper-Faithful Federated Learning: Scientific Checks for Practitioner and Agent Development",
+  "url": "https://arxiv.org/abs/2611.17129",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-12T17:22:17+00:00",
+  "summary": "Federated learning experiments can produce reasonable-looking results even when the experiment implementation differs from the intended experimental protocol. Small errors in configuration, data partitioning, aggregation, randomness, evaluation, or checkpoint recovery may therefore affect a comparison without causing the program to fail. We present FedBrew, a research codebase for controlled and reproducible federated learning experiments. Its focus is controlled simulation with checks of specified conditions of the intended experimental protocol. FedBrew uses configuration checks, identifiab…",
+  "authors": [
+   "Ali Dadras",
+   "Alp Yurtsever"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "f50b19d36bc8",
+  "title": "astral-sh/uv 0.13.8",
+  "url": "https://github.com/astral-sh/uv/releases/tag/0.13.8",
+  "source": "astral-sh/uv",
+  "source_type": "release",
+  "track": "engineering",
+  "published": "2026-11-12T17:03:07+00:00",
+  "summary": "## Release Notes Released on 2026-11-12. ### Python - Add CPython 3.16.0a2 ([#23211](https://github.com/astral-sh/uv/pull/23211)) - Update managed CPython 3.11, 3.12, 3.13, 3.14, and 3.15 builds to include pip 26.3, zlib 1.4, and Expat 2.10.0 ([#23211](https://github.com/astral-sh/uv/pull/23211)) - Update GraalPy 3.13.0 to build 25.5.5 ([#23088](https://github.com/astral-sh/uv/pull/23088)) ### Preview features - Install wheel variants from local paths, direct URLs, and Git repositories in platform-specific resolutions ([#22720](https://github.com/astral-sh/uv/pull/22720), [#22722](https://git…",
+  "authors": [],
+  "tags": [
+   "python-tooling"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "f24294478626",
+  "title": "Temporal Regularized Learning: Self-Supervised Learning Local in Space and Time",
+  "url": "https://arxiv.org/abs/2611.17019",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-12T16:09:20+00:00",
+  "summary": "Layer-local self-supervised objectives remove the backward pass between layers, but almost all still compute their loss over a batch of samples and are therefore local in space but not in time. We introduce Temporal Regularized Learning (TeReL), a spatially and temporally local learning rule for self-supervised representation learning from sequential input streams. The key idea is to instantiate a VICReg-style objective with temporally adjacent positives and non-differentiated running population statistics, yielding a per-neuron online loss with bounded state. The objective is a soft form of…",
+  "authors": [
+   "Davide Wiest"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "1cc122a11d0f",
+  "title": "Bliki: Generated Glossary",
+  "url": "https://martinfowler.com/bliki/GeneratedGlossary.html",
+  "source": "Martin Fowler",
+  "source_type": "blog",
+  "track": "engineering",
+  "published": "2026-11-12T14:15:00+00:00",
+  "summary": "When we use LLMs in a specialized domain, such as the operations of any reasonably-large organization, there is a lot of specialized vocabulary. Such words and specialized meanings will be foreign to an LLM because they aren't in its training set, making it harder for the LLM to be effective when doing tasks in that domain. One technique to aid this is to use an LLM to generate a glossary of the terminology in that domain, and make this glossary available for any LLMs doing work in those circumstances. The sources for the LLM can be any material within the organization concerned such as docum…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "c35b059aebf2",
+  "title": "Detection Is Not Early Warning: Evaluating Token-Level Alarms on Language Model Failures",
+  "url": "https://arxiv.org/abs/2611.16803",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-12T13:43:19+00:00",
+  "summary": "Many failures of language models begin at a specific token, the onset. A monitor that reads the model during generation can classify the finished response, detect the failure once it is under way, or warn before it begins, and only a warning leaves time to stop or steer the generation. Monitors are usually evaluated with response-level metrics such as AUROC, which ignore when the monitor fires. We introduce PREWARN, an evaluation protocol for any failure with an annotated onset. It calibrates each monitor's threshold on validation data to an error rate chosen for the application, runs the mon…",
+  "authors": [
+   "Marco De Negri",
+   "Luca Sartori",
+   "Lorenzo Baggi",
+   "Moritz Reihs",
+   "Eduard Frank Ďurech",
+   "Mennatallah El-Assady",
+   "Valentina Pyatkin",
+   "Anna Hedström"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "e7f2437cd9ef",
+  "title": "Do the Details Help the Whole? One-Way Transfer from Person Actions to Group Intent in VLMs on JRDB-Social",
+  "url": "https://arxiv.org/abs/2611.16581",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-12T10:14:07+00:00",
+  "summary": "Social scene datasets label people at two levels: what each person is doing and what the group is there for. Training on both levels at once is often assumed to help each of them. We test this assumption for vision-language models (VLMs) on JRDB-Social, treating person actions as the details and group intent as the whole. We fine-tune Qwen3.5 4B under eight training arms with three seeds, repeat the core arms on Qwen3.5 9B and Qwen3-VL 4B, and judge every arm with a verdict rule fixed before testing. Writing each member's actions before the intent raises intent macro-F1 from 30.1 to 31.0, and…",
+  "authors": [
+   "Chengguang Gan",
+   "Zhixi Cai",
+   "Yunhao Liang",
+   "Hanjun Wei",
+   "QingHao Zhang",
+   "Shiwen Ni"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "1f2e25af4120",
+  "title": "Rasoi: Visual Diffs for Evaluating Structural Changes Made by Coding Agents",
+  "url": "https://arxiv.org/abs/2611.16293",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-12T04:47:39+00:00",
+  "summary": "Coding agents let developers modify software rapidly through natural language. However, as agents take on larger changes, developers can lose track of how the codebase is evolving. These edits may look correct on the surface while restructuring the system in unexpected ways: duplicating logic, changing modules outside the requested scope, removing functionality developers meant to keep, or introducing architectural drift. We investigate how visual diffs can help developers understand and evaluate the structural changes that coding agents make. We present Rasoi, a design probe that maps how a…",
+  "authors": [
+   "Riya Sahni",
+   "Aryan Kaul",
+   "Anushka Bhatnagar",
+   "Xuanming Zhang",
+   "Vivian Liu",
+   "Reya Vir",
+   "Lydia B. Chilton"
+  ],
+  "tags": [
+   "agents",
+   "probing"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "332feabe8d93",
+  "title": "Eliciting and Mitigating Specification Satisficing in Coding Agents",
+  "url": "https://arxiv.org/abs/2611.16289",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-12T04:42:55+00:00",
+  "summary": "Coding agents often fail to meet all requirements in the task description. In some of these failures, the agent considers an implementation choice that meets a requirement, but later decides to commit to another one that does not meet the requirement for a reason it finds acceptable. We call this specification satisficing. It is challenging to identify and mitigate specification satisficing because the agent accepts such choices for its own reasons, and existing self-correction methods are biased toward them. We propose SatisFix, which guides a coding agent to report these choices and their r…",
+  "authors": [
+   "Ruixin Wang",
+   "Tianyi Zhang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "2350e5d835e7",
+  "title": "Guided Generation of Linux Kernel Semantic Patches with Small Local Language Models",
+  "url": "https://arxiv.org/abs/2611.16215",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-12T03:08:17+00:00",
+  "summary": "When a Linux kernel API changes, hundreds of drivers are converted by hand over months, and the earlier conversions are reviewed examples for the later ones. We ask whether small open language models running on a laptop can turn such examples into Coccinelle semantic patches, the rules kernel maintainers already use for tree-wide changes. We adapt guided code generation to this task: the training examples are decomposed by script into a tree of change variants, the model writes one small rule per variant under feedback from applying it to the examples, deterministic components repair SmPL syn…",
+  "authors": [
+   "Mohanned Ahmed"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "b910ac292a9c",
+  "title": "Data-Efficient LLM Safety Alignment Guided by Interpretable Features",
+  "url": "https://arxiv.org/abs/2611.16183",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-12T02:15:45+00:00",
+  "summary": "Existing large language models typically rely on massive fine-tuning datasets for safety alignment, which results in higher costs for safety alignment and often leads to the problem of over-refusal. We propose Less is Safer (LIS), a compact yet highly effective dataset for safety alignment, constructed through interpretable feature-guided selection and adversarial synthesis. Specifically, we leverage Sparse Autoencoder (SAE) activations to efficiently select prompts that cover diverse and interpretable safety features. Then, we employ a multi-agent adversarial synthesis framework to generate…",
+  "authors": [
+   "Hongyu Li",
+   "Zhan Yu",
+   "Zhe Zhao",
+   "Kimmo Yan",
+   "Xiong Kuang",
+   "Renfen Hu"
+  ],
+  "tags": [
+   "agents",
+   "sae"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "957154044598",
+  "title": "Robo-SWE: An Executable Issue-Resolution Dataset Mined from Robot Software Repositories",
+  "url": "https://arxiv.org/abs/2611.16116",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-11T23:51:27+00:00",
+  "summary": "Coding agents are evaluated mostly on general-purpose software, but domain-specific systems require domain-aware evaluation. Robot software is a particularly challenging case: Robot Operating System 2 (ROS 2) packages have their own build tools, simulators and learning frameworks are built on physics engines, and behavior that depends on timing and hardware is hard to test. We present Robo-SWE, a dataset of 236 executable issue-resolution tasks mined from merged pull requests in 28 public robotics repositories in four domains: ROS 2 systems, simulation and physics engines, robotics algorithm…",
+  "authors": [
+   "Vahid Haratian",
+   "Vahid Ansari",
+   "Mohammadhossein Malmir",
+   "Alois Knoll"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "6e1c05684056",
+  "title": "ADAPT: Agentic Diff-Aware Patch Testing for Pull Requests",
+  "url": "https://arxiv.org/abs/2611.16114",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-11T23:48:27+00:00",
+  "summary": "Modern software development relies on pull requests (PRs) that introduce small, targeted code changes. Once merged, these changes should be protected by focused tests that exercise the behavior the PR introduces, yet developers often submit PRs without such tests, leaving the new behavior unguarded against future regressions. Most test generation techniques target entire software units and optimize objectives such as code coverage rather than the behavior a change introduces, and prior diff-aware approaches have had limited success in capturing it. We propose ADAPT (Agentic Diff-Aware Patch T…",
+  "authors": [
+   "Vahid Haratian",
+   "Atakan Akar",
+   "Eray Tüzün"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
   "id": "df0f6b524117",
   "title": "TransformerLensOrg/TransformerLens v4.4.0",
   "url": "https://github.com/TransformerLensOrg/TransformerLens/releases/tag/v4.4.0",
@@ -70,6 +399,42 @@
   "fetched_at": "2026-11-12T08:19:48+00:00"
  },
  {
+  "id": "7ceca5cb62be",
+  "title": "DuoJEPA: Cross-Modal Translation Between Unaligned Self-Supervised Embedding Spaces",
+  "url": "https://arxiv.org/abs/2611.15968",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T20:10:52+00:00",
+  "summary": "Learning from paired modalities is commonly equated with aligning them: two encoders are trained until the embeddings of a pair coincide in a shared space. We study whether cross-modal retrieval and classification can instead be obtained while the two encoders' own embedding spaces remain directly unaligned. DuoJEPA trains one encoder per modality with the self-supervised LeJEPA objective and appends to each encoder a single transformer layer that translates its embedding into the other encoder's space, supervised by a contrastive objective computed entirely within that target space. No loss…",
+  "authors": [
+   "Mahmut S. Gokmen",
+   "Mitchell A. Klusty",
+   "Evan W. Damron",
+   "Caroline N. Leach",
+   "Samuel E. Armstrong",
+   "V. K. Cody Bumgardner"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "83d129a2bf67",
+  "title": "Honesty Is a Race: Predicting When Verifiable-Reward RL Teaches a Model to Bluff",
+  "url": "https://arxiv.org/abs/2611.15779",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T17:54:41+00:00",
+  "summary": "Two rewards with the same expected payoff at the start of training can end a reinforcement-learning run in opposite places, with an honest model or one that bluffs. We study rewards that pay $b$ for a verdict that a checker cannot verify (\"this program is correct\") and $r$ for a certificate that it accepts (an input revealing a bug). To first order, a GRPO step makes the model more honest exactly when $\\tilde{p}\\,r/b>1+κ$. Here $\\tilde{p}$ is the rate at which the checker accepts the model's certificates, weighted toward the items on which the model still gives both verdicts, and $κ$ is the p…",
+  "authors": [
+   "Nathaniel Bottman",
+   "Alexei Oblomkov"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
   "id": "d7c77ea971b9",
   "title": "llm 0.37.2",
   "url": "https://simonwillison.net/2026/Nov/11/llm/",
@@ -81,6 +446,46 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "573bcf65419d",
+  "title": "Where Is Uncertainty Observed? A Mechanistic Understanding of Uncertainty Quantification in LLMs",
+  "url": "https://arxiv.org/abs/2611.15735",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T17:14:57+00:00",
+  "summary": "Knowing when a large language model's (LLM's) response can be trusted is critical for its safe use. Uncertainty quantification (UQ) can help LLMs recognize if their responses may be unreliable. Existing taxonomies organize UQ methods by uncertainty source or estimation mechanism. They leave unresolved the question of where uncertainty is observed in the model's computation. The answer matters because the observation point determines whether an estimator has access to enough information to recover a given target, and how well it can recover it. Drawing on mechanistic interpretability, we defin…",
+  "authors": [
+   "Xiaoyu Liang",
+   "Virginia Ceccatelli",
+   "Aliai Eusebi",
+   "Tobias Braun",
+   "Nils Loose",
+   "Carlo Malagnino",
+   "Lorenzo Cavallaro"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "594943ac10b6",
+  "title": "A Mechanistic Interpretability Study of an Astronomy Foundation Model",
+  "url": "https://arxiv.org/abs/2611.15653",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T16:03:15+00:00",
+  "summary": "Foundation models are increasingly used across the sciences, but whether their internal computations correspond to known scientific operations or proceed through different mechanisms remains unclear. Understanding these mechanisms is essential for assessing reliability, identifying failure modes, and learning new science from the models. We present, to our knowledge, the first causal mechanistic interpretability study of an astronomy foundation model, AION-1, focusing on its multimodal advantage in redshift prediction, where combining imaging with photometry outperforms photometry alone. We f…",
+  "authors": [
+   "Rachel C. Zhang",
+   "Alberto Bietti",
+   "Wes Gurnee",
+   "Alessandro Favero",
+   "Miles Cranmer"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
  },
  {
   "id": "18d4d40cfb35",
@@ -99,6 +504,26 @@
   "fetched_at": "2026-11-12T08:19:48+00:00"
  },
  {
+  "id": "6ee6d1b23434",
+  "title": "Bug Finding With Agentic Symbolic Execution",
+  "url": "https://arxiv.org/abs/2611.15596",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-11T15:15:01+00:00",
+  "summary": "Symbolic execution, in tools such as CrossHair for Python, is a powerful technique for finding bugs, but two barriers hinder its adoption: the human effort of annotating code with assertions, and the need to model the execution environment outside Python, such as an external database. To overcome both, we design an agentic harness that orchestrates the symbolic execution tool CrossHair together with an AI coding agent. Without human intervention, it instruments a repository with assertions, synthesizes a constraint-aware symbolic environment for the database, runs symbolic execution, and cons…",
+  "authors": [
+   "George Granberry",
+   "Wolfgang Ahrendt",
+   "Andy Gordon",
+   "Moa Johansson"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
   "id": "a19ce5d70afc",
   "title": "Anthropic's IPO roadshow video",
   "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
@@ -110,6 +535,72 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-12T08:19:48+00:00"
+ },
+ {
+  "id": "813f0f19ab48",
+  "title": "GHAgentCI: A Dataset of Coding-Agent Invocations in CI Workflow Histories",
+  "url": "https://arxiv.org/abs/2611.15522",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-11T14:13:33+00:00",
+  "summary": "Coding agents are increasingly integrated into GitHub Actions to review pull requests, triage issues and modify code. Identifying these integrations is challenging because agentic workflows often resemble ordinary CI files, with evidence appearing in action references, shell commands and workflow conventions. We present GHAgentCI, a dataset of 15K+ workflow histories from 6K+ of 196K+ mined GitHub repositories, comprising 159K+ revisions and 205K+ agent-evidence records linked to workflow triggers and declared execution constraints. Our open-source extractor, cai-miner, detects agent-related…",
+  "authors": [
+   "Daniel Ogenrwot",
+   "Jorge Gonzalo Delgado Cervantes",
+   "Woojoong Kim",
+   "John Businge"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "f997fadaa272",
+  "title": "MORA: Correcting Time Series Forecasts with Coarse Future Signals",
+  "url": "https://arxiv.org/abs/2611.15413",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T12:36:58+00:00",
+  "summary": "Recent architectural advances have improved time-series forecasting. However, our analysis of forecasters with diverse architectures reveals a common pattern: a substantial share of residual energy is concentrated in a small number of low-frequency components. Simple linear probes further show that the forecasters' historical inputs still contain predictive information about errors in the forecast mean. Building on these findings, we propose Model-Output Residual Adaptation (MORA), a model-agnostic residual adapter that refines the outputs of frozen forecasters without requiring additional in…",
+  "authors": [
+   "Hu Li",
+   "Kenan Li",
+   "Haonan Xu",
+   "longlong",
+   "Shuqin Gao",
+   "Yucheng Zhang",
+   "Feng Dai"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "9b2fae61b9cf",
+  "title": "A Closer Look at Language Model Introspection: Probing Information and Reporting",
+  "url": "https://arxiv.org/abs/2611.15267",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T09:55:34+00:00",
+  "summary": "One way to study language-model introspection is to test whether models can identify where their activations have been perturbed. We train a simple linear classifier to identify the perturbed sentence from the model's activations, then compare its predictions with the model's own answers across pretraining and injection strengths. This tests whether the model is being asked to report information that is already easy to recover. If so, successful localization may be less demanding than it first appears and may not extend to the broader uses that motivate introspection research, such as faithfu…",
+  "authors": [
+   "Dustin Rubin",
+   "Vincenzo Timmel",
+   "Xufeng He",
+   "Aritra Saha",
+   "JooMan Kim",
+   "Vijay Madisetti"
+  ],
+  "tags": [
+   "probing",
+   "testing"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
  },
  {
   "id": "42170f0b7e95",
@@ -125,6 +616,87 @@
   "fetched_at": "2026-11-12T08:19:48+00:00"
  },
  {
+  "id": "a3bc6f603034",
+  "title": "MAST: Medoid-Anchored Subspace Steering for Visual Grounding in Multimodal LLMs",
+  "url": "https://arxiv.org/abs/2611.15168",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T08:05:18+00:00",
+  "summary": "Existing activation steering methods for multimodal large language models (MLLMs) use the global activation mean as the steering vector, which tends to cause cross-task interference and unstable performance. We trace this failure to the multi-centered geometry of task activations. The global mean lands in the empty region between clusters and is faithful to no single task. Moreover, the steering signal in each task-pure local cluster is low-rank, and different query tasks benefit from emphasizing different families of local-basis directions under the shared routing protocol. To address this,…",
+  "authors": [
+   "Zhitao Chen",
+   "Zhenxin Cai",
+   "Jingyuan Li",
+   "Jin Sha"
+  ],
+  "tags": [
+   "steering"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "46dc3e5ede0a",
+  "title": "Aggregate Accuracy Hides Diagnosis-Specific Failure in Medical Vision-Language Models",
+  "url": "https://arxiv.org/abs/2611.14975",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-11T03:35:25+00:00",
+  "summary": "Medical vision-language models (VLMs) are compared mainly by accuracy averaged across findings, a summary that can hide complete failure on a single diagnosis. We audit five open medical VLMs (MedGemma-4B, Lingshu-7B, HuatuoGPT-Vision-7B, Qwen2.5-VL-7B, and MedVLM-R1) on 6,048 ChestX-ray14 questions balanced by sex, age, finding, and label. On the 432 pneumothorax-positive X-rays, HuatuoGPT-Vision and Qwen2.5-VL detect zero cases while MedGemma and Lingshu detect 38% and 67% of the same images. The two failing models answer \"no\" to all 864 pneumothorax cases (balanced accuracy 0.500, chance),…",
+  "authors": [
+   "Shreya Ajay Kale",
+   "Angad Ripudaman Singh Bajwa"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "4e7ee37c9bfa",
+  "title": "Termination Lag: Coding Agents Solve Early but Stop Late",
+  "url": "https://arxiv.org/abs/2611.14960",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-11T03:11:00+00:00",
+  "summary": "Coding agents can solve a task well before they stop working on it. We characterize \\emph{termination lag}--the number of steps between an agent's first correct patch and the end of its run--across five models, two agent frameworks, and three SWE-bench datasets by recording and testing every distinct repository patch generated during execution. Our analysis reveals that 38--82% of successful runs achieve a correct solution on their initial source-code edit. However, agents continue to expend substantial effort after correct patches, with post-solution steps accounting for a median of 35--37%…",
+  "authors": [
+   "Musa Cim",
+   "Burak Topcu",
+   "Mahmut Taylan Kandemir"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "d793cc0bfece",
+  "title": "JoyFrontBench: Evaluating Front-End Coding Agents through Goal-Oriented Acceptance Contracts",
+  "url": "https://arxiv.org/abs/2611.14952",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-11T02:58:14+00:00",
+  "summary": "Front-end coding agents are expected to produce applications that fulfill user goals, yet high task scores can coexist with failures in essential workflows. Evaluating these agents therefore requires an explicit distinction between partial implementation and application success. We introduce JoyFrontBench, a benchmark that makes this distinction through goal-oriented acceptance contracts. Each contract identifies core tasks and mandatory criteria before generation: a core task passes only when all mandatory criteria are satisfied and a shared completion threshold is met, while application suc…",
+  "authors": [
+   "Xiaoyi Qiao",
+   "Yicheng Wang",
+   "Jianan Lin",
+   "Xiaoyang Ji",
+   "Dongyi Lv",
+   "Yidan Huang",
+   "Shi Suo",
+   "Shiying Fan"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
   "id": "dc677be26cbb",
   "title": "Delaying Internal Deployments Until After X Days of Safety Testing",
   "url": "https://www.alignmentforum.org/posts/XNLhpWgzhF8GYZ4Er/delaying-internal-deployments-until-after-x-days-of-safety",
@@ -138,6 +710,25 @@
    "testing"
   ],
   "fetched_at": "2026-11-11T07:44:53+00:00"
+ },
+ {
+  "id": "a4ff9433d5c3",
+  "title": "Sophon: A Procedural Diagnostic for Spatial Reasoning in Vision-Language Models",
+  "url": "https://arxiv.org/abs/2611.14838",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-10T23:40:14+00:00",
+  "summary": "Open-weight Vision-Language Models (VLMs) score 85-94% on spatial benchmarks (BLINK Spatial, What's Up CLEVR) yet collapse to chance on simple geometric questions when object, scene, and texture priors are stripped away. We introduce and open-source Sophon, a procedurally generated diagnostic of paired colored point-cloud stimuli across three coordinate systems (1D linear, 2D Cartesian, 2D polar) and four question types (binary, categorical, comparative, quantitative). Across four open architectures (LLaVA-NeXT, LLaVA-OneVision, Qwen2.5-VL, Idefics3), accuracy clusters at 47-52% while frontie…",
+  "authors": [
+   "J. Zach Gazak",
+   "Ryan Swindle",
+   "Justin Fletcher"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-13T07:57:01+00:00"
  },
  {
   "id": "c1fbfe2e3fcb",
