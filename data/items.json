@@ -1,5 +1,18 @@
 [
  {
+  "id": "3578b3def025",
+  "title": "anthropics/claude-code v2.1.325",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-13T20:40:01+00:00",
+  "summary": "## What's changed - Fixed a security issue in how zstd-compressed responses are decoded - Added a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook - Added a line under the error shown when your organization's policy blocks a request, saying how to continue: run `/rewind` and change the message, or run `/clear` - Added a note for Claude when a sandboxed `git checkout`, `git stash` or autostash pull cannot update protected files such as those in `.claude` - Fixed `/security-review` and skills' inlin…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-14T07:36:35+00:00"
+ },
+ {
   "id": "0a77842a138b",
   "title": "jbloomAus/SAELens v6.55.5",
   "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.5",
