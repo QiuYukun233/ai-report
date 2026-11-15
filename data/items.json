@@ -1,5 +1,20 @@
 [
  {
+  "id": "2059ff8340bb",
+  "title": "datasette-llm 0.1a11",
+  "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-14T23:59:28+00:00",
+  "summary": "Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget https://datasette.io/content.db uvx --with datasette-agent datasette \\ --root --secret 1 \\ -s plugins.datasette-llm.d…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-15T07:51:30+00:00"
+ },
+ {
   "id": "3578b3def025",
   "title": "anthropics/claude-code v2.1.325",
   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
