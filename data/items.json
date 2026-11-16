@@ -1,5 +1,61 @@
 [
  {
+  "id": "128a04bf78b6",
+  "title": "datasette-maplibre 0.1a0",
+  "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-15T23:58:36+00:00",
+  "summary": "Release: datasette-maplibre 0.1a0 The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) I built most of this with a single prompt to Claude Fable 5.2: Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses maplibreGL and openfreemap and combines the features of those other two plugins - but be creative and think outside…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "67eb98ac1cd8",
+  "title": "datasette 1.0a43",
+  "url": "https://simonwillison.net/2026/Nov/15/datasette/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-15T23:20:27+00:00",
+  "summary": "Release: datasette 1.0a43 I've been leaning hard into Claude Fable 5.2 to help knock things off the 1.0 milestone , which is now 53% complete. The biggest 1.0 item in this release is streaming support for output renderers - the built-in TSV and CSV export mechanisms now use this as well, and plugins can register themselves as capable of streaming every row in a table in one go via the new Response.stream() method. There are a couple of security fixes, one of which I deemed deserving of a GitHub advisory : private stored queries could be exposed, granting access to the title and SQL of the que…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "968e4ab4d9bb",
+  "title": "datasette-apps 0.4a0",
+  "url": "https://simonwillison.net/2026/Nov/15/datasette-apps/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-15T04:02:45+00:00",
+  "summary": "Release: datasette-apps 0.4a0 Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data. 0.4a0 adds support for linking: you can link to an app with #fragments in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write apps that link to each other. This means you can have e.g. an app that shows details about a specific record, and a completely separate app that searches those records and links to their representat…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "cc7b7d650858",
+  "title": "datasette-agent 0.6a0",
+  "url": "https://simonwillison.net/2026/Nov/15/datasette-agent/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-15T03:49:47+00:00",
+  "summary": "Release: datasette-agent 0.6a0 Accumulated small fixes for Datasette Agent, my agent plugin for Datasette that lets you ask questions about your data. Most notably, it now adds an agent prompt directly to the Datasette homepage, with support for hash-mentions of tables and queries: Tags: datasette-agent , llm , datasette , llms , ai , generative-ai",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
   "id": "2059ff8340bb",
   "title": "datasette-llm 0.1a11",
   "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
@@ -26,6 +82,257 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-14T07:36:35+00:00"
+ },
+ {
+  "id": "661c8f9be92d",
+  "title": "Can Mechanistic Interpretability Help Explain LLM Agent Failures? A Case Study on Web Element Hallucination",
+  "url": "https://arxiv.org/abs/2611.18514",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T18:30:58+00:00",
+  "summary": "Mechanistic Interpretability (MI) has made significant progress in explaining the internal computations of Large Language Models (LLMs); however, these advances have yet to demonstrate comparable success in explaining the decision-making processes of LLM-based agents. This paper examines the challenges MI tools face when applied to realistic agentic failures. We focus on one such failure: web agents hallucinating actions that are not available on a website. We apply a series of mechanistic analyzes to Qwen2.5-7B-Instruct as it interacts with live websites. We find that a linear probe trained…",
+  "authors": [
+   "Mohamed Aghzal",
+   "Mor Geva",
+   "Gregory J. Stein",
+   "Ziyu Yao"
+  ],
+  "tags": [
+   "agents",
+   "probing"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "c173258aa1db",
+  "title": "Contrastive latent representation learning with denoising score matching",
+  "url": "https://arxiv.org/abs/2611.18469",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T17:42:55+00:00",
+  "summary": "Contrastive representation learning methods operate by pulling different views of the same data sample together while pushing them away from views of different samples. A fundamental challenge is the estimation of the repulsive force, which typically requires large batch sizes, can exhibit high variance, and is susceptible to the curse of dimensionality. We introduce ScoreCLR, a contrastive representation learning method that offers a novel way to estimate this repulsion term. We consider the framework of representation learning by maximizing the mutual information between two latent views of…",
+  "authors": [
+   "Christopher Marouani",
+   "Grigory Bartosh",
+   "Christian A. Naesseth"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "4c496f2780d6",
+  "title": "HerAgent: A Block-Level Checkpointing Harness for Coding-Agent Environment Setup",
+  "url": "https://arxiv.org/abs/2611.18443",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-13T17:18:56+00:00",
+  "summary": "Modern coding agents rely on establishing executable software environments before they can perform software engineering tasks such as testing, debugging, and patch validation. Existing setup agents typically control progress at either single-command or whole-script granularity, making recovery either too local to remove polluted state or too coarse to preserve useful progress. We present HerAgent (Harness EnviRonment Setup Agent), a block-level harness for coding-agent environment setup. HerAgent's main contribution is semantic setup blocks: a single progress-control abstraction used for exec…",
+  "authors": [
+   "Xiang Li",
+   "Siyu Lu",
+   "Federica Sarro",
+   "Claire Le Goues",
+   "He Ye"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "ad93a409d8af",
+  "title": "PrivacyPR: A Dataset of Real-World Privacy Fixes for Benchmarking Privacy-Aware Code Review",
+  "url": "https://arxiv.org/abs/2611.18293",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-13T15:18:33+00:00",
+  "summary": "Coding agents increasingly review code, yet whether they catch the privacy defects that laws such as the GDPR require software to avoid remains largely untested, partly because few datasets connect real privacy defects to their accepted fixes and review context. We present PrivacyPR, a dataset of 4,131 merged GitHub pull requests (PRs) from 1,469 repositories, created between June 2018 and January 2024. Each PR includes its commits, diffs, review discussion, and LLM-generated labels for privacy relevance, fix type, and GDPR principles. PrivacyPR provides 1,169 high-confidence privacy fixes an…",
+  "authors": [
+   "Hua Yang",
+   "Aditya Bhardwaj",
+   "Shidong Pan",
+   "Bowen Xu"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "8fc730634637",
+  "title": "Right Token, Right Time: From Per-Token Gating to Trajectory-Aware Activation Steering",
+  "url": "https://arxiv.org/abs/2611.18274",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T15:06:43+00:00",
+  "summary": "Activation steering via sparse autoencoders (SAEs) enables behavioral control of large language models without task-specific fine-tuning. Yet, standard methods apply the steering signal at every generated token, displacing representations from the distribution the model was trained on and eroding generation quality. We show that \\emph{when} along a generation the intervention is applied is a decisive axis of control. We cast steering as a per-token allocation problem under a fixed budget of steerable tokens, so that methods differ only in which tokens they select, making allocation the sole v…",
+  "authors": [
+   "Nima Eshraghi",
+   "Lovedeep Gondara",
+   "Sagarika Suresh",
+   "Xiaotong Xu",
+   "Jithin Pradeep",
+   "Fanny Chevalier"
+  ],
+  "tags": [
+   "sae",
+   "steering"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "ac957ae48fe3",
+  "title": "From Bytes to Behavior: Request-Level Attribution from Live GPU Hidden States",
+  "url": "https://arxiv.org/abs/2611.18272",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T15:04:05+00:00",
+  "summary": "Existing memory forensics for machine learning systems typically targets static artifacts, such as model weights or prompt logs, rather than the transient computational states of a live inference process. This gap limits an examiner's ability to analyze the specific behavior of a running large language model (LLM) service that cannot be restarted or modified. We present a method for acquiring per-layer residual-stream activations from a live GPU process using a non-modifying debugger, without requiring prior knowledge of the model's architecture parameters or weights. The approach employs a g…",
+  "authors": [
+   "Jonathan Pan",
+   "Yidi Yuan",
+   "Xin Wei Chia",
+   "Xinhui Su",
+   "Vincent Tan",
+   "Brenda Ong"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "e4aafba38c05",
+  "title": "Explanations that Transfer: Interpreting Medical Retrieval with Sparse AutoEncoders",
+  "url": "https://arxiv.org/abs/2611.18179",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T13:48:24+00:00",
+  "summary": "Medical AI systems that answer users' queries rely on retrieving medical knowledge from large document collections. In this context, finetuning general models on medical datasets can improve retrieval relevance. Yet the dense embeddings underlying modern retrieval systems remain largely opaque, making it difficult to understand the mechanics behind their results. Moreover, adapting to a specific medical dataset risks losing transferability to new clinical corpora. In this work, we tackle these issues by applying Sparse Autoencoders (SAEs) to medical information retrieval, transforming dense t…",
+  "authors": [
+   "Diane Bouchacourt",
+   "Gaëtan Brison"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "a8717120c4cf",
+  "title": "Deep Latents, Long Memory: Latent persistence explains temporal correlations in transformer activations",
+  "url": "https://arxiv.org/abs/2611.18089",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T12:14:17+00:00",
+  "summary": "The hidden layers of Large Language Models (LLMs) are believed to encode representations of the data whose abstraction increases with depth. However, in the absence of an operational notion of abstraction, this statement is hard to test quantitatively. Here, we propose an alternative view, building on the principle that the correlations of a sequence reflect the structure of the process that generated it. We define the autocorrelation function of a layer as the average dot product between its activations at two context positions separated by a lag. Latent variables encoded persistently along…",
+  "authors": [
+   "Francesco Cagnetta",
+   "Santiago Acevedo"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "e417393729ef",
+  "title": "PerfArena: Ranking LLMs by Code Performance",
+  "url": "https://arxiv.org/abs/2611.18030",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-13T10:58:12+00:00",
+  "summary": "Industry now relies on LLMs to write a large share of production code. Although that code is mostly, but not always, correct, correctness alone does not determine whether it is fit for repeated and extensive use, which depends on what the code costs in time, memory and energy. Most code-generation benchmarks nonetheless evaluate correctness in isolation, and most performance-oriented benchmarks cover few languages and rarely measure energy consumption. To address this gap, we present PERFARENA, an open-source, reproducible arena that ranks LLMs by the performance of their generated code acros…",
+  "authors": [
+   "Rui Rua",
+   "Hailemariam Mersha",
+   "Joao Paulo Fernandes",
+   "Karim Ali"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "227be0f6750c",
+  "title": "DECODE: Diagnosing Interpretability Failures in Automated Interpretation Process",
+  "url": "https://arxiv.org/abs/2611.17856",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T07:40:51+00:00",
+  "summary": "Tools for interpreting the internal representations of Large Language Models (LLMs) increasingly rely on LLMs themselves to both generate and evaluate explanations, creating a self-referential automated interpretation process with minimal human oversight. This automation raises significant reliability concerns, which are exacerbated by the absence of ground truth. In practice, it is difficult to validate explanations or to attribute interpretability failures to their source -- whether they originate from the tool's extracted representations or from the LLM used in the process. To address thes…",
+  "authors": [
+   "Dohyun Kim",
+   "Jaeung Lee",
+   "Donghee Hong",
+   "Jaemin Jo"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "c2855811f136",
+  "title": "V-JEPA-LM: Video-Language Models That Read Dynamics Beyond Static, Text-Aligned Representations",
+  "url": "https://arxiv.org/abs/2611.17831",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T07:05:22+00:00",
+  "summary": "World-model video encoders such as V-JEPA learn how scenes change (direction, speed, order, state) from video alone. To answer questions, they are joined to a language model trained on captions and question-answer pairs. But each caption or question names only a few attributes of a clip, so the model learns to retrieve those attributes rather than to read the clip, and the dynamics the encoder carries go unused: on the same items, a linear probe reads speed from frozen V-JEPA features at 87% while the VLM answers at chance. We show where dynamics lives in a frozen encoder: in a subspace share…",
+  "authors": [
+   "Keuntae Kim",
+   "Dongjun Kim",
+   "Yong Suk Choi"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "31b2bbe291de",
+  "title": "AI Reviews Are Biased Towards the Appendix",
+  "url": "https://arxiv.org/abs/2611.17811",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-13T06:47:34+00:00",
+  "summary": "Large language models (LLMs) are increasingly used by reviewers to highlight weaknesses during the reviewing process, and their outputs often shape the reviews that humans submit. Prior work studies how LLM reviews align with human ones, yet we know little about which parts of a paper these models actually criticize. In this work, we investigate 2,000 papers from ACL, EMNLP, COLM, and ICLR, and show that the latest GPT and Claude models draw about 50% or more of their review weaknesses from the appendix. This behavior holds across the API, coding-agent, and web access methods for using LLMs t…",
+  "authors": [
+   "Saptarshi Ghosh",
+   "Mohammad Saim",
+   "Tianyu Jiang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "9bffe5dfc044",
+  "title": "Antidistillation is Cheap: Lightweight Distillation-Resistance via Stylistic Corruption",
+  "url": "https://arxiv.org/abs/2611.17772",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T05:32:26+00:00",
+  "summary": "Knowledge distillation (KD) is a highly effective paradigm for transferring capabilities from large language models (LLMs) to smaller, more specialized student models. In commercial deployment where frontier models are restricted behind black-box APIs, sequence-level distillation remains a potent vector for competitors to clone proprietary capabilities at a fraction of the development cost. Existing defenses mostly rely on surrogate models to manipulate next-token sampling, which increases computational overhead and real-time inference latency. In this work, we propose a lightweight defense t…",
+  "authors": [
+   "Anh Tu Ngo",
+   "Anupam Chattopadhyay"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
  },
  {
   "id": "0a77842a138b",
@@ -67,6 +374,43 @@
    "claude-code"
   ],
   "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "e6172fe56fc4",
+  "title": "Creating Steering Vectors via Input Optimisation",
+  "url": "https://arxiv.org/abs/2611.17481",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-12T20:06:14+00:00",
+  "summary": "Activation steering influences a language model's behaviour by adding a steering vector to its residual stream during generation, but it requires white-box access to modify the hidden states at every generation step. We introduce ActGCG, a modification of Greedy Coordinate Gradient which optimises a suffix to match the target activations obtained by adding a steering vector to the residual stream. We further introduce universal suffixes trained across many prompts at once, a model-translation step that rewrites the suffix into human-readable text midway through optimisation, and a soft-suffix…",
+  "authors": [
+   "Batuhan Akar"
+  ],
+  "tags": [
+   "steering"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "01fe63811cb4",
+  "title": "Interpreting Coding Agents Through Their Behavioral Trajectories",
+  "url": "https://arxiv.org/abs/2611.17440",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-12T19:11:23+00:00",
+  "summary": "Standard coding-agent benchmarks primarily evaluate binary task success, treating execution as a black box and obscuring the behaviors that produce those outcomes. We analyze a large corpus of 143,209 execution trajectories from 125 agent configurations spanning 117 unique models. To enable comparisons across heterogeneous agent interfaces, we develop a rule-based parser that maps raw execution traces to high-level actions such as repository search, file editing, and test execution, and audit its predictions against a six-model consensus reference on 500 events. We find that agents with simil…",
+  "authors": [
+   "Ibragim Badertdinov",
+   "Alexander Golubev"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-16T07:58:45+00:00"
  },
  {
   "id": "0e01cb2c129d",
