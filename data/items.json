@@ -1,5 +1,266 @@
 [
  {
+  "id": "3ae3a490dc72",
+  "title": "llm 0.37.3",
+  "url": "https://simonwillison.net/2026/Nov/16/llm/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-16T23:57:26+00:00",
+  "summary": "Release: llm 0.37.3 A bug fix release for LLM , mainly to cover a problem with the most recent Homebrew package of the software. Homebrew now ships the latest SQLite, 3.54.1 , which includes a fix that broke LLM's logging code . Short version: in SQLite 3.54.0 the following SQL: select json_object('a', (select json_array(1))) Returns this: {\"a\":[1]} But in 3.54.1 the same query returns this: {\"a\":\"[1]\"} According to D. Richard Hipp : That was a bug fix. Per the documentation, (SELECT json_array(...)) returns SQL text, not JSON. Hence the 3.54.1 behavior is correct and 3.54.0 was a bug. The wo…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "328f5dc06ab4",
+  "title": "anthropics/claude-code v2.1.326",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.326",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-16T22:11:05+00:00",
+  "summary": "## What's changed - Added support for turning on Code Mode while agent teams are enabled; if you already turned it on, sessions with teams on now start in Code Mode - Added a startup warning when an `--allowedTools`, `--disallowedTools` or `--tools` value has an entry that doesn't look like a complete rule - Added a message explaining why MCP servers stop loading when an administrator adds `managed-mcp.json` during a session - Added a row to `/status` that says when your provider or an environment variable such as `DISABLE_TELEMETRY` turns features off - Added a note in `/plugin` and `claude…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "df20e944db0f",
+  "title": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+  "url": "https://arxiv.org/abs/2611.21586",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-16T18:54:40+00:00",
+  "summary": "Job titles and job descriptions alone provide limited insight into how technical roles differ in a changing job market. To assess how such roles differ in their work and industry applications, we design and compare two methods based on deep learning and transformer representations using 36,081 early-career job postings collected from LinkedIn in the United States between December 2025 and October 2026. We first apply PERC, short for Preprocessing (P), Embedding (E), Dimensionality Reduction (R) and Clustering (C). We employ GPT-6 Luna to classify job description passages into Team context, Ro…",
+  "authors": [
+   "Yisong Cao",
+   "Leah Kim",
+   "Brian Wright",
+   "Ali Rivera"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "c4452cccf6f4",
+  "title": "Beyond Leaderboard Ranks: Selecting Software Engineering Agents Under Budget Constraints",
+  "url": "https://arxiv.org/abs/2611.21515",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T18:10:37+00:00",
+  "summary": "Teams that adopt LLM agents for issue resolution must decide which agent to pay for, and how much to spend finding out. Leaderboard ranks give weak evidence for this decision. Accuracy differences may be statistically unresolved, reported costs may be inconsistent, and evaluating candidate agents can itself be expensive. We investigate budget-constrained agent selection using 58,197 run--task records extracted from the Holistic Agent Leaderboard (HAL), focusing on SWE-bench and six additional benchmarks. Across seven benchmarks, 27 of 35 steps along the accuracy--cost Pareto frontiers are sta…",
+  "authors": [
+   "Srinath Srinivasan",
+   "Tim Menzies"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "93420d3938f4",
+  "title": "Is This Code Mine? Student Ownership When AI Agents Write the Spec and the Code",
+  "url": "https://arxiv.org/abs/2611.21501",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T18:02:10+00:00",
+  "summary": "Software engineering courses are starting to ask students to build entire systems with AI coding agents, but little is known about what students actually do with them and whether they still own what they deliver. If the agent writes both the code and the decisions behind it, the artifacts we grade no longer show what students learned. We studied an assignment in which 18 pairs of students built applications with agents under Spec-Driven Development, combining the mined history of their repositories, the prompts they recorded, and a survey of 33 students. The agents wrote 69\\% of the specifica…",
+  "authors": [
+   "Gustavo Pinto",
+   "Enne Rebeca Silva de Freitas",
+   "Danilo Monteiro Ribeiro"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "2b6467343d01",
+  "title": "Representational Change Under Self-Consuming Training: A Sparse Autoencoder Analysis",
+  "url": "https://arxiv.org/abs/2611.21348",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-16T16:27:02+00:00",
+  "summary": "Large language models are increasingly exposed to model-generated text, raising the possibility that future models will be trained recursively on the outputs of their predecessors. Prior work on such self-consuming training loops has largely focused on output quality and downstream performance, leaving their effects on internal representations poorly understood. We study how representations evolve across five generations of self-consumption and whether sparse autoencoders (SAEs) remain reliable under this shift. At each generation, we compare a lineage trained on synthetic data with a matched…",
+  "authors": [
+   "Suchit Gupte",
+   "Zhongteng Cai",
+   "Xueru Zhang",
+   "Mohammad Mahdi Khalili"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "de22f307aa44",
+  "title": "Agent-Native by Design: A Programming Language for Agentic Applications",
+  "url": "https://arxiv.org/abs/2611.21298",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T16:01:06+00:00",
+  "summary": "Building agentic applications requires combining large language model (LLM) operations, workflow structure and application state, and model-guided routing. With SDKs and agent frameworks, developers connect these components through supporting code that prepares model inputs, propagates state, and dispatches model-selected steps. Workflow changes can require coordinated updates to this code, increasing development and testing effort. Splitting execution logic between application code and framework internals also limits compiler visibility into control flow and state dependencies, hindering aut…",
+  "authors": [
+   "Jayanaka Dantanarayana",
+   "Savini Kashmira",
+   "Xiaoyu Ma",
+   "Malitha",
+   "Malitha Prabhashana",
+   "Lingjia Tang",
+   "Jason Mars"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "faf93063fc7a",
+  "title": "From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop",
+  "url": "https://arxiv.org/abs/2611.21152",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T14:20:58+00:00",
+  "summary": "Training coding agents for long-horizon tasks requires environments with verifiable feedback. Existing pipelines often follow a linear process that ends with validation, establishing usability but providing little guidance on improving training value. Recursive self-improvement (RSI) often requires model rollouts or model training followed by downstream evaluation, with costs and feedback delays amplified on long-horizon tasks. How can we use timely, reliable proxy signals to improve training value and synthesize environments at scale? We present RepoFactory, an automated pipeline that conver…",
+  "authors": [
+   "Yang Tian",
+   "Tianyu Zheng",
+   "Xiyuan Yang",
+   "Yaxin Du",
+   "Chengran Yang",
+   "Bo Zhao",
+   "Jian Yang",
+   "Bryan Dai"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "a5e42b2b6ba3",
+  "title": "SWE-WhatIf: Simulating Real Users of Coding Agents from Recorded Session",
+  "url": "https://arxiv.org/abs/2611.21095",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T13:42:26+00:00",
+  "summary": "Recorded sessions between users and coding agents offer a way to evaluate how agents complete real-world tasks and interact with users. However, these sessions cannot simply be replayed with new agents, because recorded user replies may no longer apply when an agent takes a different trajectory. We introduce SWE-WhatIf, which replays recorded sessions with new agents by modeling the user's intents, the criteria for satisfying them, and the conditions under which they arise. Using this model, a user simulator generates replies that adapt to unseen agent turns while remaining grounded in the re…",
+  "authors": [
+   "Tae Soo Kim",
+   "Tongshuang Wu",
+   "Juho Kim"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "24b3c47edf65",
+  "title": "Evaluation-Free Recursive Self-Improvement for Coding Agents",
+  "url": "https://arxiv.org/abs/2611.21056",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T13:05:46+00:00",
+  "summary": "Recent self-improving coding agents have achieved strong benchmark performance by iteratively modifying their own executable implementations. A common pattern uses downstream task-derived evidence to decide which candidates or lineages continue evolving, which we term evaluate-and-select. Obtaining this signal requires repeatedly executing evolved agents on downstream tasks, so broader exploration incurs increasing evaluation cost, while repeated optimization against a fixed evaluation distribution may encourage benchmark-specific adaptation. We ask: can coding agents self-improve without dow…",
+  "authors": [
+   "Zhe Ren",
+   "Guowei Rong",
+   "Yimeng Chen",
+   "Nanbo Li",
+   "Piotr Piękos",
+   "Mateusz Ostaszewski",
+   "Dandan Guo",
+   "Jürgen Schmidhuber"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "cee98bb33d52",
+  "title": "LEDGER: Auditable Agent Memory Under Change",
+  "url": "https://arxiv.org/abs/2611.20927",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T11:37:23+00:00",
+  "summary": "Agent memory systems are mostly evaluated on fixed histories, and only their final answers are scored. In real use, facts change, sources differ in reliability, and users ask the agent to forget things. We present LEDGER, a memory layer in which a language model proposes facts and explicit rules decide which value is current, which source to trust, and what to delete. Each fact keeps its source and the period in which it held. LEDGER+EP adds a search over raw conversation turns for questions the ledger does not cover, and scrubs these turns on deletion. We compare both against no memory, full…",
+  "authors": [
+   "Md Aidul Islam",
+   "Md Nasir Uddin Shuvo",
+   "Muhammad Waseem",
+   "Pekka Abrahamsson"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "7955792171be",
+  "title": "Embeddings vs. Grep: Rethinking the Dense Advantage in Code Search",
+  "url": "https://arxiv.org/abs/2611.20455",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T03:24:04+00:00",
+  "summary": "Code-search benchmarks show dense encoders well ahead of BM25, yet coding agents do well with \\texttt{grep}. What does this dense advantage measure? Existing benchmarks cannot tell: they use curated queries, old code and a handicapped BM25. To find out, we build Repo-Premium, a realistic repository-level code-search benchmark. It ranks files in real repositories, with curated and raw queries in Python, JavaScript, TypeScript, Go, Rust and Java, pull requests from 2022 to 2026, and a preregistered test pool over $91$ repositories. Our experiments trace the advantage to two sources: evaluation…",
+  "authors": [
+   "Siqiao Xue",
+   "Ziyin Zhang",
+   "Zihan Liao",
+   "Jin Qin",
+   "Yixiang Mu",
+   "Hang Yu"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "f850e1574058",
+  "title": "Pretty Linear Liars: Unregularized Probes Favor Intervention-Unfaithful Features",
+  "url": "https://arxiv.org/abs/2611.20371",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-16T01:01:31+00:00",
+  "summary": "Linear probing is a common technique in mechanistic interpretability despite the fact that the decodability of a given feature does not necessarily imply the network uses that feature. Intervention faithfulness, not merely decodability, is the appropriate criterion for whether a feature serves a defined active role in the model. Meanwhile, probe regularization has been used for feature discovery, but the impact of regularization on feature causality remains unclear. We study probe regularization systematically, starting with unregularized ordinary least squares (OLS) regression and considerin…",
+  "authors": [
+   "Karl Vilhelmsson Emneby",
+   "Julian Yocum",
+   "Cameron Allen"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
   "id": "128a04bf78b6",
   "title": "datasette-maplibre 0.1a0",
   "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
@@ -24,6 +285,68 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-16T07:58:45+00:00"
+ },
+ {
+  "id": "659d7ff639f3",
+  "title": "Reliable Mining of Heterogeneous AI Coding-Agent Data: Context-Aware Prediction and Resource-Aware Ranking",
+  "url": "https://arxiv.org/abs/2611.20297",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-15T22:54:27+00:00",
+  "summary": "Operational records from AI coding agents differ across agents, repositories, tasks, and workflows. We study 71,677 pull requests (PRs) from six agents and show that pooling these records can reverse descriptive and predictive conclusions. PRs carrying a co-authorship trailer have a 55.6% merge rate, compared with 77.5% without the trailer, but removing the dominant agent flips this -21.8 percentage-point gap to +23.7 points. We treat this Simpson-type reversal as a data-veracity problem and represent source, environment, and workflow context in a feature cascade. Gradient-boosting merge-pred…",
+  "authors": [
+   "Haoran Yu",
+   "Lifei Liu",
+   "Danping Zhang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "5c3a37d25e00",
+  "title": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations",
+  "url": "https://arxiv.org/abs/2611.20218",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-15T19:39:01+00:00",
+  "summary": "A coding agent working within a software organization must establish what to build, collaborate with colleagues, and verify what it delivers. We introduce SWE-CoWork, a benchmark comprising 101 development assignments across 101 real repositories, 11 programming languages, and 12 application domains. Each assignment places an agent in a simulated engineering organization with 26 colleagues who have distinct responsibilities, bounded knowledge, and controlled collaboration behavior. Starting from a brief handoff, agents must recover requirements distributed across colleagues and workplace reco…",
+  "authors": [
+   "Xinping Lei",
+   "Minghao Liu",
+   "Ruijie Zhu",
+   "Xiaohui Hu",
+   "Xingqiao Li",
+   "Ao Zhang",
+   "Wenhao Chai",
+   "Han Li"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "149e25e58740",
+  "title": "Equal Dose, Different Coverage:Tracing Rate and Duration in Image Editing",
+  "url": "https://arxiv.org/abs/2611.19955",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-15T11:52:41+00:00",
+  "summary": "Benchmarks for scientific image editing test whether a model draws the outcome of a described process, leaving open which representations carry its errors and whether correcting them yields the right quantity. We study this question with an airbrush of fixed deposition profile, under which exchanging rate and duration preserves the dose and should preserve the endpoint, yet changes the edited coverage. Matched-norm activation patches across text positions and denoising stages show that, in distilled FLUX with Chinese prompts, representations at unchanged text positions (context) carry this di…",
+  "authors": [
+   "Yi Liu"
+  ],
+  "tags": [
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
  },
  {
   "id": "968e4ab4d9bb",
@@ -56,6 +379,31 @@
   "fetched_at": "2026-11-16T07:58:45+00:00"
  },
  {
+  "id": "0e1737dc20d3",
+  "title": "Where Should LLM Agents Adapt at Test Time? In Context, in Weights, or Both",
+  "url": "https://arxiv.org/abs/2611.19700",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-15T01:07:23+00:00",
+  "summary": "LLM agents operating repeatedly in the same environment, such as a code repository, a database, or an application suite, encounter tasks that share latent structure. Experience can reveal this structure, allowing agents to reuse environment knowledge and learn from environmental feedback. Agents can adapt at test-time using this experience through two channels: retaining it in context and updating their weights. These channels are usually studied separately, leaving unclear what each contributes and when they complement each other. We compare in-context learning (ICL), reinforcement learning…",
+  "authors": [
+   "Parsa Mirtaheri",
+   "Mohammadreza Armandpour",
+   "Keivan Alizadeh",
+   "Iman Mirzadeh",
+   "Parshin Shojaee",
+   "Aryo Lotfi",
+   "David Harrison",
+   "Mehrdad Farajtabar"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
   "id": "2059ff8340bb",
   "title": "datasette-llm 0.1a11",
   "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
@@ -71,6 +419,119 @@
   "fetched_at": "2026-11-15T07:51:30+00:00"
  },
  {
+  "id": "e3784ec8117e",
+  "title": "Before the Word: Name Information in Description-Derived States of Small Language Models, With and Without Naming Failure",
+  "url": "https://arxiv.org/abs/2611.19609",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-14T20:39:00+00:00",
+  "summary": "The tip-of-the-tongue (TOT) state, knowing an object but not its name, motivates this study as an analogy only. We ask whether small language models form a name-predictive state from a name-free description, and whether it differs when naming fails but description selection succeeds. In an internally pre-registered study (a frozen document, no external registry) of Qwen2-0.5B, SmolLM2-1.7B and Phi-3-mini with 200 items, we combine a similarity read-out, a Patchscopes-style read-out and activation patching with matched controls. H1 (name information in the state) was supported in all nine mode…",
+  "authors": [
+   "Fernando Cardenas Piepereit"
+  ],
+  "tags": [
+   "patching"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "3ef1a72ce445",
+  "title": "SemMask: Semantic-Prioritized Progressive Masking for Diffusion Language Models",
+  "url": "https://arxiv.org/abs/2611.19560",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-14T18:48:34+00:00",
+  "summary": "Diffusion Language Models (DLMs) are designed to enable globally parallel generation. However, in practice, they often exhibit pseudo-autoregressive behavior and a function-word-first bias, which undermines their performance on tasks such as text writing and code generation that benefit from global planning and parallel decoding. To address this, we propose SemMask, a novel fine-tuning paradigm that leverages a semantic-prioritized progressive masking strategy to encourage the model to decode high-information semantic tokens early and globally, thereby enhancing its global planning and parall…",
+  "authors": [
+   "Qi Chen",
+   "Zifeng Cheng",
+   "Zhiwei Jiang",
+   "Qing Gu"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "e1574269797a",
+  "title": "Beyond Prompts: Runtime Contracts for Coding Agents",
+  "url": "https://arxiv.org/abs/2611.19549",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-14T18:22:42+00:00",
+  "summary": "Coding agents act on repositories through shell commands and file edits, and teams steer them with written engineering rules. Industrial settings expect such rules to be enforced and their application to be evidenced, and a rule given as prompt text provides neither. We test whether executable contracts enforced while the agent works reduce rule violations compared with the same rules in the prompt, retrieved as guidance, or checked only after generation. Violations are scored by an oracle whose methods differ from the in-loop checks, and the oracle is validated by two human reviewers and a m…",
+  "authors": [
+   "Reda Heddad"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "fbc42bde014e",
+  "title": "Confidence Without Cause: Predicting and Localizing Physics-Shortcut Sensitivity in Language Model Hidden States",
+  "url": "https://arxiv.org/abs/2611.19403",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-14T13:39:36+00:00",
+  "summary": "A language model's confidence on a physics problem deserves trust only if it ignores details irrelevant to the answer. We introduce DECOY (Distractor-Embedded Certified cOunterfactuals for phYsics): 155 families of four prompts differing in one irrelevant detail. A symbolic solver certifies that each edit preserves the answer. Families are labelled by the largest drop in the model's log-probability of the certified answer, using a threshold fixed before probe training. Qwen2.5-7B-Instruct is sensitive on 50.0% of the 140 families yielding labels, and Llama-3.1-8B-Instruct on 22.9%. Effects ar…",
+  "authors": [
+   "Shubham Mishra",
+   "Atharv Sharma",
+   "Dhruv Kumar"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "d546bc4f9686",
+  "title": "A Bag of Concepts? Testing Role-Filler Binding in the Verbalizable Workspace",
+  "url": "https://arxiv.org/abs/2611.19176",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-14T05:52:00+00:00",
+  "summary": "Runtime alignment monitors built on a verbalizable workspace have been proposed as a way to surface a model's silent cognition before it produces output. Their value rests on the workspace carrying enough structure to distinguish safety-relevant propositions, most of which are relational: \"the model plans to deceive the user\" and \"the user plans to deceive the model\" share a concept set and differ only in role assignment. We ask whether the workspace carries the role-filler bindings (which entity fills which role) such a monitor would need, on three frontier language models (Qwen3.6-27B, Gemm…",
+  "authors": [
+   "Reya Dawlah",
+   "Elizabeth McMillin",
+   "Michael Shihong Zhang",
+   "Badrish Ananth",
+   "Rishi Adi Ruia",
+   "Ane Zuñiga",
+   "Thomas Jiralerspong"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "783083d2ec99",
+  "title": "Match and Correct: A Repeated Computational Motif in Evoformer Layers",
+  "url": "https://arxiv.org/abs/2611.19016",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-13T23:31:30+00:00",
+  "summary": "Triangle attention and triangle multiplicative updates form key components of the Evoformer, and were introduced specifically to encourage consistency with the triangle inequality. Yet whether representational changes over layers reduce triangle inequality violations has not been tested. We probe the pair representation at each of OpenFold's 48 Evoformer layers, decoding final C$_α$-C$_α$ distances with four probe families (a shared linear probe, per-protein linear probes, a sequence-separation-gated linear probe, and XGBoost) and reconstructing intermediate 3D structures from the decoded dis…",
+  "authors": [
+   "Ishan Khire",
+   "Naren Manikandan",
+   "Tyler Hayes",
+   "Giri Krishnan"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
   "id": "3578b3def025",
   "title": "anthropics/claude-code v2.1.325",
   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
@@ -82,6 +543,31 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-14T07:36:35+00:00"
+ },
+ {
+  "id": "1d4502cf12b4",
+  "title": "Benchmark Factory: Agentic Benchmark Creation via Dataset Curation and Label-Free Quality Anchors",
+  "url": "https://arxiv.org/abs/2611.18890",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-13T19:49:01+00:00",
+  "summary": "Teams deploying coding agents need benchmarks built from their own code, but curating and validating them by hand is resource intensive, and an unvalidated benchmark can mislead silently. We present Benchmark Factory, an autonomous meta-agent loop with human checkpoints: an LLM agent writes sourcing queries over landed production code changes, runs models of known relative strength on each candidate, diagnoses why a candidate fails, and repairs it by editing its queries, prompts, and configuration until it clears quality anchors that need no per-task human labels. We used Benchmark Factory to…",
+  "authors": [
+   "Shervin Shahidi",
+   "James Poon",
+   "Hang Xie",
+   "Kenneth O. Xu",
+   "Robin Håkanson",
+   "Vikram Nair",
+   "Jens Pillgram-Larsen",
+   "Nachiappan Nagappan"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-17T09:13:00+00:00"
  },
  {
   "id": "661c8f9be92d",
