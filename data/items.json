@@ -1,5 +1,303 @@
 [
  {
+  "id": "1560056f3e5d",
+  "title": "anthropics/claude-code v2.1.327",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-17T23:17:45+00:00",
+  "summary": "## What's changed - Added a confirmation before `/install-github-app` changes a repository - Added `claude mcp add-json -` to read the server's JSON from stdin, so tokens can stay off the command line; not available inside a Claude Code session - Added a line when a resumed session's earlier messages can't be loaded - Added a list in `/status` of broken agent, skill, command and output style files, keybinding errors, an unavailable sandbox, ignored permission settings and hook matchers that never match - Added a note in `/config` when other settings override a row - Added `x-claude-code-manag…",
+  "authors": [],
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "acdaad578a36",
+  "title": "External sandboxes for coding agents",
+  "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-17T22:52:29+00:00",
+  "summary": "External sandboxes for coding agents I've been exploring new ways to sandbox code that is executed by agents, with a focus on making it safer to try out local models without worrying that a mistake or prompt injection attack might cause them to take damaging actions on a machine. I worked on this project with Prime Radiant , the AI research lab behind Superpowers and other projects . My post on the Prime Radiant blog introduces the external sandbox pattern, where code executed by the agent runs inside a dedicated sandbox while the agent itself lives outside of that sandbox. To demonstrate thi…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "2a139dc941fa",
+  "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+  "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-17T22:38:52+00:00",
+  "summary": "GPT‑6.2 Astra and GPT‑6.2 Sol OpenAI: We’re introducing GPT‑6.2 Astra, our new frontier model for your hardest projects, and GPT‑6.2 Sol, our efficient, versatile model for everyday work. They're available in the API as gpt-6.2-astra and gpt-6.2-sol . I shipped LLM 0.38 with support for the new models. 6.2 Astra is 80% of the price of 6 Astra - $8/MTok input and $40/MTok output, the same price as Claude Fable 5.2 (which was also 80% of its predecessor). 6 Astra and Fable 5 were both $10/$50. The cached price is an even bigger discount - $0.40/million compared to $1/million for the older model…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "2e072b318207",
+  "title": "Higher-Scoring Coding Models Did Not Get More Work Done",
+  "url": "https://arxiv.org/abs/2611.23216",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T18:56:42+00:00",
+  "summary": "New coding models advertise themselves on score improvements of coding benchmarks. Yet no study has tested if a model that scores higher on these benchmarks gets more real work done. On June 12, 2026, a U.S. export control directive banned access to Claude Fable 5 for 19 days, which forced users to switch to other models. During this time, most former Fable 5 users switched to Opus 4.8 (11 points lower on SWE-Bench Pro compared to Fable 5). We treat this suspension as a natural experiment, where the people and projects stayed the same and only the model changed, so we could isolate the effect…",
+  "authors": [
+   "Yining Hua"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "6fa7ea9af9f4",
+  "title": "Identifying and Repairing Energy Smells with Agent Skills",
+  "url": "https://arxiv.org/abs/2611.23203",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T18:45:42+00:00",
+  "summary": "Energy smells are inefficient implementations that waste energy. Once code reaches production, these smells become costlier and riskier to fix, so energy efficiency checks should shift left, i.e., move earlier in the development lifecycle, to where code is written. Existing energy smell tools rely on fixed static rules and do not measure energy savings, whereas LLM-based optimizers mostly target execution time and rarely ground their changes in concrete smell definitions. To address both limitations, we present DR. GREENS, an agent skill that detects and repairs energy smells in Python code w…",
+  "authors": [
+   "Mohammadjavad Mehditabar",
+   "Saurabhsingh Rajput",
+   "Tushar Sharma"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "fb7bfdb8dd7d",
+  "title": "Get Hint-Augmented GRPO Done Right Through Activation Steering",
+  "url": "https://arxiv.org/abs/2611.23124",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-17T17:43:28+00:00",
+  "summary": "GRPO has become the dominant reinforcement learning method for eliciting reasoning capability in LLMs using verifiable rewards. However, it suffers from a fundamental failure mode: when a training question exceeds the base model's current capability, all generated responses fail and receive zero reward, yielding no gradient signal and stalling further capability expansion. An emerging class of GRPO extensions, termed Hint-Augmented GRPO (HA-GRPO), adds a \"hint\" to the context to reduce the difficulty of the question, thereby producing a usable gradient signal. Nevertheless, existing HA-GRPO m…",
+  "authors": [
+   "Khiem Le",
+   "Ting Hua",
+   "Nitesh V. Chawla"
+  ],
+  "tags": [
+   "steering"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "890c57ba47bf",
+  "title": "Deterministic Simulation Testing",
+  "url": "https://martinfowler.com/articles/deterministic-simulation-testing.html",
+  "source": "Martin Fowler",
+  "source_type": "blog",
+  "track": "engineering",
+  "published": "2026-11-17T14:33:00+00:00",
+  "summary": "Distributed systems are hard to test because partial failures overlap with live traffic and the same fault can produce different execution traces on different runs. Unmesh Joshi describes how deterministic simulation testing addresses this by replacing real clocks, networks, and storage with simulated components driven by a single-threaded execution loop. This allows simulating both hard failures and routine slowdowns—such as network and disk latency spikes—and more importantly makes every execution reproducible. This article explains the technique using a quorum key-value store as a running…",
+  "authors": [],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "e2c0beeb4193",
+  "title": "When Passing Checks Do Not Establish Completion: Evidence Interpretation in Coding Agents",
+  "url": "https://arxiv.org/abs/2611.22835",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T14:17:43+00:00",
+  "summary": "Verification procedures in coding agents must preserve execution facts, interpret their scope and discharge checking obligations. We study these responsibilities through qualified repository checks, controlled evidence consumers and executable workflows. A prospective thirteen-task factorial study finds that correct reported facts need not yield the requested finite verdict. Conversely, all 122 delivered labels in a held-out receipt-supply study are correct, while sixteen responses misreport facts and eleven others exceed authorized scope. Production repair supplies successful controls and fi…",
+  "authors": [
+   "Xueping Gao"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "c563bb884f08",
+  "title": "Python Code Generation for Isabelle/HOL",
+  "url": "https://arxiv.org/abs/2611.22613",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T11:29:58+00:00",
+  "summary": "The Isabelle theorem prover provides an environment for formalising mathematics and reasoning about programs. To make verified implementations practically usable, its code generator translates functions expressed in the executable fragment of its logic into conventional programming languages. Its targets have traditionally been functional languages (Standard ML, OCaml, Haskell, and Scala), recently joined by Go. Python, which is becoming the dominant language of scientific computing, data science, and education, has remained out of reach. In this work, we close this gap with a Python backend…",
+  "authors": [
+   "Nikolaus Huber",
+   "Roly Perera",
+   "Dominic Orchard"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "42f3d1e8d3f1",
+  "title": "astral-sh/uv 0.13.9",
+  "url": "https://github.com/astral-sh/uv/releases/tag/0.13.9",
+  "source": "astral-sh/uv",
+  "source_type": "release",
+  "track": "engineering",
+  "published": "2026-11-17T09:57:55+00:00",
+  "summary": "## Release Notes Released on 2026-11-17. ### Preview features - Support PEP 832 `.venv` redirect files for project environments ([#21822](https://github.com/astral-sh/uv/pull/21822)) - Add the `http2-keep-alive` preview feature to close unresponsive HTTP/2 connections with active requests ([#23236](https://github.com/astral-sh/uv/pull/23236)) ### Performance - Reduce lockfile size and speed up reads by factoring repeated conditions in environment markers ([#23184](https://github.com/astral-sh/uv/pull/23184)) ### Bug fixes - Reject wheels advertised by an index under a different package name (…",
+  "authors": [],
+  "tags": [
+   "python-tooling"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "58ba6affb87e",
+  "title": "Motion-Aware Reward Modeling for Instruction-Guided Video Editing",
+  "url": "https://arxiv.org/abs/2611.22495",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-17T09:51:25+00:00",
+  "summary": "Reward models for instruction-guided video editing can favor temporal consistency at the expense of motion. We study this failure, termed \\emph{motion collapse}, using controlled motion-suppression variants of real edits. On VE-Bench, the evaluated composite reward prefers a motion-suppressed candidate in $97\\%$ of cases. Learned video rewards and a VLM judge also struggle with mild suppression, while latent optimization and reward-guided fine-tuning exploit this weakness to increase reward as motion declines. A linear probe of our base reward backbone performs near chance on mild suppression…",
+  "authors": [
+   "Li Li",
+   "Xiangbo Gao",
+   "Bo Ni",
+   "Samyadeep Basu",
+   "Viet Dac Lai",
+   "Jing Shi",
+   "Seunghyun Yoon",
+   "Gang Wu"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "20784264ce93",
+  "title": "When the World Is the Test Suite: Agentic Intelligence for the Physical World",
+  "url": "https://arxiv.org/abs/2611.22291",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T06:48:03+00:00",
+  "summary": "Coding agents built to repair software now write, test, and repair programs for robots, laboratories, and industrial controllers. Unlike in software engineering, no test suite comes with the code. Whether a program works must be established by running it on a robot, in a physics simulator, or through the policies it helps to train, and such evidence is costly to obtain and can itself be wrong. As these agents take on more physical tasks, how their programs are judged matters as much as how they are written. This paper examines this emerging area, agentic intelligence for the physical world, b…",
+  "authors": [
+   "Kaixin Li",
+   "Meng Luo",
+   "Yanlin Li",
+   "Yuchen Tian",
+   "Xiang Liu",
+   "Xiangru Jian",
+   "Yan Yang",
+   "Zhiheng Xi"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "c0544beb7d12",
+  "title": "SOTA or Luck? The Winner's Curse in LLM Leaderboards",
+  "url": "https://arxiv.org/abs/2611.22227",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T05:18:14+00:00",
+  "summary": "Public LLM leaderboards guide model evaluation and adoption, yet the reported performance of top-ranked models can be systematically overstated. This leaderboard winner's curse arises because ranking noisy benchmark scores rewards sampling luck alongside genuine ability. The same selection effect can distort scores throughout the leaderboard, a phenomenon we call the rank-induced bias. We develop an $m$-out-of-$N$ bootstrap to correct for this bias. It assumes a fixed model pool with independent, identically distributed bounded tasks while allowing arbitrary within-task correlation among mode…",
+  "authors": [
+   "Sikun Xu",
+   "Raphael Thomadsen",
+   "Dennis J. Zhang",
+   "Heng Zhang"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "1c52c25dd0ff",
+  "title": "What RL on Expert-Built Tasks Teaches Nemotron 3.5 Super",
+  "url": "https://arxiv.org/abs/2611.22161",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T03:48:06+00:00",
+  "summary": "We post-train NVIDIA's Nemotron 3.5 Super (120B total, 12B active parameters) with reinforcement learning (RL) on five expert-built task datasets, one at a time: real-world software engineering, complex constraints, long-horizon tool use, professional chart understanding and enterprise document reasoning. Each run trains a fresh rank-32 LoRA adapter with CISPO on Tinker, with no supervised stage, and each adapter is compared with the base model on the same tasks, harness and settings. On twelve headline benchmarks, eight built by other groups and four by Surge AI, the gains range from +4.5 po…",
+  "authors": [
+   "Sushant Mehta",
+   "Edwin Chen"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "c627ed034f0c",
+  "title": "Long-Context Generation Is a Sampling Problem (When You Turn Up the Heat)",
+  "url": "https://arxiv.org/abs/2611.22148",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T03:30:03+00:00",
+  "summary": "Open-weight language models are widely observed to get worse the longer they generate. Often, attempts to fix this involve more training. At high temperature, The sampler, i.e. the rule that picks the next token out of the model's probabilities, decides whether long and agentic generation survives and/or thrives. We test 29 open-weight models from 1B to 122B parameters on ten established benchmarks plus needle retrieval out to one million tokens, covering SWE-bench Verified coding agents, long chain-of-thought reasoning, long-form writing, long structured output and long-context reading. Samp…",
+  "authors": [
+   "Allen G. Roush",
+   "Minh Nhat Nguyen",
+   "Ravid Shwartz-Ziv",
+   "Judah Goldfeder",
+   "Sanjay Basu"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "14a1f345f694",
+  "title": "SkillBuffBench: Measuring What Agent Skills Contribute across Harnesses, Models, Skill Access Modes and Memory",
+  "url": "https://arxiv.org/abs/2611.22017",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T00:12:40+00:00",
+  "summary": "Agent Skills, file-based packages of procedural knowledge that a coding agent can discover and load on demand, are now shipped by every major agent harness, yet the evidence for how much they help comes almost entirely from settings in which the right Skill is hand-picked for the task and the agent starts from a blank slate. Neither holds in deployment, where an agent chooses from whatever library happens to be installed and frequently carries memory from earlier work. We present SkillBuffBench, a benchmark and paired evaluation protocol that treats Skill access as a three-level factor (no Sk…",
+  "authors": [
+   "Gengyue Dong",
+   "Ye Wei",
+   "Zheng Zhu",
+   "Yidong Han",
+   "Jiale Miao",
+   "Xiaojun Jia",
+   "Guanghui Li"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
   "id": "3ae3a490dc72",
   "title": "llm 0.37.3",
   "url": "https://simonwillison.net/2026/Nov/16/llm/",
@@ -26,6 +324,74 @@
    "agents"
   ],
   "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "605a92477f8e",
+  "title": "EmbedGym: Letting Coding Agents Develop and Debug Embedded Firmware Without Physical Hardware",
+  "url": "https://arxiv.org/abs/2611.21845",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T20:02:12+00:00",
+  "summary": "Modern coding agents perform well on general software benchmarks because they can run code and unit tests in a closed loop. Embedded firmware development, however, breaks this loop: a program that compiles can still fail on real hardware due to pin polarity, bus protocol, timing, or networking bugs that an agent at a text terminal cannot observe. Existing embedded coding agents either skip hardware execution, drive GPIO-only simulators with multi-second delays, or test on physical boards in a static environment. In this paper, we present EmbedGym, an interactive virtual hardware environment t…",
+  "authors": [
+   "Minghui Zhao",
+   "Yiming Li",
+   "Sophie Zhu",
+   "Maxwell Khor",
+   "Lauren Ouyang",
+   "Hai \"Helen\" Li",
+   "Yiran Chen",
+   "Tingjun Chen"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "909b331e7d8a",
+  "title": "Can Coding Agents Write and Transpile Unit Tests",
+  "url": "https://arxiv.org/abs/2611.21797",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T19:16:19+00:00",
+  "summary": "Coding assistants built on Large Language Models (LLMs) have become a staple of modern software development, increasingly trusted to execute workflows and modernize code end-to-end. Much of this trust rests on passing tests, which are often written by the coding agents themselves. In this work, we examine the ability of these agents to both write reliable tests and translate them between programming languages. We benchmark three popular coding agents, each evaluated with a native frontier model and high reasoning effort. Verifying across a broad suite of metrics, we find that coding agents fa…",
+  "authors": [
+   "Gil Pasternak",
+   "AJ Langley",
+   "Tom Yotam",
+   "Ellie Kitanidis"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "8365bfe0357e",
+  "title": "Revisiting the Survival of Agent-Attributed Code: How Measurement Choices Decide the Verdict",
+  "url": "https://arxiv.org/abs/2611.21784",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T19:09:35+00:00",
+  "summary": "Studies of how long code from AI coding agents survives after it is merged reach conflicting verdicts: agent code is reported to be retained longer than human code, about as long, or modified sooner. Each study makes defensible measurement choices, but how much these choices decide the verdict is unknown. We revisit the survival of agent-attributed code in our earlier study: 854,139 lines that 2,802 merged pull requests (PRs) added to 215 repositories of the AIDev dataset. We vary nine measurement choices in five research questions and build a specification curve of 88 survival analyses, test…",
+  "authors": [
+   "Musfiqur Rahman",
+   "Mahi Begoug",
+   "Emad Shihab"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
  },
  {
   "id": "df20e944db0f",
@@ -104,6 +470,26 @@
    "sae"
   ],
   "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "927fbff213f7",
+  "title": "Disambiguating Moral Circuits and Moral Features in Language Models: Moral content, normative judgment or cue words? Evidence from 14 models",
+  "url": "https://arxiv.org/abs/2611.21705",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-16T16:12:45+00:00",
+  "summary": "Interpretability methods can locate the attention heads and sparse autoencoder (SAE) features that change the answer a language model gives to a moral prompt, e.g., whether \"Stealing medicine for a dying child is morally\" continues with \"justified\" or \"wrong\". Such a component could respond to moral content, to the judgment of conduct by any norm, or to the word \"morally\" in the prompt. We built 227 minimal pairs of short phrases, validated by five annotators, whose two versions differ in a moral standard, in another kind of norm (prudence, etiquette, aesthetics or evidence) or in a descripti…",
+  "authors": [
+   "Davide Liga",
+   "Liuwen Yu",
+   "Matteo Magnini"
+  ],
+  "tags": [
+   "circuits",
+   "sae"
+  ],
+  "fetched_at": "2026-11-18T08:32:37+00:00"
  },
  {
   "id": "de22f307aa44",
