@@ -1,5 +1,470 @@
 [
  {
+  "id": "6a0c5ccc70b8",
+  "title": "Solomonoff induction with reflective oracles",
+  "url": "https://www.alignmentforum.org/posts/nvrFYAwciyyj9T5ir/solomonoff-induction-with-reflective-oracles",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-19T04:36:27+00:00",
+  "summary": "Linkpost for https://arxiv.org/html/2611.14454v1 Our PIBBSS fellow Damini Kusum wrote an excellent paper on prediction with reflective oracle Solomonoff Induction (rOSI). Reflective oracles are best known for their game-theoretic applications, where they are often dismissed because \"why would all players choose the same reflective oracle?\" It turns out that reflective oracles can also be used to construct a version of Solomonoff induction (called rOSI) with very nice sequence prediction properties - roughly speaking, it can learn to extract computable structure from (partly) uncomputable sequ…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "249cf944c137",
+  "title": "anthropics/claude-code v2.1.328",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-19T01:14:04+00:00",
+  "summary": "## What's changed - Added auto mode for Claude Opus 4.6 and Sonnet 4.6 on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude apps gateway; interactive sessions with no permission mode start in it - Added `\"onFailure\": \"block\"` for `mcp_tool` hooks, as for command and HTTP hooks: a hook whose call fails blocks the action - Added a warning when a message from a session that skips permission prompts may be held and dropped by a cloud session - Added a notice in `/status` and `claude doctor` when an OpenTelemetry exporter has no endpoint and its data would likely be lost…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "fd1897fc7619",
+  "title": "llm-gemini 0.38",
+  "url": "https://simonwillison.net/2026/Nov/18/llm-gemini/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-18T23:59:20+00:00",
+  "summary": "Release: llm-gemini 0.38 Today Google introduced Gemini 4 Neon . I wrote recently about how confusing the pricing for the Gemini 4 series was - Neon has somehow made this even worse. Previously the Gemini 4 lineup was Hydrogen, Argon, and Carbon - where Argon and Carbon were the same price , and Hydrogen was 3/4 of that price now but will be 1/4 of that price when the other two double an 1st December once their initial discount pricing expires. The Neon announcement pretends that Argon doesn't exist. Here's their new image explaining the model line-up: So the lineup now, from most to least ex…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "c55c7774b218",
+  "title": "ndif-team/nnsight v0.8.3",
+  "url": "https://github.com/ndif-team/nnsight/releases/tag/v0.8.3",
+  "source": "ndif-team/nnsight",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-18T21:07:41+00:00",
+  "summary": "0.8.3 is a bug-fix and compatibility release. It works with transformers 5.23, moves the vLLM integration to vLLM 0.33, and fixes several ways a `TransformersModel` could load the wrong tokenizer or none at all. It also adds an on/off switch for PEFT adapters. If you use vLLM, read the upgrade notes: the pin moved to 0.33, and results under `n > 1` changed shape. ## Highlights ### transformers 5.23 - **Lazy loading** (#844, @Rohit4507). On transformers 5.23, `TransformersModel(repo)` with the default `dispatch=False` failed with `Impossible to guess which tokenizer to use`. It loads again. -…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "a21dfc2cb7c2",
+  "title": "Learning Trajectories Leave Decodable Traces in Neural Network Weight Space and Internal Representations",
+  "url": "https://arxiv.org/abs/2611.24782",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T17:27:55+00:00",
+  "summary": "Neural networks trained on the same task develop related weight-space structures, yet remain distinguishable after learning. Do these differences merely reflect alternative solutions, or do they preserve information about individual learning histories? We tested whether final weights reveal initialization, task order, and earlier trajectory states. Training reorganized the ensemble: initial pairwise distances did not consistently predict final distances. Nevertheless, all 30 trained networks were correctly matched to their initial weights among ten candidates per dataset. Networks sharing an…",
+  "authors": [
+   "Patrick Krauss",
+   "Achim Schilling",
+   "Andreas Maier",
+   "Thomas Kinfe",
+   "Claus Metzner"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "25233b116d91",
+  "title": "datasette-arrows 0.1a0",
+  "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-18T17:09:59+00:00",
+  "summary": "Release: datasette-arrows 0.1a0 Datasette 1.0a43 added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The register_output_renderer() plugin hook can now be used to implement the same pattern for other formats. I've learned never to release a new plugin feature without accompanying it with a plugin that uses it. Claude Fable 5.2 suggested the Apache Arrow streaming forma…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "628eed619e2b",
+  "title": "Quoting Daniel Stenberg",
+  "url": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-18T15:58:27+00:00",
+  "summary": "During the time these agents converted 185,000 lines of C code into 340,000 lines of Rust code (I counted), we merged over 300 commits in the actual curl project. We actually improved curl during these a little more than three weeks. A little over 200 bugfixes actually. 200 bugfixes that none of those rust rewrites have. We also fixed a few vulnerabilities. In another month we have done another 200 and maybe fixed a few more vulnerabilities. Will these clones keep up? — Daniel Stenberg , Actual curl rewrites in Rust Tags: daniel-stenberg , curl , rust , security , coding-agents , c , ai , llm…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "a284680c5080",
+  "title": "CurvDelta: Low-Curvature Delta Modeling For Surgical Learning and Unlearning",
+  "url": "https://arxiv.org/abs/2611.24654",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T15:56:20+00:00",
+  "summary": "A central challenge in adapting large language models (LLMs) is capability preservation: an adaptation can achieve its target while degrading general capabilities. We introduce CurvDelta, a scalable framework that incorporates the preservation constraint into the parameterization of the model update. By analyzing the local geometry of the preservation constraint around the pre-adaptation model, CurvDelta constructs a low-curvature space in which parameter updates leave the preservation loss nearly invariant. We make its construction practical for LLMs through Kronecker-factored approximate cu…",
+  "authors": [
+   "Zeguan Xiao",
+   "Zhuocheng Liang",
+   "Yun Chen",
+   "Yong Wang",
+   "Guanhua Chen",
+   "Pinyan Lu"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "9f83ba81afcd",
+  "title": "Clover-35B-A3B-Preview Technical Report",
+  "url": "https://arxiv.org/abs/2611.24636",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T15:46:14+00:00",
+  "summary": "We introduce Clover-35B-A3B-Preview (Clover), a mixture-of-experts diffusion language model with 35 billion total parameters and 3 billion activated parameters, supporting thinking-mode generation. Clover adapts Gated Delta Networks to block diffusion by combining recurrent memory of previously generated context with bidirectional softmax attention inside the current block. Historical memory readout competes with current-block tokens in a shared softmax, with learnable block-size calibration and a separate, zero-initialized right-context convolution branch. Clover leads the seven evaluated ag…",
+  "authors": [
+   "DiffuSpace Technical Team"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "f02aea4c3854",
+  "title": "GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits",
+  "url": "https://arxiv.org/abs/2611.24619",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T15:37:04+00:00",
+  "summary": "As large language models (LLMs) and LLM-based agents are increasingly deployed, monitoring their behavior becomes important for detecting unsafe or unintended actions. Activation probes offer an efficient approach, but existing methods face trade-offs between accuracy, interpretability, and computational overhead. Probes on raw activations lack interpretable inputs, whereas sparse autoencoder (SAE) probes use interpretable features but often rely on additive classifiers and large SAE encoders, limiting interpretability and increasing memory overhead. We introduce GateWatch, a compact, interpr…",
+  "authors": [
+   "Firas Spanioli",
+   "Yaniv David"
+  ],
+  "tags": [
+   "agents",
+   "circuits",
+   "probing",
+   "sae"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "1a9261d28a26",
+  "title": "Chain-of-Thought Hidden States Reveal Task-Solving Directions for Direct Answers",
+  "url": "https://arxiv.org/abs/2611.24598",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T15:25:14+00:00",
+  "summary": "Chain-of-Thought (CoT) prompting improves the performance of Large Language Models by eliciting intermediate reasoning steps. However, CoT is far from perfect: on some tasks, models perform worse than with direct-answer prompting, and on others they generate a few hundred tokens to reach the correct answer. We start by labelling each CoT hidden state as recovering if patching it into the direct prompt yields the correct answer, and failed otherwise. A linear probe shows that the model encodes these two classes differently. We then show that the representation space of the direct prompt holds…",
+  "authors": [
+   "Houman Mehrafarin",
+   "Ioannis Konstas"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "7582ca82a223",
+  "title": "Probing agent overeagerness in realistic settings with continuation audits",
+  "url": "https://arxiv.org/abs/2611.24491",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T14:23:10+00:00",
+  "summary": "Frontier coding agents increasingly exhibit overeagerness, taking surprising, sometimes reckless actions beyond a user's mandate --- reported in recent system cards from frontier model developers. These cases are surfaced through internal deployment monitoring, which requires private traffic and is out of reach for open-weight models and independent evaluators. Automated alignment audits are the natural alternative, but capable models increasingly recognise the synthetic setup and adjust their behaviour. We introduce Continuation Audits, a pipeline that grounds the auditor on a prefix drawn f…",
+  "authors": [
+   "Sean Lim",
+   "Clement Neo"
+  ],
+  "tags": [
+   "agents",
+   "probing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "1e6b15e0e845",
+  "title": "Data Contracts",
+  "url": "https://martinfowler.com/articles/data-contracts.html",
+  "source": "Martin Fowler",
+  "source_type": "blog",
+  "track": "engineering",
+  "published": "2026-11-18T14:02:00+00:00",
+  "summary": "Data contracts are a way to describe the contents and guarantees of datasets. Simon Harrer and Arif Wider describe in detail what they are and how to use them. They apply practices from API design to data by treating them as data-providing services - such as data products - whose interfaces we want to define as clearly as possible. This approach significantly increases the robustness of large-scale data landscapes, and gives both people and AI agents the explicit, trustworthy metadata they need to work with data autonomously, which is why more and more enterprises are adopting them. more…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "48c58b20cb9b",
+  "title": "Harmonic Circuit: Chord Progression Lies in a Sparse Principal Information Flow in Symbolic Music Models",
+  "url": "https://arxiv.org/abs/2611.24453",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T14:01:33+00:00",
+  "summary": "Mechanistic Interpretability (MI) seeks to decode neural network computations into human-understandable logic. A core methodology in MI is circuit discovery: identifying the information flow in sub-networks that drive specific model behaviors. While circuit discovery has matured within Natural Language Processing (NLP), the interpretable circuits in music models remain largely unexplored. In this work, we identify a music-functional circuit within two symbolic music generative models: ChatMusician and MuPT. The music function we consider is the prediction of the terminal tonic root in a class…",
+  "authors": [
+   "Ruiji Yu",
+   "Gus Xia"
+  ],
+  "tags": [
+   "circuits"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "29702ed4d9c4",
+  "title": "Probing Physics in Motion Diffusion Models Against Their Own Estimate",
+  "url": "https://arxiv.org/abs/2611.24423",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T13:44:03+00:00",
+  "summary": "Recent studies report that video diffusion models \"know more than they show\": physical properties decode better from their activations than from their inputs or outputs. But a diffusion model computes its clean-sample estimate from those same activations, so such a comparison measures how easily a readout extracts the information. Whether the model hides anything is a separate question. We set out to find hidden physical knowledge in kinematic text-to-motion diffusion models, where the physics of every intermediate estimate can be computed exactly, and recorded every layer along the sampling…",
+  "authors": [
+   "Saeed Ghorbani"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "22fad911f710",
+  "title": "MoE-Context: Show the Model Only What It Needs",
+  "url": "https://arxiv.org/abs/2611.24379",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T13:08:14+00:00",
+  "summary": "AI agents read their whole history at every step. People do not work like that: we keep what the moment needs and hold the rest as a rough note we can recall. MoE-Context applies this to language models. The context is split into blocks. Before each step a fast yes or no pass decides which blocks the step needs; the rest stay as one-line notes that can be brought back, and nothing is deleted. In the version we build, one model makes this decision and then answers, over a single key-value cache where hidden blocks are masked rather than removed. On a laptop with Qwen3-1.7B and a synthetic look…",
+  "authors": [
+   "Vedant Navale"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "7361aa3df1e5",
+  "title": "Reducing Inference Cost of Coding Agents with Timeout Cascades",
+  "url": "https://arxiv.org/abs/2611.24324",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T12:26:42+00:00",
+  "summary": "AI coding agents have become one of the most popular applications of large language models. Yet, agentic AI comes at the cost of a tremendous amount of GPU compute resources, which limits its profitability and its viability at scale. In this paper, we investigate whether smaller, cheaper models can cut this cost without sacrificing accuracy. We evaluate 36 popular large and small open-weight models released since 2024 on a software engineering benchmark, and find that recent small models are closing the accuracy gap compared to their large counterparts. We investigate the structure of this ga…",
+  "authors": [
+   "Boxi Zhou",
+   "German Sviridov",
+   "Dmitrii Ustiugov",
+   "Haris Javaid"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "6c826b739a03",
+  "title": "RespCCT and FreqCCT: Compact, Explainable and Cost-Aware Convolutional Transformers for Multi-Class Respiratory Disease Classification",
+  "url": "https://arxiv.org/abs/2611.24323",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T12:26:30+00:00",
+  "summary": "Chest auscultation depends on the listener, and software that classifies lung sounds could give a second reading where trained listeners are scarce. The most accurate published classifiers fine-tune large pretrained networks, and their accuracy is rarely reported with running cost or paired statistics. This study makes three contributions. (i) It proposes RespCCT and FreqCCT, two compact convolutional transformers of 173,187 and 124,999 parameters that learn from random initialization on mel, constant-Q and cepstral images of 5 s frames from three public databases, ICBHI, KAUH and RD@TR, with…",
+  "authors": [
+   "Auntor Chakma",
+   "Mst. Farhana Akter",
+   "Abu Henaf Rashid Ahmad Mufti",
+   "Asmana Yasmin"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "ef16ace220d1",
+  "title": "The Comprehension Gap in LLM-Assisted Software Development: An Experiment",
+  "url": "https://arxiv.org/abs/2611.24216",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T10:55:37+00:00",
+  "summary": "When LLM tools are pushed beyond their capabilities for software development tasks, developers must be able to step in. However, the comprehension that developers acquire during development might be negatively impacted due to excessive code generation. This could create a cognitive debt that needs to be resolved before tasks can be solved efficiently again. We explore how well developers understand code they generated by prompting in comparison to self-written and unseen code and how they reflect on their comprehension. We conduct a crossover experiment and interviews with 35 participants con…",
+  "authors": [
+   "Julian Oertel",
+   "Jil Klünder",
+   "Regina Hebig"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "cb7777167f79",
+  "title": "MemoSync: Co-Managing Developer-Agent Metamemory Across Contexts",
+  "url": "https://arxiv.org/abs/2611.24165",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T10:06:51+00:00",
+  "summary": "AI coding agents increasingly manage what context carries across sessions and projects, but developers have limited visibility into what these agents store, retrieve, and apply. This opacity creates a metamemory problem: the developer's meta-level judgments about what should be remembered are separated from the agent's object-level memory operations, disrupting the monitoring and control that keep the two levels aligned. We conducted a formative study with 12 developers and identified what they want to monitor and control across four dimensions of agent memory use. Based on these findings, we…",
+  "authors": [
+   "Baiqiao Zhang",
+   "Junze Li",
+   "Chunyang Luo",
+   "Yuying Tang",
+   "Wenshuo Zhang",
+   "Shiyuan Piao",
+   "Dingdong Liu",
+   "Shuai Ma"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "dbfe58cf56ed",
+  "title": "How Well Do Generalist CT Foundation Models Differentiate Liver Tumors?",
+  "url": "https://arxiv.org/abs/2611.24122",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T09:41:41+00:00",
+  "summary": "Generalist CT foundation models detect many findings with high performance, but their ability to differentiate detected lesions remains largely unevaluated. This retrospective study evaluated two generalist models, RADAR and Merlin, for differentiating liver tumors using a public single-institution multiphase CT dataset (517 cases: hepatocellular carcinoma, intrahepatic cholangiocarcinoma, breast and colorectal cancer liver metastases, and hemangioma). The models were evaluated in a zero-shot setting using their existing outputs and with linear probing, in which only a linear classifier was t…",
+  "authors": [
+   "Yosuke Yamagishi",
+   "Tomohiro Kikuchi",
+   "Shouhei Hanaoka",
+   "Takeharu Yoshikawa",
+   "Osamu Abe"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "dbc42a142111",
+  "title": "Inference-Time Scaling in Agentic Hardware Verification Workflows: A Multi-Strategy Characterization Across Protocol Complexity",
+  "url": "https://arxiv.org/abs/2611.23905",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T05:58:20+00:00",
+  "summary": "Inference-time scaling, allocating more compute during generation rather than pre-training, has demonstrated dramatic quality improvements for LLM reasoning tasks. Its behaviour in structured hardware verification code generation, where outputs must satisfy compiler correctness, protocol semantics, and functional coverage constraints simultaneously, is less understood. We present a systematic, simulator-grounded study of inference-time compute scaling for agentic UVM testbench synthesis targeting AMBA protocol bridges. Four inference strategies---zero-shot (\\$0.04), raw-feedback iterative (\\$…",
+  "authors": [
+   "Vikash Kumar"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "aa615746ece8",
+  "title": "SWE-growth: Teacher-Guided Adaptive Self-Play for Software Engineering Agents",
+  "url": "https://arxiv.org/abs/2611.23876",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T05:29:18+00:00",
+  "summary": "Self-play offers a scalable way to train software engineering agents by generating repository-level repair tasks. However, with binary repair rewards and finite rollout budgets, all-fail groups provide no reward-based group-relative advantage. Such tasks may still offer learning opportunities when a Teacher can provide verified repairs absent from the Student's own attempts. We introduce SWE-Growth, a teacher-guided adaptive self-play framework that uses verified Teacher outcomes to identify learning opportunities for the current Student. Tasks with all students failure but reliable Teacher s…",
+  "authors": [
+   "Songshi Liang",
+   "Zixuan Huang",
+   "Mingxuan Song",
+   "Haoyu Tang",
+   "Shusheng Xu",
+   "Tongkai Yang",
+   "Zihe Wang",
+   "Rui Yan"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "6d5ce1eaa9e9",
+  "title": "Asking but Missing: Decision Coverage in Natural-Language Data Querying",
+  "url": "https://arxiv.org/abs/2611.23864",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T05:13:13+00:00",
+  "summary": "Large language models are increasingly used to translate natural language questions about structured data into executable programs. A fundamental challenge is recognizing when a question admits multiple computational interpretations and identifying the decisions needed to resolve them. We investigate whether language models recognize these unresolved decisions before generating code, or silently adopt assumptions that may lead to incorrect results. We refer to the latter behavior as Underspecified Decision Completion (UDC). To distinguish different causes of UDC, we introduce Grounded Code Ge…",
+  "authors": [
+   "Hangle Hu",
+   "Chenyu Hou",
+   "Bin Cao",
+   "Jing Fan",
+   "Wei Luo"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "e0d65d858e19",
+  "title": "Communicative On-Policy Distillation: Distilling Black-Box Teacher Capabilities through Communication for Long-Horizon Tasks",
+  "url": "https://arxiv.org/abs/2611.23673",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T00:56:10+00:00",
+  "summary": "On-policy distillation (OPD) is a powerful paradigm for improving language-model agents on long-horizon tasks, yet its conventional formulation relies on teacher logits that text-only black- box models do not expose. To address this limitation, we introduce Communicative On-Policy Distillation (COPD), which uses natural-language communication as a medium for distilling a stronger model's capabilities into a smaller student. During task execution, the student au- tonomously decides when to consult a black-box teacher and formulates open-ended natural- language requests without predefined quest…",
+  "authors": [
+   "Lirui Luo",
+   "Kelong Mao",
+   "Xinwei Yang",
+   "Rongqing Li",
+   "Luyu Chen",
+   "Kieran Wong",
+   "Yudong Guo",
+   "Xinrui Wang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "1259f1cf62f2",
+  "title": "FairPGT: Partitioned Graph Transformers for Dual-Level Fair Graph Clustering",
+  "url": "https://arxiv.org/abs/2611.23631",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-17T23:41:54+00:00",
+  "summary": "Clustering on attributed graphs can produce demographically biased clusters, particularly when communities align with protected groups. Graph transformers can amplify this bias through same-group attention, while global attention limits scalability. We propose FairPGT, a partitioned graph transformer for fair graph clustering. FairPGT restricts attention to METIS partitions and connects them through routing tokens, which divides the quadratic cost of attention by the number of partitions. A graph-aware self-training target guides clustering, with a provably bounded deviation from the standard…",
+  "authors": [
+   "Siamak Ghodsi",
+   "Amjad Seyedi",
+   "Sahar Tahmasebi",
+   "Eirini Ntoutsi",
+   "Sören Auer"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
   "id": "1560056f3e5d",
   "title": "anthropics/claude-code v2.1.327",
   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
@@ -42,6 +507,62 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "9b950ea119ab",
+  "title": "JEPA for astronomy: multi-survey spectral alignment puts stellar parameters on the leading principal axes",
+  "url": "https://arxiv.org/abs/2611.23492",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-17T20:44:12+00:00",
+  "summary": "Spectra from different surveys carry different systematics and are not calibrated against one another. Multi-survey foundation models for stellar spectra are then built by aligning embeddings of the same star observed across surveys. Most in astronomy follow the recipes established for language and vision, aligning with a contrastive loss that separates every star from the others. However, this does not ensure that the stellar physics is encoded in a form that a simple read-out can recover. Holding the cross-survey architecture fixed and varying only the alignment loss, we measure what an obj…",
+  "authors": [
+   "Xiaosheng Zhao",
+   "Rosemary F. G. Wyse",
+   "Yuan-Sen Ting",
+   "Alexander S. Szalay"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "438f6cf9400f",
+  "title": "Tracking Representations in LLM Reasoning Traces for Iterated Games",
+  "url": "https://arxiv.org/abs/2611.23403",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-17T19:03:18+00:00",
+  "summary": "Large language model (LLM) agents achieve state-of-the-art performance across domains through chain-of-thought (CoT) reasoning. Despite their ubiquitous use, little is understood about the relationship between the externalized trace and the model's actual computation. We address this by investigating how LLM agents make decisions in iterative games with incomplete information. Using a series of mechanistic interpretability techniques, we find that the model forms and iteratively revises an internal representation of the game throughout the CoT. Once the model prematurely commits to an incorre…",
+  "authors": [
+   "Chaipat Tirapongprasert",
+   "Rajarshi Das",
+   "Parijat Dube"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "571da629935d",
+  "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
+  "url": "https://arxiv.org/abs/2611.23375",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T19:00:02+00:00",
+  "summary": "Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software thermodynamics. The theory draws analogues from classical and stochastic thermodynamics, extends them, and applies them to modern agentic coding. We count the tokens an agent generates as its cost and divide that cost into work and heat. The test suite acts as a software Maxwell's daemon that judges every coding change. We test the theory with an analogue of the experiments in which a single molecule is pulled open and let fold again: an agent m…",
+  "authors": [
+   "Alán Aspuru-Guzik",
+   "Varinia Bernales"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
  },
  {
   "id": "2e072b318207",
@@ -129,6 +650,23 @@
    "agents"
   ],
   "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "72550b2635d6",
+  "title": "Systematic Mapping Protocol. Generative AI-Augmented Requirements Engineering: A Systematic Mapping Study of Practices, Specifications, and Reuse in Software Development",
+  "url": "https://arxiv.org/abs/2611.23349",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T11:59:25+00:00",
+  "summary": "Generative artificial intelligence (GenAI), particularly large language models (LLMs), is rapidly being adopted in requirements engineering (RE). Existing secondary studies have characterized which RE activities are supported and which prompting strategies are used, but little is known about the specifications that GenAI-augmented RE produces and how they are used in subsequent activities such as specification-driven development (SDD), design and code generation, test derivation, verification, and reuse. This document presents the protocol of a systematic mapping study (SMS) that will identif…",
+  "authors": [
+   "Fernando Pinciroli"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
  },
  {
   "id": "c563bb884f08",
@@ -274,6 +812,41 @@
   "fetched_at": "2026-11-18T08:32:37+00:00"
  },
  {
+  "id": "7de1d8e9ec78",
+  "title": "Truthgate: Checking Coding Agents Against a Record They Cannot Edit - Cheating, Deterrence and Disclosure on Impossible Tasks",
+  "url": "https://arxiv.org/abs/2611.23335",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T01:43:45+00:00",
+  "summary": "When a coding agent says it is done, is that true, and how would anyone know? We study this question in five steps; every paid study was pre-registered, and in each step the agent is checked against a record it cannot edit: tests re-run by the host and, from step 2 on, hidden checks in containers the agent never sees and a signed log of every tool call written by a signer outside the agent's sandbox. A pilot with a small local model (Qwen3.5-4B, 36 runs on impossible tasks) found no hidden failure, and showed that labels built from actions alone over-count lies. On Impossible-LiveCodeBench, C…",
+  "authors": [
+   "Bravish Ghosh"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "57b73843177e",
+  "title": "Integrating AI Coding Agents Into Scientific Research",
+  "url": "https://arxiv.org/abs/2611.23334",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-17T01:03:38+00:00",
+  "summary": "New software tools have emerged that enable AI agents to quickly develop code that analyzes data and generates figures, but their mistakes can also harm a researcher's computer, require extensive resources for validation, and cause the results to be received more skeptically. These concerns could be mitigated if scientific software is developed in a secure environment with a system for monitoring file changes and well-defined standards for handling AI agents. This paper first describes how coding agents change eleven aspects of generating, verifying, and reproducing numerical results. A six-l…",
+  "authors": [
+   "Rory Barnes"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
   "id": "14a1f345f694",
   "title": "SkillBuffBench: Measuring What Agent Skills Contribute across Harnesses, Models, Skill Access Modes and Memory",
   "url": "https://arxiv.org/abs/2611.22017",
@@ -392,6 +965,23 @@
    "testing"
   ],
   "fetched_at": "2026-11-18T08:32:37+00:00"
+ },
+ {
+  "id": "dee7b56711c8",
+  "title": "Training for sustainable scientific software in the AI era: from code production to scientific stewardship",
+  "url": "https://arxiv.org/abs/2611.23330",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-16T19:04:03+00:00",
+  "summary": "Generative and agentic artificial intelligence (AI) systems are changing how researchers interact with scientific software. Their effects on productivity vary across tasks and users, but they can weaken the connection between producing a successful computational artifact and retaining scientific command over the consequential choices and evidence on which it depends. For high-energy physics, this shifts part of the training challenge from code production toward scientific stewardship: researchers must be able to validate, explain, reproduce, maintain, and justify software and workflows partly…",
+  "authors": [
+   "Juliette Alimena"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
  },
  {
   "id": "df20e944db0f",
@@ -715,6 +1305,27 @@
    "evals"
   ],
   "fetched_at": "2026-11-17T09:13:00+00:00"
+ },
+ {
+  "id": "af41eea05ae4",
+  "title": "HydroMind: A Checkable Agent for Autonomous Hydrological Research",
+  "url": "https://arxiv.org/abs/2611.23323",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-15T17:53:30+00:00",
+  "summary": "General-purpose coding agents have written code for hydrological and Earth-system models. In these studies the researchers decided in advance how the model would be evaluated, for example the test period, the scoring function, and the standard the model had to meet. No study has tested what happens when the agent makes these decisions itself: how many of its claims are supported by its own data, code, and results, and whether readers can check them. Both may depend on the agent's harness, that is, the tools it can call and the written instructions it follows. We compared three harnesses: the…",
+  "authors": [
+   "Zheng Fang",
+   "Yiqun Sun",
+   "Simin Qu",
+   "Shijie Jiang"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-19T08:48:10+00:00"
  },
  {
   "id": "149e25e58740",
