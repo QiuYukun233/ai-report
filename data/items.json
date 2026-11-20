@@ -1,5 +1,297 @@
 [
  {
+  "id": "f32d5bea8abf",
+  "title": "Token fraud is here and it’s BAD (YouTube)",
+  "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-20T02:49:57+00:00",
+  "summary": "Token fraud is here and it’s BAD (YouTube) Claire Vo runs ChatPRD , an AI platform that helps product managers \"turn an idea into a spec\". The product has been live since the GPT-4 era, and Claire has been building it in public for much of that time. In this YouTube video (see also the accompanying Twitter post ) Claire describes the flood of token fraud she has seen from groups abusing the product's free trial, sometimes just to get free AI usage but often to resell tokens or run other commercial enterprises on top of the ChatPRD agent. I am funding a international Roblox and Fortnite map st…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "be74a7632236",
+  "title": "jbloomAus/SAELens v6.56.1",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.56.1",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-20T02:21:23+00:00",
+  "summary": "# v6.56.1 (2026-11-20) ## Fix * fix: _validate_seqpos rejecting valid step_size of 1 (#681) ([`d7ec154`](https://github.com/decoderesearch/SAELens/commit/d7ec154c42f4a34f94446ce95ad91f23e7dbc304)) ## Test * test: make fewer Hugging Face requests so CI stays under the rate limit (#799) ([`3235edf`](https://github.com/decoderesearch/SAELens/commit/3235edfd69aa42913b9db47c3735fdd96715a0ee))",
+  "authors": [],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "e4de766e855c",
+  "title": "jbloomAus/SAELens v6.56.0",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.56.0",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-19T23:53:01+00:00",
+  "summary": "# v6.56.0 (2026-11-19) ## Feature * feat: rename n_batches_in_buffer to n_sequences_in_buffer (#756) ([`e456823`](https://github.com/decoderesearch/SAELens/commit/e45682358c3de8816cb718646364a08a8b40aacb))",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "9166064c2f31",
+  "title": "anthropics/claude-code v2.1.329",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-19T22:14:41+00:00",
+  "summary": "## What's changed - Added a trust dialog warning that says where a folder's hooks are declared - Added a warning in the conversation, in Claude Desktop and other non-interactive hosts, when hooks in managed settings fail to load - Added this session's scheduled tasks, `/loop` wakeups, the goal and this conversation's forks to `/tasks`; x stops one after asking - Added a \"Server message\" row to a server's page in `/mcp` that shows the JSON-RPC error message of a remote HTTP MCP server that refuses the connection - Added a \"Marketplace auto-update\" row to `/status` that names managed marketplac…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "26a0b4a7475f",
+  "title": "jbloomAus/SAELens v6.55.8",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.8",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-19T21:57:56+00:00",
+  "summary": "# v6.55.8 (2026-11-19) ## Fix * fix: run_evals and covariance_whitening crash on MPS (no float64) (#797) ([`3860f42`](https://github.com/decoderesearch/SAELens/commit/3860f4218965694355a8014e1f47fd48f3bc3844))",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "2cde29cda7ec",
+  "title": "jbloomAus/SAELens v6.55.7",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.7",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-19T21:31:07+00:00",
+  "summary": "# v6.55.7 (2026-11-19) ## Fix * fix: resolve list-valued hook aliases in SAETransformerBridge (#796) ([`b3d62c1`](https://github.com/decoderesearch/SAELens/commit/b3d62c12878f68b3c8e09b5929dac6f60fe77c92))",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "18030cf50d98",
+  "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+  "url": "https://arxiv.org/abs/2611.26627",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T18:59:53+00:00",
+  "summary": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base…",
+  "authors": [
+   "Tuna Han Salih Meral",
+   "Kaan Oktay",
+   "Alec Helbling",
+   "Atakan Kara",
+   "Duen Horng Chau",
+   "Pinar Yanardag"
+  ],
+  "tags": [
+   "probing",
+   "steering"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "6eb4d2ebb5e8",
+  "title": "Represented but misread: Post-training changes how language models read out what they represent",
+  "url": "https://arxiv.org/abs/2611.26584",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T18:43:56+00:00",
+  "summary": "Does post-training change what a language model represents, or how this representation is read out into an answer? We compared linear probes with the models' own answers, analyzed with signal detection theory, in six open-weight base models and their post-trained versions. For judgments of whether German texts were written by a human or an AI, probes and word n-gram classifiers separated the classes well, but the answers did not and often ordered the texts inversely. Post-training lowered the sensitivity of the answers on average ($Δd' = -0.34$ across model families; -0.29 across three prompt…",
+  "authors": [
+   "Jochen Laubrock"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "112c7e413ff3",
+  "title": "The Geometry of Lies: Knowledge and Persona Directions for Detecting Deception in Large Language Models",
+  "url": "https://arxiv.org/abs/2611.26545",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T18:20:01+00:00",
+  "summary": "Linear probes are the cheapest LLM lie detectors but often fail to transfer across kinds of lie. Label-free directions from honest and deceptive role-play are untested at 70B scale and on lies about knowledge, where a lie and an honest denial can be identical. We widen a published persona bank with roles that deny knowledge they have, plus honest counterparts. At each model's middle layer the resulting persona direction ranks lies across Liars' Bench better than single-dataset probes on three of its four models; it fails on Qwen, even when Qwen stays in role far more often. On Llama-3.3-70B-I…",
+  "authors": [
+   "Md. Abdullah Al Zami",
+   "Suraiya Shanaz",
+   "Mahdi Hasan",
+   "Shoaib Ahmed Dipu",
+   "Farig Yousuf Sadeque",
+   "Md. Sabbir Ahmed"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "0f88e8f1820c",
+  "title": "Static Analysis Guidance for Secure LLM Code Generation",
+  "url": "https://arxiv.org/abs/2611.26312",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-19T16:01:56+00:00",
+  "summary": "Static analyzers are cheap and widely deployed, which makes their reports a candidate feedback signal for secure LLM code generation. Existing approaches place the analyzer inside an iterative repair loop with intermediate steps, which is costly and makes it hard to isolate the report's effect on the model. We introduce two strategies that give the finding to the model during generation. When the analyzer raises an alert, generation is rolled back, and the finding is inserted either as a code comment (Comment) or in the user message (Steering). We compare them with two iterative approaches an…",
+  "authors": [
+   "Daniele Lunghi",
+   "Alberick Euraste Djiré",
+   "Zacharie Chenail-Larcher",
+   "Mélissa Tessa",
+   "Quentin Stiévenart",
+   "Jacques Klein",
+   "Florent Avellaneda",
+   "Naouel Moha"
+  ],
+  "tags": [
+   "steering"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "e4a4273f7626",
+  "title": "astral-sh/ruff 0.17.6",
+  "url": "https://github.com/astral-sh/ruff/releases/tag/0.17.6",
+  "source": "astral-sh/ruff",
+  "source_type": "release",
+  "track": "engineering",
+  "published": "2026-11-19T15:57:37+00:00",
+  "summary": "## Release Notes Released on 2026-11-19. ### Preview features - \\[`flake8-type-checking`\\] Add a fix for `runtime-string-union` (`TC010`) ([#15635](https://github.com/astral-sh/ruff/pull/15635)) ### Bug fixes - Fix handling of parenthesized duplicate items (`B033`, `RUF068`) ([#30493](https://github.com/astral-sh/ruff/pull/30493)) - \\[`pyflakes`\\] Fix false negative when a name is assigned more than once (`F823`) ([#30524](https://github.com/astral-sh/ruff/pull/30524)) - \\[`pylint`\\] Avoid false positive when collection is modified in loop (`PLR1733`, `PLR1736`) ([#30466](https://github.com/a…",
+  "authors": [],
+  "tags": [
+   "python-tooling"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "36bd6e591306",
+  "title": "Who Moved My $Z$ Boson? Revealing Resonance Features Inside a Neural Network",
+  "url": "https://arxiv.org/abs/2611.26291",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T15:48:04+00:00",
+  "summary": "Methods used in mechanistic interpretability have revealed human-aligned concepts inside language and image models. In this paper, we search for physics concepts inside a neural a generative collider physics model trained on real LHC data (ShellFlow). We discover features inside ShellFlow that represent resonances, such as the $Z$, $J/ψ$, and $Υ$. The network was never told which muons come from a resonance, it was only trained to generate the kinematics of the final-state particles. We use these features to alter aspects of the $Z$ boson: we change its mass between $\\sim80$ and $105$ GeV, an…",
+  "authors": [
+   "Kevin Alberto Urquía Calderón",
+   "Midori Kato",
+   "Inar Timiryasov",
+   "Oleg Ruchayskiy"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "5981d754f780",
+  "title": "SheetAlign: Grounded Interaction and Stage-Isolated Learning for Spreadsheet Agents",
+  "url": "https://arxiv.org/abs/2611.26069",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-19T13:13:12+00:00",
+  "summary": "Spreadsheets are widely used for data analysis and supporting decision-making. Automating spreadsheet analysis while protecting sensitive data and controlling deployment costs motivates locally deployed open-weight large language models (LLMs). Meanwhile, complex spreadsheet tasks require both task reasoning and workbook understanding, while predefined operation interfaces impose additional tool-selection and invocation demands. We introduce SheetAlign, a spreadsheet manipulation framework with stage-isolated policy learning, organized around where to operate, what to change, and how to imple…",
+  "authors": [
+   "Yuxiang Wang",
+   "Junhao Gan",
+   "Jianzhong Qi"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "9783af77e02b",
+  "title": "jbloomAus/SAELens v6.55.6",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.55.6",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-19T11:50:00+00:00",
+  "summary": "# v6.55.6 (2026-11-19) ## Fix * fix: accept cache name filters when stopping proxy forwards (#798) ([`13995f2`](https://github.com/decoderesearch/SAELens/commit/13995f29cdf3a6f2852f37573d127caad411ece9)) * fix: keep Matryoshka decoding finite for zero-norm decoder rows (#795) ([`d587d20`](https://github.com/decoderesearch/SAELens/commit/d587d2087b7689798a99f15bc5c7c8a1a0a61fda)) * fix: add embedding SAEs to the canonical Gemma Scope res releases (#794) ([`bdb1b3a`](https://github.com/decoderesearch/SAELens/commit/bdb1b3a4250289545396aa8215e910894576aee8)) * fix: drop context_size from feature…",
+  "authors": [],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "c677893ca441",
+  "title": "Language models represent more about emphasis than they can tell you",
+  "url": "https://arxiv.org/abs/2611.25808",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T09:30:53+00:00",
+  "summary": "Prosodic prominence can largely be predicted from the words of a sentence, but part of it depends on how the speaker reads it. We study how much of prominence language models recover from text, whether they can report it when asked, and what the speech signal adds. On read English speech labelled for word-level prominence, we compare frozen and fine-tuned text models, prompted large language models (LLMs) and speech models on the same words. All text models end within about one point of each other, at best 68.8% on the 3-way task, and largely make the same errors. With the prompts we tested,…",
+  "authors": [
+   "Aarne Talman",
+   "Stergios Chatzikyriakidis"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "ed11311ccac8",
+  "title": "Closing Performance Gap for Diffusion Language Models under Low Inference Budgets",
+  "url": "https://arxiv.org/abs/2611.25763",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-19T09:03:43+00:00",
+  "summary": "Diffusion language models offer an architectural route to low-budget generation by updating multiple tokens in parallel, which can reduce the number of sequential decoding steps relative to token-by-token autoregressive decoding. However, realizing this advantage at low budgets is challenging, as generation quality often declines when the number of denoising and refinement steps is reduced. Editable diffusion models address this quality loss through post-draft refinement, but useful intermediate results may still be lost before final submission. We introduce CaRR (Commitment-aware Refinement…",
+  "authors": [
+   "Hao Wu",
+   "Sipeng Chen",
+   "Jingwen Fu",
+   "Yuwang Wang"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "b91ac3642b3a",
+  "title": "Characterizing and Detecting Unfaithful Work Reports by Coding Agents",
+  "url": "https://arxiv.org/abs/2611.25760",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-19T09:01:02+00:00",
+  "summary": "Coding agents increasingly carry out long-horizon development tasks, autonomously planning and executing multi-step actions that span files, tools, and sessions. Because developers rarely follow each action, and agents resuming the work depend on records of what was done, the agent's work report often becomes the primary account of what was changed and established. When the report contains false or unsupported claims, it gives recipients false assurance: incomplete work may be accepted without verification, incorrect assumptions about the current state can propagate to later steps and agents,…",
+  "authors": [
+   "Wenhao Yang",
+   "Runzhi He",
+   "Minghui Zhou",
+   "Pengfei Gao",
+   "Dayi Lin",
+   "Qingwei Lin",
+   "Dongmei Zhang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
   "id": "6a0c5ccc70b8",
   "title": "Solomonoff induction with reflective oracles",
   "url": "https://www.alignmentforum.org/posts/nvrFYAwciyyj9T5ir/solomonoff-induction-with-reflective-oracles",
@@ -11,6 +303,22 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "17e39d347fb2",
+  "title": "Breaking Noise Shortcuts in Self-Supervised Learning Via Noise-Aligned View Generation",
+  "url": "https://arxiv.org/abs/2611.25335",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T01:19:12+00:00",
+  "summary": "Self-supervised learning (SSL) is increasingly applied to scientific imaging domains, such as microscopy, where labels are scarce but noisy data is abundant. These domains exhibit significant signal-dependent noise, which can create a representational shortcut: since both augmented views derive from the same noisy image, the encoder can boost view agreement by also encoding noise patterns rather than semantic content. To enable noise-robust representation learning without knowledge of underlying noise models, we introduce Self-Aligned Noise Augmentation (SEANA), a drop-in module that generate…",
+  "authors": [
+   "Oankar R. Patil",
+   "May D. Wang"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
  },
  {
   "id": "249cf944c137",
@@ -52,6 +360,69 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-19T08:48:10+00:00"
+ },
+ {
+  "id": "7564c6d321c5",
+  "title": "Separating Interpretability and Reconstruction in Sparse Autoencoders",
+  "url": "https://arxiv.org/abs/2611.25165",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T20:41:27+00:00",
+  "summary": "Sparse Autoencoders (SAEs) are effective tools for mechanistic interpretability by decomposing neural representations into sparse and interpretable features. However, a single sparse representation in traditional SAEs is responsible for both reconstruction fidelity and interpretability, which are not guaranteed to align. To separate these objectives, we propose DualSAE, a modular framework that augments standard SAEs with a plug-in Residual Branch. A standard SAE serves as the Sparse Branch, learning a sparse code that contains the dominant semantics of the input. The added Residual Branch mo…",
+  "authors": [
+   "Anh Tien Nguyen",
+   "Dimitris Samaras",
+   "Mahdi S. Hosseini"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "398d1bf49159",
+  "title": "Auditing Learned Dynamics in Weather Models",
+  "url": "https://arxiv.org/abs/2611.25119",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-18T19:58:01+00:00",
+  "summary": "Learned weather models are experimentally accessible computational systems whose internal representations can be inspected and manipulated. Using sparse autoencoder features from GraphCast, DeepMind's autoregressive weather forecasting model, we test whether causal relevance requires physical semantics, a question that matters for auditing whether AI forecasters used in high-assurance settings rely on reliable mechanisms. We also look at whether physically associated latent directions can be steered to improve extreme-event forecasts, where interventions are applied to the model's internal ac…",
+  "authors": [
+   "Skylar Gu",
+   "Christina Last"
+  ],
+  "tags": [
+   "sae",
+   "testing"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "26106b242d80",
+  "title": "BuggyMLE: Scaling Machine Learning Engineering Difficulty with Bug Injection",
+  "url": "https://arxiv.org/abs/2611.25088",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-18T19:26:15+00:00",
+  "summary": "Enabling AI systems to autonomously improve AI models requires agents capable of performing machine learning engineering (MLE). In practice, designing, training, and evaluating complex models demands modifying multi-file repositories to reproduce results, debug training runs, integrate datasets, and port frameworks. However, existing MLE benchmarks limit agents to single-file edits without full repository or shell access, and common repository-level software engineering benchmarks have rapidly saturated. To address this, we introduce the Code Complexity Index (CCI), a difficulty metric based…",
+  "authors": [
+   "John Wu",
+   "Rushi Qiang",
+   "Yuchen Zhuang",
+   "Guowang Li",
+   "Girish Narayanswamy",
+   "Max Xu",
+   "Sam Schmidgall",
+   "Mark Malhotra"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-20T08:32:40+00:00"
  },
  {
   "id": "a21dfc2cb7c2",
