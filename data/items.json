@@ -1,5 +1,48 @@
 [
  {
+  "id": "7ce40af71312",
+  "title": "anthropics/claude-code v2.1.330",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-20T22:32:56+00:00",
+  "summary": "## What's changed - Added sign-in to organizations managed in Anthropic's Enterprise Admin Console: after `claude auth login`, Claude Code applies the organization's settings and uses its cloud provider or gateway - Added easel, a built-in mod that draws charts when asked and under MCP metrics results, on Pro, Max and, where available, Team and Enterprise on macOS and Linux; turn automatic charts off in `/config` - Added `CLAUDE_CODE_FULL_SIGN_IN_LINK=1` to print the full sign-in link, if the short one shows an error or a script reads values from it - Self-hosted runner: Added `--start-dir` /…",
+  "authors": [],
+  "tags": [
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-21T08:17:02+00:00"
+ },
+ {
+  "id": "7c0fb66e7725",
+  "title": "Fragments: November 20",
+  "url": "https://martinfowler.com/fragments/2026-11-20.html",
+  "source": "Martin Fowler",
+  "source_type": "blog",
+  "track": "engineering",
+  "published": "2026-11-20T18:38:00+00:00",
+  "summary": "Marcus Borg recounts an experiment to investigate if healthy code was cheaper for agents to review . Between a typical unhealthy pull request (CodeHealth 2.8) and a typical healthy one (9.7), that adds up to 22 to 35%. The measures of health come from CodeScene. The experiment looked at three LLMs, 465 pull requests on 246 open source repositories. Each pull request was put through a review and fix pipeline involving five agents. They also looked at which code smells led to increased costs: they highlighted Complex Method and Complex Conditional from the smells identified by CodeScene. Anothe…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-21T08:17:02+00:00"
+ },
+ {
+  "id": "9e188d65b5ac",
+  "title": "Quoting Levent Alpöge",
+  "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-20T16:30:48+00:00",
+  "summary": "I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis. In fact, the method easily extends much further, resolving the so-called Generalized Riemann Hypothesis, and I expect, with more time, the Extended Riemann Hypothesis too. Claude and I have also formalized the arguments without assumptions. It is natural to feel that this is an end, in my case a loss of a principal guiding light, but what I saw during the course of progress so amazed me that I believe it is one dawn across science of something far greater. [...] Claude and I have had a great time together wit…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-21T08:17:02+00:00"
+ },
+ {
   "id": "f32d5bea8abf",
   "title": "Token fraud is here and it’s BAD (YouTube)",
   "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
@@ -2228,6 +2271,21 @@
    "claude-code"
   ],
   "fetched_at": "2026-11-13T07:57:01+00:00"
+ },
+ {
+  "id": "3e8c41bccb12",
+  "title": "Looping a transformer increases no-CoT capabilities more than general capabilities",
+  "url": "https://www.alignmentforum.org/posts/uxsDuWWHNTpKrsF6P/looping-a-transformer-increases-no-cot-capabilities-more",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-12T20:16:32+00:00",
+  "summary": "Some researchers worry that looping (as in looped transformers ) is a particularly scary way to make AI models more capable, because looped models will be harder to monitor than standard transformers of similar capability. We test this worry on NVIDIA’s Dory 4B, a publicly available looped transformer, and find evidence that it is justified. Result 1. Looping boosts no-CoT reasoning much more than it boosts general capabilities . Dory can run with a configurable number of loops. It was trained to use up to 4 loops, and adding loops up to 8 at inference time still improves performance. Without…",
+  "authors": [],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-21T08:17:02+00:00"
  },
  {
   "id": "e6172fe56fc4",
