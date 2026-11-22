@@ -1,5 +1,20 @@
 [
  {
+  "id": "bd269e80d477",
+  "title": "safety-research/circuit-tracer v0.5.4",
+  "url": "https://github.com/decoderesearch/circuit-tracer/releases/tag/v0.5.4",
+  "source": "safety-research/circuit-tracer",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-22T07:34:13+00:00",
+  "summary": "Adds `release.yaml` which will automatically push new releases of `circuit-tracer` to PyPI.",
+  "authors": [],
+  "tags": [
+   "circuits"
+  ],
+  "fetched_at": "2026-11-22T07:59:15+00:00"
+ },
+ {
   "id": "7ce40af71312",
   "title": "anthropics/claude-code v2.1.330",
   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
@@ -41,6 +56,19 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-21T08:17:02+00:00"
+ },
+ {
+  "id": "d63c6404d469",
+  "title": "llm-gemini 0.38.1",
+  "url": "https://simonwillison.net/2026/Nov/20/llm-gemini/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-20T03:01:57+00:00",
+  "summary": "Release: llm-gemini 0.38.1 Gemini 4 Carbon only supports low , medium and high reasoning levels - but Gemini 4 Hydrogen and Gemini 4 Neon both have an extra xhigh level. I missed that when I added those models to the llm-gemini plugin, which is now fixed in this dot release. The xhigh setting for Hydrogen makes a significant difference. I updated my Gemini 4 comparison grid - note how Hydrogen at high used 5,311 output tokens and cost 3.99 cents, but the same model at xhigh used 31,477 output tokens, cost 23.61 cents, and produced a pelican that's competitive with Gemini 4 Neon: Tags: gemini…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-22T07:59:15+00:00"
  },
  {
   "id": "f32d5bea8abf",
