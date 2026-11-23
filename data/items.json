@@ -1,5 +1,31 @@
 [
  {
+  "id": "feef35100127",
+  "title": "ndif-team/nnsight v0.8.4",
+  "url": "https://github.com/ndif-team/nnsight/releases/tag/v0.8.4",
+  "source": "ndif-team/nnsight",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-23T02:40:22+00:00",
+  "summary": "## What's Changed * transformers: build the meta model from the class a real load ends on by @AdamBelfki3 in https://github.com/ndif-team/nnsight/pull/851 * Dev by @JadenFiotto-Kaufman in https://github.com/ndif-team/nnsight/pull/853 **Full Changelog**: https://github.com/ndif-team/nnsight/compare/v0.8.3...v0.8.4",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "9b4a55165bbd",
+  "title": "Select Styling Specimens",
+  "url": "https://simonwillison.net/2026/Nov/22/select-styling/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-22T19:45:06+00:00",
+  "summary": "Tool: Select Styling Specimens I got frustrated at how HTML boxes default to looking different in different browsers, and are (I think) quite ugly in Chrome: So I had Claude Fable 5.2 build me this page showing all of the ways they can be styled: Build an HTML page that shows all of the ways a select box can be styled, I plan to take screenshots in every desktop and mobile browser After some experimentation I've decided my favorite CSS for select boxes is this: select { appearance : none ; color : # 1f2933 ; padding : 0.5 em 2.25 em 0.5 em 0.75 em ; border : 1 px solid # c4cbd3 ; border-radiu…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
   "id": "bd269e80d477",
   "title": "safety-research/circuit-tracer v0.5.4",
   "url": "https://github.com/decoderesearch/circuit-tracer/releases/tag/v0.5.4",
@@ -45,6 +71,24 @@
   "fetched_at": "2026-11-21T08:17:02+00:00"
  },
  {
+  "id": "afce00366f96",
+  "title": "TEA-Bench-BR: Can Coding Agents Turn a Branching Clinical Specification into Correct Code?",
+  "url": "https://arxiv.org/abs/2611.27895",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T17:35:59+00:00",
+  "summary": "Coding agents increasingly implement rules written by domain experts, and bugs in such code are silent: it runs and returns a plausible answer. We introduce TEA-Bench-BR, a benchmark built on the Brazilian pathway for early autism (TEA) screening: three fictitious instruments with the structure of real ones, a multi-professional referral flow, and export to FHIR R4 with the national RNDS profiles, all specified in Portuguese. A generator samples each task's parameters (144 tasks, 6,798 hidden cases), and the hidden cases kill all 1,955 non-equivalent mutants of the reference. With Gemma 4 as…",
+  "authors": [
+   "Marcio Andre de Souza Estevam"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
   "id": "9e188d65b5ac",
   "title": "Quoting Levent Alpöge",
   "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
@@ -56,6 +100,233 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-21T08:17:02+00:00"
+ },
+ {
+  "id": "965774fc95b0",
+  "title": "Auditing Post-Training Unlearning in Diffusion Language Models using Sparse Autoencoders",
+  "url": "https://arxiv.org/abs/2611.27652",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T14:17:08+00:00",
+  "summary": "Machine unlearning is an approach to privacy protection: it aims to remove the influence of designated data while preserving the model's behavior on information that should be retained. While a growing body of work investigates this objective in autoregressive large language models, machine unlearning remains underexplored in diffusion language models (DLMs). DLMs generate text through iterative denoising, exposing partially masked states whose internal representations change throughout the generation process. This raises a DLM-specific question: can selective forgetting improve by identifyin…",
+  "authors": [
+   "Yunha Seo",
+   "Changhoon Kim"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "01872c42035d",
+  "title": "WaXup: Weight Averaging of Experts as Data Augmentation for Robust Introspection",
+  "url": "https://arxiv.org/abs/2611.27353",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T09:25:27+00:00",
+  "summary": "As the capabilities of large language models keep improving, traditional mechanistic interpretability methods struggle to keep pace. In contrast, trainable introspection methods emerge as a promising alternative; they repurpose the model itself as a self-diagnostic tool, trained to verbalize what it has learned during finetuning in natural language. While training on datasets of finetuned experts achieves encouraging results, it currently lacks robustness and generalization. Building on the data augmentation framework of MiXup, we introduce WaXup, a method that augments the introspection trai…",
+  "authors": [
+   "Marc Boëlle",
+   "Lucas Dixon",
+   "Alexandre Ramé"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "d2b85a4b6893",
+  "title": "Unimodal Shortcuts and Joint Scene-Intent Dependence in Vision-Language Safety Representations",
+  "url": "https://arxiv.org/abs/2611.27339",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T09:14:51+00:00",
+  "summary": "The safety of a request to a vision-language model often depends on the image: asking how to serve a dish is harmless for fresh food and harmful for spoiled food. High accuracy on situational safety benchmarks does not tell us whether a model's safety representation encodes both the scene and the user's intent, because a benchmark can often be solved from one modality alone. Studying frozen vision-language safety representations, we audit five public situational benchmarks and find that each admits a unimodal shortcut: images alone predict the labels, and on same-image prompt pairs a probe th…",
+  "authors": [
+   "Guijia Zhang",
+   "Hongbo Qiu",
+   "Guohao Cai",
+   "Hao Zheng",
+   "Jiajun Zha",
+   "Hanqing Wang",
+   "Zhenhao Zhang",
+   "Huihao Jing"
+  ],
+  "tags": [
+   "evals",
+   "probing"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "d6efc31d2ae0",
+  "title": "H-MSAE: Hierarchical Sparse Concept Coverage for Efficient and Diverse Instruction Data Selection",
+  "url": "https://arxiv.org/abs/2611.27329",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T09:08:19+00:00",
+  "summary": "Large instruction-tuning corpora contain substantial semantic redundancy, motivating the selection of compact subsets that preserve useful supervision while reducing training cost. Existing diversity-aware selectors often rely on generated semantic tags and explicit graph structures, introducing considerable annotation and preprocessing overhead. We introduce H-MSAE, a hierarchical sparse instruction selection framework that organizes multi-resolution concepts learned by a Matryoshka sparse autoencoder into a coarse-to-fine hierarchy. Quality-weighted, diminishing-return coverage with ancesto…",
+  "authors": [
+   "Bohan Cui",
+   "Jingyi Cui",
+   "Hongwei Wen",
+   "Feng Wang",
+   "Simiu Gu"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "b91a106ae525",
+  "title": "CoPyro: Feeding Copy Proposals to Parallel Drafters",
+  "url": "https://arxiv.org/abs/2611.27217",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T07:11:06+00:00",
+  "summary": "Speculative decoding accelerates language generation by letting a target model verify several draft tokens in one forward pass. Earlier neural drafters such as EAGLE extend each candidate sequence one token at a time. Recent work has turned to parallel drafters such as DFlash, which predict a whole block at once. Another approach uses n-gram retrieval to find an earlier occurrence of the current context suffix and copy the tokens that followed it directly into the draft. We introduce CoPyro, which feeds these copied tokens into a parallel drafter in place of masks. The drafter learns from con…",
+  "authors": [
+   "Hong-Kai Zheng",
+   "Piji Li"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "5cb03080748f",
+  "title": "EDAGoat: An EDA-Aware Agent for Project-Level GPU Optimization",
+  "url": "https://arxiv.org/abs/2611.27196",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T06:31:08+00:00",
+  "summary": "GPU acceleration has transformed electronic design automation (EDA), yet further improving expert-engineered GPU tools still demands substantial manual effort. Automating this work calls for coding agents that can trace bottlenecks across host and device code while preserving correctness and design quality. We introduce EDAGoat, to our knowledge the first EDA-aware GPU optimization agent for this task. Its optimization enhancement (OE) mode guides edits with four cross-project GPU optimization patterns. Its mandatory validation (MV) mode requires the agent to test the edited program against t…",
+  "authors": [
+   "Chengxi Li",
+   "Liang Xiao",
+   "Yutao Wang",
+   "Wenhao Lin",
+   "Xinzhuang Xiong",
+   "Han Zhao",
+   "Evangeline Young"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "7ec5f9292944",
+  "title": "Git History Is a Pangenome: Repetition in Code Training Corpora and What Deduplication Removes, Keeps and Misses",
+  "url": "https://arxiv.org/abs/2611.27154",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T05:38:42+00:00",
+  "summary": "Code models are increasingly trained on the full history of software repositories, every version of every file, rather than on a single snapshot. The tools that deduplicate training data were built for snapshots, and what they do to a history has not been measured. We measured it on a pre-registered random sample of 306 public repositories, 25 mature projects, and the 12 repositories behind the SWE-bench benchmark. A history is mostly repetition: in the vocabulary of text indexing, a pangenome, one text in many near-identical variants. The history of a typical repository holds the equivalent…",
+  "authors": [
+   "Saurabh Chopra"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "315ac5932a2b",
+  "title": "Markdown Is Not a Firewall: four coding agents, one rules file, four boundaries",
+  "url": "https://arxiv.org/abs/2611.27112",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T04:35:33+00:00",
+  "summary": "Teams put a one-page rules file in a repository and call it a control on coding agents. A registered study found agents rarely look up a repository's contribution rules. I asked the security question: what does a rules file do at a boundary, against a gate? I tested one 278-word rules file, with hypotheses and analysis code deposited first. Claude Code, Codex CLI, Gemini CLI and OpenCode with DeepSeek worked through 20 small repositories with hidden tests, 12 for three of them. Three agents met four boundaries I built: a refused endpoint, a destructive shortcut, a planted instruction and a pl…",
+  "authors": [
+   "Sandeep Dhuri"
+  ],
+  "tags": [
+   "agents",
+   "claude-code",
+   "testing"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "37e54e3c5345",
+  "title": "Omo: Giving Continuing AI-Agent Work a Place to Return To",
+  "url": "https://arxiv.org/abs/2611.27107",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T04:32:19+00:00",
+  "summary": "AI coding agents now keep working while the people who started them are away. Coming back is the hard part: a session list tells you which agent is where, but not what it was asked to do, what it changed, or what to tell it next. We present Omo, which gives each piece of continuing agent work a persistent place to return to. We built the idea twice. Omo Space is an open-source Minecraft mod in which rooms and screens that people build are live terminals on their own machine. Omo Theia brings the same rooms and desks into a customizable IDE, one step away from the editor and the Git patch. Bot…",
+  "authors": [
+   "Kaviru Hapuarachchi",
+   "Harrison Edwards"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "e05939eff2d2",
+  "title": "One state, many questions: Opsis gives a frontier model typed eyes for pathology",
+  "url": "https://arxiv.org/abs/2611.27102",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T04:23:39+00:00",
+  "summary": "A synoptic pathology report is a checklist of questions with fixed answer sets, many composed from others. Pathology foundation models answer them accurately with one classifier trained with labels for each, and frontier language models, which compose freely, cannot fit a slide of fourteen thousand tiles in their context. On 189 breast report questions, frontier models that read a written description of the slide or look at a thumbnail and tiles of it answer at 0.50 to 0.66, below the majority class at 0.67. A description is written before the question is known, and a look covers a handful of…",
+  "authors": [
+   "Zhixuan Ge",
+   "Wei Qiu"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "94757dab9722",
+  "title": "Exercised, Rarely Recovered: What Public Reports Say About Recovery in 50 AI Agent Harnesses and Runtimes",
+  "url": "https://arxiv.org/abs/2611.27090",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T04:05:35+00:00",
+  "summary": "When an AI coding agent deletes the wrong files or a long agent run crashes, users fall back on recovery mechanisms: resume from a checkpoint, undo, ask for approval, read the log. Research runtimes promise stronger guarantees, such as saga-style compensation and transactional rollback. We ask what public evidence shows about whether either kind works in real use. Under a protocol frozen before data collection, we graded 12 persistent agent runtimes, 26 coding-agent harnesses and 12 research runtimes on eight recovery mechanisms, from not found to exercised in a real run, with two blind codin…",
+  "authors": [
+   "Kaviru Hapuarachchi"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "a25e27fc1271",
+  "title": "Weight-space programming and mechanistic interpretability for model editing in particle physics",
+  "url": "https://arxiv.org/abs/2611.27079",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T03:46:32+00:00",
+  "summary": "We demonstrate that weight-space programming and edits guided by sparse autoencoders can remove unwanted aspects of a particle-physics foundation model through direct edits to its weights. In a foundation model trained on jets, we observe that adding a single soft neutral particle causes large changes in jet classification, violating infrared safety. We locate the responsible attention heads with mechanistic analysis and trace the flaw's origin to pretraining on datasets with different reconstruction thresholds. We then propose two targeted approaches to repair the flaw: by removing three lat…",
+  "authors": [
+   "Raphaël Bonnet-Guerrini",
+   "Johann Ioannou-Nikolaides",
+   "Troels Petersen"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
  },
  {
   "id": "d63c6404d469",
@@ -99,6 +370,25 @@
    "testing"
   ],
   "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "bd90f584910d",
+  "title": "Large Reported CHB-MIT Adaptation Gains Disappear with Pretrained Encoders and Matched Probes",
+  "url": "https://arxiv.org/abs/2611.26929",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T00:25:41+00:00",
+  "summary": "Dani and Liebe (2026) (DL) report that adapting the final encoder block of BIOT and CBraMod with self-supervised learning (SSL) improves CHB-MIT seizure-detection ROC-AUC by 36.2 and 29.5 points over linear probing. We investigate these results with their released code and an independent pipeline. The release loads pretrained weights for adaptation only when an otherwise unset configuration key is supplied, and its CBraMod probe reads the reconstruction head with dropout active. With pretrained initialisation and a probe on the encoder output in evaluation mode, the fixed-recipe adaptation ga…",
+  "authors": [
+   "Joseph Sankoorikal Johny",
+   "Antony J. Sankoorikal"
+  ],
+  "tags": [
+   "evals",
+   "probing"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
  },
  {
   "id": "e4de766e855c",
@@ -151,6 +441,30 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "3c3aa18781a8",
+  "title": "Parasite Features: Causal Abstraction Through Spurious Pathways",
+  "url": "https://arxiv.org/abs/2611.26711",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T19:12:58+00:00",
+  "summary": "Causal Abstraction defines a notion of \\emph{equivalence} between a neural network and an algorithm, thus serving as a powerful framework for mechanistic interpretability. In this paper, however, we show the existence of a class of \\emph{spurious features} which straightforwardly pass such equivalence tests. Suppose there are two directions in a model's representation space where: (i) one discriminates the input based on some feature, and (ii) the other steers the model towards a certain output. Interpretability methods based on Causal Abstraction (e.g., Distributed Alignment Search) can \\emp…",
+  "authors": [
+   "Denis Sutter",
+   "Qing Yao",
+   "Sasha Boguraev",
+   "Julian Minder",
+   "Antonio Di Maio",
+   "Thomas Hofmann",
+   "Kyle Mahowald",
+   "Tiago Pimentel"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
  },
  {
   "id": "18030cf50d98",
@@ -304,6 +618,26 @@
    "sae"
   ],
   "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "9d0c7f8f7e20",
+  "title": "How developers split roles among them and a coding agent and what \"collaboration\" means",
+  "url": "https://arxiv.org/abs/2611.26668",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-19T10:58:14+00:00",
+  "summary": "Background: Coding agents such as Claude Code become more and more competent, so that their role in the development process can grow. Objective: How do developers characterize the role-split between them and their agent? How would they ideally want to collaborate with their agent? Methods: We perform a 3-step, mixed-methods study. We apply qualitative open coding to 2025 early adopters' blog articles; perform a quantitative survey of 2026 practitioners; develop and apply a method for coding-agent-supported open coding of survey freetext responses. Results: The 2025 practitioners have the agen…",
+  "authors": [
+   "Linus Ververs",
+   "Helya Dadkhah",
+   "Lutz Prechelt"
+  ],
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-23T09:03:57+00:00"
  },
  {
   "id": "c677893ca441",
