@@ -1,5 +1,377 @@
 [
  {
+  "id": "dea2f8e3c06e",
+  "title": "datasette-charts 0.2a0",
+  "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-24T04:24:29+00:00",
+  "summary": "Release: datasette-charts 0.2a0 I introduced this new charting plugin for Datasette yesterday . Today it's gained integration with Datasette Agent , so now you can ask chat for a chart and it will create one for you using the same underlying chart suggestion and generation tools. Here's a demo video, recorded on agent.datasette.io where you can sign in with GitHub to try the plugin yourself: Download the video (MP4) I prompt Datasette Agent to \"Use #stats to show sqlite-utils downloads over time as a chart\" - where typing \"#stats\" opens a table search box. It shows me a chart inline in the ch…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "80ee2a6733f1",
+  "title": "datasette-agent 0.7a1",
+  "url": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-24T03:45:57+00:00",
+  "summary": "Release: datasette-agent 0.7a1 I small improvement to Datasette Agent : chat sessions can open an iframe side panel, and that panel can then navigate to different pages. This version improves navigation by fragment hashes, for deeper integration with other Datasette plugins that update fragment hashes when the user interacts with the plugin in a way that changes state. I built this in order to fix some bugs with the much more exciting datasette-charts 0.2a0 release . Tags: datasette-agent , datasette",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "2c7d23e3a5c8",
+  "title": "Comparing AI R&D compute caps and deployment lags",
+  "url": "https://www.alignmentforum.org/posts/e758PJCpwAwyodvEj/comparing-ai-r-and-d-compute-caps-and-deployment-lags",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-24T02:23:44+00:00",
+  "summary": "I’m publishing this a bit rougher than usual because it’s very pertinent to Evan Hubinger’s recent shortform , which advocates for blocking internal deployment as a pacing mechanism over compute reallocation (he mostly discusses it in the context of a risk-assessment-based regime, while this post discusses the policies standalone). (see my response to Evan which also summarizes this post.) I compare 2 classes of policies: AI R&D compute cap : A cap on the percentage of compute used for capabilities R&D, as proposed at pacing-ai.com . Deployment lags/freezes: An X-month lag means that you have…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "efc98a45d931",
+  "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+  "url": "https://simonwillison.net/2026/Nov/23/glm-54/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-23T23:40:49+00:00",
+  "summary": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer GLM 5.4 is now available from Chinese AI lab Z.ai. It's their first model to use a looped transformer architecture, which they describe like this: In a standard Transformer, each layer runs once per forward pass. In a Loop Transformer, a group of weight-shared layers runs for multiple iterations, refining the hidden states from the previous pass. This gives us a deeper network without increasing the parameter count. This is the second mention of looped transformers I've seen in the past week - the first was Inkling 2 Mini from…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "800aeca2d315",
+  "title": "anthropics/claude-code v2.1.331",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-23T21:34:41+00:00",
+  "summary": "## What's changed - Added Code Mode support in terminal sessions on Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude Platform on AWS - Added `oidc.groups_jsonpath` to the Claude apps gateway, to read groups from the matching entries of a list of objects with a small subset of JSONPath (RFC 9535) - Added an API connectivity section to `claude doctor` that reports whether the API can be reached, with the HTTP status or the error, or says why it wasn't tested - Added a notice when tap-mode voice dictation stops by itself, after 15 seconds without recognized speech or a…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "5025ccb67bc6",
+  "title": "A Mixed-Methods Study of Personal Software Creation",
+  "url": "https://arxiv.org/abs/2611.31217",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T18:56:16+00:00",
+  "summary": "People have long wanted software shaped around their own data, routines, and preferences. We refer to such software as \\emph{personal software}. For decades, programming expertise limited who could build it: people without that expertise could build software only within constrained end-user programming tools, such as spreadsheets. AI coding agents seem to remove this bottleneck by letting people build full applications from natural-language descriptions, and many people now build and share personal software publicly. Yet personal software has rarely been studied at scale: we know little about…",
+  "authors": [
+   "Shaokang Jiang",
+   "Kira Yuha Cho",
+   "Emerson Murphy-Hill",
+   "Daye Nam"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "f917c7915f41",
+  "title": "Can Latent Reasoning Drive LLM Outputs Without a Trace?",
+  "url": "https://arxiv.org/abs/2611.31015",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T16:59:12+00:00",
+  "summary": "LLMs typically solve complex tasks with chain-of-thought (CoT) reasoning, which is also the main tool for monitoring them for misaligned behavior. However, standard transformers can also solve tasks with complete latent reasoning (CLR), carrying out the whole task internally and outputting only the final answer. Theory bounds the depth of CLR, the number of sequential steps it can carry out, and recent work measured it to be shallow. In this work, we ask whether CLR is deep enough for a model to pursue a hidden objective that requires reasoning. Such a model would generate a CoT that appears…",
+  "authors": [
+   "Tomer Ashuach",
+   "Zorik Gekhman",
+   "Avi Caciularu",
+   "Ori Ram",
+   "Jonathan Herzig"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "f29d305cc9cc",
+  "title": "RoboUniverse-10K: Toward the Scaling Era of Agentic Robotics via Real-to-Sim Environments",
+  "url": "https://arxiv.org/abs/2611.31002",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T16:53:57+00:00",
+  "summary": "Agentic Robotics, in which foundation models act as coding agents to control robots through executable programs, has emerged as a compelling paradigm for embodied intelligence. Yet unlike software engineering, where massive executable environments power post-training, robotics remains constrained by small, manual benchmarks and in-distribution evaluation. To bridge this gap, we introduce RoboUniverse-10K, 10,807 interactive, resettable, and verifiable physics environments built from real-world videos via an automated Real2Sim and quality assurance pipeline. Each runs in an isolated, Harbor-co…",
+  "authors": [
+   "Jinkun Liu",
+   "Yingze Wang",
+   "Situ Wang",
+   "Deyao Hong",
+   "Mingju Gao",
+   "Wenyi Li",
+   "Yizhe Chi",
+   "Youjie Zheng"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "f1b0a77b9b7d",
+  "title": "Beyond Patching: Consistent Circuit Discovery via Gradient Spectral Analysis",
+  "url": "https://arxiv.org/abs/2611.30939",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T16:22:29+00:00",
+  "summary": "Mechanistic interpretability seeks to reverse-engineer neural networks by identifying small, faithful subgraphs--circuits--that implement specific behaviors. The dominant paradigm scores each unit by replacing its clean activation with a corrupted counterpart as causal intervention. While effective, this approach rests on a brittle prerequisite: the structure prompt pairs are task-specific, expensive to engineer, and silently couple the discovered circuit to prompt-design choices. In this work, we propose Spectral Circuit Analysis (SCA), a gradient-spectral pipeline that achieves consistent c…",
+  "authors": [
+   "Yujie Zhang",
+   "Tianyi Zhao",
+   "Guanghui Min",
+   "Chen Chen"
+  ],
+  "tags": [
+   "circuits"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "0581fabf5f31",
+  "title": "Useful but Unwieldy: How Software Engineers Perceive the Design of Chain-of-Thought Explanations in Coding Agents",
+  "url": "https://arxiv.org/abs/2611.30894",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T15:57:22+00:00",
+  "summary": "Coding agents (CAs) powered by Large Language Models (LLMs) are increasingly integrated into software engineering (SE) workflows. As these CAs take up more tasks and responsibilities, it is imperative for software engineers to understand the CA's rationale behind its' decisions, also known as the chain-of-thought (CoT). During the interaction, some CAs are capable of showing this CoT as a separate message to users with the goal of providing transparency and explainability. However, its effectiveness as an explainable AI (XAI) mechanism for end-users in software engineering has not yet been es…",
+  "authors": [
+   "Carlos Rafael Catalan",
+   "Lheane Marie Dizon",
+   "Patricia Nicole Monderin",
+   "Hyo Jin Do",
+   "Qiaosi Wang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "52b1ccf7a6f8",
+  "title": "SWEEP-Bench: Do Embodied Policies Act on the Speed They See?",
+  "url": "https://arxiv.org/abs/2611.30637",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T13:03:17+00:00",
+  "summary": "Robot policies must adapt to the speed of moving objects, yet existing benchmarks rarely measure this ability across diverse tasks and speeds. We introduce SWEEP-Bench, a simulation benchmark with 80 conveyor-belt manipulation tasks spanning 16 skill categories, each evaluated at 13 belt speeds (0.10-0.40 m/s). Objects are transported through physical contact with a visibly moving belt. Each task has a static counterpart, and each evaluation episode uses the same randomized scene at all 13 speeds. We fine-tune eight vision-language-action and world-action models on demonstrations spanning the…",
+  "authors": [
+   "Hiroaki Honda",
+   "Koya Sakamoto",
+   "Shu Morikuni",
+   "Yusuke Iwasawa",
+   "Taiki Miyanishi"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "f12afd27ab9b",
+  "title": "AgentBouncer: Defending Software Engineering Agents via Dynamic System-Call Mediation",
+  "url": "https://arxiv.org/abs/2611.30621",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T12:54:45+00:00",
+  "summary": "Software engineering (SE) agents can complete diverse engineering tasks by interacting with the development environment via tools that access files, run commands, and download resources. Unfortunately, the same ability that makes SE agents useful also makes them prone to performing unintended malicious actions through prompt injections, malicious tools, or supply-chain attacks. Existing defenses that analyze the agent trajectory may fail to detect such attacks, as they inspect only the initial prompt and the sequence of tool calls, but not the actual actions that are executed in the environme…",
+  "authors": [
+   "Pascal Joos",
+   "Michael Pradel"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "d7502d0be75e",
+  "title": "Improving Repair Agents with Cause-Chain Diagnoses",
+  "url": "https://arxiv.org/abs/2611.30574",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T12:19:04+00:00",
+  "summary": "Repair agents resolve a growing share of real-world issues. Starting with the same information as a developer reading a bug report, they have to find out how the program fails before actually fixing it. We present FORECAST, which provides repair agents with a diagnosis of the failure. From the executions of passing and failing tests, FORECAST infers a cause chain, a short sequence of execution features, such as conditions or data flow, that explains how the failing runs diverge. FORECAST appends this cause chain to the issue an agent receives. It thus works with any agent that builds its prom…",
+  "authors": [
+   "Marius Smytzek",
+   "Martin Eberlein",
+   "Lars Grunske",
+   "Andreas Zeller"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "3058c4525075",
+  "title": "sudo L7: Can Coding Agents Act Like Staff Engineers?",
+  "url": "https://arxiv.org/abs/2611.30517",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T11:32:37+00:00",
+  "summary": "Coding agents can now turn a well-specified ticket into a patch that passes its tests. Experienced engineers also notice risks the request never mentioned, question flawed premises, reuse what already exists and say plainly what they did and did not check. We present sudo L7, a benchmark of 60 software-engineering tasks written by staff-level engineers, mostly in private production codebases and each built around a place where a frontier model failed. A task pairs a realistic, underspecified request with a hidden, expert-authored rubric of atomic criteria (1,287 in all), tagged with eight beh…",
+  "authors": [
+   "Nick Heiner",
+   "Ian Niebres",
+   "Suhaas Garre",
+   "Sushant Mehta",
+   "Edwin Chen"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "f2ee63a57c0f",
+  "title": "RepoClean: Evaluating Coding Agents on Repository-Level Obsolete Code Cleanup",
+  "url": "https://arxiv.org/abs/2611.30350",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T09:22:53+00:00",
+  "summary": "Large language model (LLM) agents have demonstrated strong repository-level programming capabilities. However, as software evolves, repository code may become redundant or obsolete, increasing maintenance costs and potentially introducing functional issues. Agents must therefore identify and remove unnecessary code safely, yet autonomous repository-level code cleanup remains insufficiently evaluated in isolation. To evaluate this capability, we introduce RepoClean, a benchmark of 200 cleanup tasks from 34 popular open-source Python repositories. RepoClean is constructed by automatically reint…",
+  "authors": [
+   "Hongyixuan Yuan",
+   "Qixing Zhou",
+   "Pengcheng Huang",
+   "Qingshuo Ni",
+   "Runsong Zhao",
+   "Shaokai He",
+   "Xiangpeng Li",
+   "Deqiang Ouyang"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "b48f222d9ff9",
+  "title": "HEART: Hierarchical Expert Adaptive Refinement Transformer for ECG Representation Learning",
+  "url": "https://arxiv.org/abs/2611.30298",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T08:50:50+00:00",
+  "summary": "Learning robust representations from electrocardiograms (ECGs) is challenging because repeated cardiac cycles coexist with subtle and sparse diagnostic cues in local morphology and rhythm-level context. Existing ECG foundation models commonly rely on Transformerbased patch encoders with uniformly shared dense refinement pathways, limiting adaptive processing across heterogeneous ECG tokens. We propose HEART (Hierarchical Expert Adaptive Refinement Transformer), an ECG foundation model that introduces stage-specific conditional expert refinement during self-supervised pre-training. HEART place…",
+  "authors": [
+   "Junho Song",
+   "Jong-Hwan Jang",
+   "Joon-Myoung Kwon",
+   "Yong-Yeon Jo"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "c11f3075b5a7",
+  "title": "What Makes Good Data for Training Coding Agents? A Systematic Study on SWE-Gym",
+  "url": "https://arxiv.org/abs/2611.30207",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T07:45:13+00:00",
+  "summary": "Reinforcement learning (RL) trains coding agents on software tasks whose hidden tests decide the reward, yet task collections check these tests only against the reference fix. We ask what makes a task good training data, focusing on the correctness of its reward labels. We audit SWE-Gym with two LLM families, and a suspected error counts only if execution reproduces it. We find that unsolved often means mislabelled: 74% of the tasks that a 9B base model never solves have a test that rejects correct fixes (a false negative), versus 20% of those it sometimes solves. We repair or remove such tas…",
+  "authors": [
+   "Yikai Zhang",
+   "Mai Xu",
+   "Yunbei Zhang",
+   "Qirui Jin",
+   "Kenan Li",
+   "Yuwen Jia",
+   "Jinwei Yao",
+   "Xiangyu Zhang"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "1dcecbb4c103",
+  "title": "Character Information in Language Models: A Prompt-Independent Word Store and a Late, Question-Driven Signal That Grows With Scale",
+  "url": "https://arxiv.org/abs/2611.30094",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T05:53:01+00:00",
+  "summary": "Linear probes recover character properties of a word from a language model's hidden states, but a probe at the answer position cannot say whether the property was stored with the word or produced because the prompt asked for it. We separate the two with a word-position baseline: the same held-out-word probe applied to the query word's own tokens in a sentence that asks nothing. Across 16 open-weight models from seven families (0.6B--14B) and eleven character tasks, the word tokens encode \\texttt{first\\_letter}, \\texttt{last\\_letter} and \\texttt{most\\_frequent\\_letter} above a word-only nuisan…",
+  "authors": [
+   "Pratyush Acharya",
+   "Nuraj Rimal",
+   "Apar Baral",
+   "Habish Dhakal",
+   "Piyush Mohan Bhattarai"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "dbfc0ea91a02",
+  "title": "SAEPO: Sparse-Autoencoder-Guided Credit Assignment for Policy Optimization",
+  "url": "https://arxiv.org/abs/2611.29936",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T02:54:19+00:00",
+  "summary": "Reinforcement Learning with Verifiable Rewards (RLVR) has demonstrated strong performance in improving large language model (LLM) reasoning, yet its credit-assignment signal remains coarse. Outcome verifiers provide scalable supervision by judging whether a completed response is correct, but they do not directly indicate which intermediate reasoning tokens contribute to success or failure. As a result, policy optimization can be inefficient, especially when training base models directly from sparse outcome feedback. In this paper, we introduce SAEPO, a Sparse AutoEncoder-guided token-level cr…",
+  "authors": [
+   "Yusong Zhao",
+   "Zihao Zhao",
+   "Zirui Zhang",
+   "Tunyu Zhang",
+   "Ziyan Wang",
+   "Yi Wang",
+   "Chengzhi Mao",
+   "Hao Wang"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
   "id": "feef35100127",
   "title": "ndif-team/nnsight v0.8.4",
   "url": "https://github.com/ndif-team/nnsight/releases/tag/v0.8.4",
@@ -11,6 +383,95 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-23T09:03:57+00:00"
+ },
+ {
+  "id": "4a604faf8c94",
+  "title": "Does the Agent's Map Match the Territory? Architectural Claims in AI Agent Context Files and Their Fit with the Code",
+  "url": "https://arxiv.org/abs/2611.29916",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T02:14:13+00:00",
+  "summary": "AI coding agents start every session without memory of how a system is built. Developers fill this gap with context files, such as CLAUDE.md and AGENTS.md. Agents treat these files as true, so it matters whether they match the code. We study two kinds of architectural claims that can be checked against a repository: path claims, which name folders and files, and dependency rules, which say what may import what. We check 41,090 path claims and 184 dependency rules from 3,602 context files in 3,346 open-source projects against the code and its history. About 5% of path claims point to paths we…",
+  "authors": [
+   "Bachan Ghimire",
+   "Daniela Damian"
+  ],
+  "tags": [
+   "agents",
+   "claude-code"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "5f7392aa1315",
+  "title": "datasette-charts 0.1a0",
+  "url": "https://simonwillison.net/2026/Nov/23/datasette-charts/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-23T00:37:20+00:00",
+  "summary": "Release: datasette-charts 0.1a0 I've been thinking about this problem for over a year now, but on Sunday I finally fired up Claude Fable 5.2 to build an initial prototype. The prototype went so well that this is now a full plugin. You can try it out in Datasette Lite here . It looks like this: The new charts plugin works against any table or arbitrary SQL query in Datasette. It defines several different chart types (using vendored D3 , Observable Plot , and topojson-client ), each with a set of heuristics for identifying when they might be a good match for a specific set of rows. Those sugges…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "bafe34b36914",
+  "title": "Can Vibe Coding Produce Accessible Websites: An Empirical Study on LLM Coding Agents and Skills",
+  "url": "https://arxiv.org/abs/2611.29822",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-22T23:00:38+00:00",
+  "summary": "Large language model (LLM) coding agents increasingly allow developers and non-professionals to create websites through natural-language instructions, with limited inspection of the generated source code. Although this ``vibe coding'' workflow lowers barriers to software creation, it may also propagate accessibility defects at scale. We investigate the accessibility of websites generated end-to-end by contemporary coding agents and whether agent-level accessibility interventions improve their output. We generated 90 websites for three projects using combinations of three coding agents, four l…",
+  "authors": [
+   "Syed Fatiul Huq",
+   "Md. Asif Haider",
+   "Abu Jafar Saifullah",
+   "Thomas Zimmermann",
+   "Sam Malek"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "e5b8d8f0d52c",
+  "title": "Why Units Die in the Layer After a Frozen Random Encoder, and What the Number of Live Units Measures",
+  "url": "https://arxiv.org/abs/2611.29752",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-22T20:32:35+00:00",
+  "summary": "Reinforcement-learning agents can learn Atari games through a convolutional encoder whose random weights are never trained. They reach expert play in Pong and, without random action repeats, in Breakout, but training takes far longer and few ReLU units in the layer after the encoder stay alive. A dead unit outputs zero for every input and cannot learn. In earlier work we took the number of live units to measure the game's complexity. Here we ask why units die and correct that conclusion. We find that more units die as the layer's inputs lie farther from zero relative to how much they vary. We…",
+  "authors": [
+   "Scott M. Norton"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "adbf9dffe00d",
+  "title": "Agentic Root Cause Reasoning and Localization of Unsoundness in Static Call Graph Analysis",
+  "url": "https://arxiv.org/abs/2611.29745",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-22T20:18:38+00:00",
+  "summary": "Static call graph tools cannot soundly model every dynamic language feature, yet rarely reveal when, where, or why their results are unsound. We present CGRizz, an agentic framework that diagnoses unsoundness for developers and warns users about it. During training, CGRizz compares static and dynamic call graphs to identify boundary edges: calls observed at runtime but missing from the static graph. For each edge, an LLM agent proposes a root cause, including the unmodeled program pattern and responsible tool location. CGRizz validates each proposal using three independent forms of evidence:…",
+  "authors": [
+   "Mohammad Rafieian",
+   "Michael Hicks",
+   "Shiyi Wei"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
  },
  {
   "id": "9b4a55165bbd",
@@ -26,6 +487,66 @@
   "fetched_at": "2026-11-23T09:03:57+00:00"
  },
  {
+  "id": "522e09022e21",
+  "title": "From States to Dynamics: Detecting Rule Violations in OthelloGPT",
+  "url": "https://arxiv.org/abs/2611.29715",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-22T19:27:23+00:00",
+  "summary": "Sequence models trained on game moves have been shown to encode world models, with structured linear probes revealing the underlying game states. World models, however, are inherently dynamic: in deterministic board games, a set of rules constrain how states evolve over time. We therefore ask if and how OthelloGPT, a transformer trained only on Othello move sequences, manifests the rules of the game in its activation space. We divide the rules of Othello, and symmetrically their violations, into three classes: placing a disc on an empty square (R1), flanking an opponent's disc (R2), and movin…",
+  "authors": [
+   "David L. Cao",
+   "Sai Sumedh R. Hindupur",
+   "Demba Ba"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "cb651efaa123",
+  "title": "KernelShift: Benchmarking Kernel Optimization Across Evolving Hardware",
+  "url": "https://arxiv.org/abs/2611.29590",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-22T16:25:24+00:00",
+  "summary": "Efficient AI computation depends on hardware that evolves over time, shifting the strategies needed to implement performant code. For CPU kernels, a key evolving factor is the set of available architectural extensions, which expose specialized hardware instructions that change the techniques used to optimize kernels. We study how effectively coding agents use these new, potentially unfamiliar extensions to write fast code. We introduce KernelShift, a benchmarking pipeline and a set of environments for evaluating coding agents in kernel optimization across evolving CPU architectures. Its agent…",
+  "authors": [
+   "Shuaiwei Huang",
+   "Weihua Du",
+   "Allen Wu",
+   "Ivan Fox",
+   "Manupa Karunaratne",
+   "Yiming Yang",
+   "Sean Welleck"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "c6017948ebf2",
+  "title": "SAE-Audit: Clinical-Trial Prediction via Inference-Time Optimization of Black-Box LLMs Audited by Sparse Autoencoder Evidence",
+  "url": "https://arxiv.org/abs/2611.29368",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-22T10:13:45+00:00",
+  "summary": "Clinical trials are costly and often take years to complete, making early outcome prediction valuable for trial planning. Large language models (LLMs) are increasingly used to forecast clinical-trial outcomes, yet their predictions remain unreliable and their rationales may not faithfully reflect the evidence underlying their answers. On tasks such as predicting whether a registered clinical trial will complete or terminate early, frontier LLMs perform only modestly above chance in our experiments. We introduce SAE-Audit, which optimizes a black-box LLM at inference time with evidence obtaine…",
+  "authors": [
+   "Junbo Shen"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
   "id": "bd269e80d477",
   "title": "safety-research/circuit-tracer v0.5.4",
   "url": "https://github.com/decoderesearch/circuit-tracer/releases/tag/v0.5.4",
@@ -39,6 +560,197 @@
    "circuits"
   ],
   "fetched_at": "2026-11-22T07:59:15+00:00"
+ },
+ {
+  "id": "3e43bf22547e",
+  "title": "Compared to What? Calibrating Machine-Unlearning Diagnostics with Present, Absent and Suppressed Anchors",
+  "url": "https://arxiv.org/abs/2611.29285",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-22T07:18:43+00:00",
+  "summary": "Unlearning methods for language models are judged mainly by behaviour, but a model can stop producing an answer while still encoding it. Internal diagnostics such as linear probes, the logit lens and relearning speed are used to tell removal from suppression, yet none has been checked against cases where the answer is known. We build such cases. A present anchor learned a set of synthetic facts; an absent anchor is a never-taught oracle retrained without them; and suppressed anchors are unlearned with their lower layers frozen, so the facts stay encoded below the frozen block by construction.…",
+  "authors": [
+   "Arsalan Kaleem"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "6d51c867738a",
+  "title": "Edit-Induced Dependency Mismatch: Propagation Omissions, Recovery, and Evaluation Blind Spots in Coding Agents",
+  "url": "https://arxiv.org/abs/2611.29242",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-22T05:25:28+00:00",
+  "summary": "During iterative code modification, coding agents may continue to rely in subsequent reasoning on outdated dependency judgments whose text remains fixed in the context, leading to errors in subsequent reasoning and leaving consumer defects undetected by the original task evaluations, thereby exposing blind spots in the tested benchmarks. We study actual agent execution trajectories collected on benchmark tasks: deepseek-v4-flash runs on DeepSWE and SWE-bench Verified, supplemented by Qwen3.8-Flash cases on FeatureBench. Focusing on edit-induced consumer obligations, a full-corpus blinded huma…",
+  "authors": [
+   "Fei Ding"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "2892c57139de",
+  "title": "GameAnything: From Any Inspirations to Playable Game Worlds",
+  "url": "https://arxiv.org/abs/2611.29238",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-22T05:17:35+00:00",
+  "summary": "AI-driven game development holds the potential to transform diverse human inspirations into interactive experiences. However, existing systems and benchmarks primarily focus on explicit development specifications, with limited support for adapting multimodal references and evaluating actual gameplay experiences. We introduce GameAnything, an open-source agentic platform that transforms multimodal inspirations into playable extensions of existing games through iterative development. GameAnything integrates coding agents with an independent playtesting critic, persistent development state, and…",
+  "authors": [
+   "Wenyi Wu",
+   "Siqi Liu",
+   "Yuru Feng",
+   "Zixuan Song",
+   "Aayush Salvi",
+   "Sibo Zhu",
+   "Kun Zhou",
+   "Biwei Huang"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "339b9920ea7a",
+  "title": "Curvature Mismatch and Local Errors in Galaxy Property Estimation",
+  "url": "https://arxiv.org/abs/2611.29224",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-22T04:51:01+00:00",
+  "summary": "Linear probes are widely used to evaluate learned representations and infer physical quantities from unlabelled data. The probe's predictions are from an affine function in ambient space restricted to the underlying representation, and consequently, even a representation that has complete information needed to predict a target can produce systematic probe errors when that information is encoded in a form inaccessible to the linear probe. Here we share that some of this probing error is due to the innate geometry of the manifold. Linear probes, when evaluated on a curved manifold, generally ha…",
+  "authors": [
+   "Austin Lutterbach",
+   "Angus Hoy",
+   "Jasper Chong",
+   "Aman Kumar",
+   "Michael J. Smith"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "3af3d74d3f00",
+  "title": "Direct Feedback Policy Optimization for AI Coding Agents",
+  "url": "https://arxiv.org/abs/2611.29193",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-22T03:36:09+00:00",
+  "summary": "AI coding agents generate, modify, and validate code through multi-turn interactions. Existing reinforcement learning methods often rely on sparse terminal rewards, making it difficult to assess how intermediate decisions affect task outcomes, and group-relative methods also require repeated sampling for each task. We propose Direct Feedback Policy Optimization (DFPO), a single-trajectory reinforcement learning algorithm that trains directly from a single trajectory. DFPO achieves higher task resolution rates than GSPO under matched base models and execution harnesses.",
+  "authors": [
+   "Fei Ding"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "ce5fd4bd15ad",
+  "title": "Fixed or Deleted? External Feedback Lets Cheaper AI Coding Agents Repair Rule Violations",
+  "url": "https://arxiv.org/abs/2611.29162",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-22T02:44:10+00:00",
+  "summary": "Many defects violate project rules that the code itself does not reveal, such as layering constraints or required tests. We study whether LLM coding agents repair such violations better when an external checker reports them, with their location and a repair goal. Three models, a small, medium and large model, driven by an AI agent, worked on 25 pull requests with 31 planted defects in ten open-source projects, plus 5 correct controls, five times alone and five times with findings from CodeAssure (CA), a commercial checker. We also compare with GitHub Copilot code review, and compare CodeAssur…",
+  "authors": [
+   "Laura Wynter"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "10785db4cf6a",
+  "title": "Micro Operational Robustness of LLMs on Code Generation",
+  "url": "https://arxiv.org/abs/2611.28957",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-21T17:48:23+00:00",
+  "summary": "It is now common practice in software development for large language models (LLMs) to be used to generate program code. It is desirable to evaluate the robustness of LLMs for this usage. This paper is concerned in particular with how sensitive LLMs are to variations in descriptions of the coding tasks. However, existing techniques for evaluating this robustness are unsuitable for code generation because the input data space of natural language (NL) descriptions is discrete and sparse. To address this problem, we propose a robustness evaluation method called scenario domain analysis, which aim…",
+  "authors": [
+   "Debalina Ghosh Paul",
+   "Hong Zhu",
+   "Ian Bayley"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "c15345e2a2c7",
+  "title": "Zero-Trust Formal Methods: AI Agents Build Verified Checkers for Untrusted Solvers",
+  "url": "https://arxiv.org/abs/2611.28704",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-21T09:58:05+00:00",
+  "summary": "AI coding agents now generate code faster than humans can review it. Security analyses rely on solver answers such as \"unsatisfiable\" (for example, no attack path exists) or \"optimal.\" Unlike satisfying models, they cannot be checked by looking at them. Formal verification moves trust from code to specifications, but verifiers still place large SAT, SMT, and answer-set solvers, and the translation into solver queries, in their trusted computing base, and these have had soundness bugs. Unlike agent-based pipelines that trust their verifier and solver, our farm trusts no component by default: n…",
+  "authors": [
+   "Tobias Philipp"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "bacd9595cd99",
+  "title": "State of Mind: Learning and Evaluating World Models of Naturalistic Brain Dynamics",
+  "url": "https://arxiv.org/abs/2611.28508",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-21T02:52:31+00:00",
+  "summary": "Understanding naturalistic brain activity requires going beyond the stimulus alone, as external inputs continuously interact with an individual's evolving brain state. A world model captures such dynamics in a latent state by inferring it from neural observations, predicting stimulus-driven evolution, and updating with new observations. However, existing brain world models fail to maintain a persistent latent state over time, and standard metrics of neural prediction accuracy cannot tell whether a model tracks an individual's brain state or relies solely on the stimulus. To directly test stat…",
+  "authors": [
+   "Yuxiang Wei",
+   "Zundong Wu",
+   "Weiyu Sun",
+   "Qizhen Lan",
+   "Yanteng Zhang",
+   "Vince D. Calhoun"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "cdfe0186c800",
+  "title": "Center-Aware Ordinal Learning for Prostate Cancer Grading from Histopathology Images",
+  "url": "https://arxiv.org/abs/2611.28419",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-20T23:45:09+00:00",
+  "summary": "Prostate cancer grading from histopathology whole-slide images (WSIs) is complicated by the ordered nature of ISUP grades, class imbalance, and center-dependent variations in staining, tissue preparation, and scanning. Most weakly supervised methods treat grade groups as independent categories and may therefore learn representations that do not transfer reliably across institutions. We propose a center-aware ordinal learning framework that combines a pretrained pathology encoder with attention-based multiple instance learning. The framework uses an Earth Mover's Distance loss to account for o…",
+  "authors": [
+   "Mohammad Mahdi Abootorabi",
+   "Parvin Mousavi",
+   "Purang Abolmaesumi"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
  },
  {
   "id": "7ce40af71312",
@@ -100,6 +812,29 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-21T08:17:02+00:00"
+ },
+ {
+  "id": "e7b239a8ed6c",
+  "title": "From Point Clouds to Engineering Models: Benchmarking Agentic 3D Reconstruction in the Built Environment",
+  "url": "https://arxiv.org/abs/2611.28197",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-20T16:26:09+00:00",
+  "summary": "Coding agents can translate 3D measurements into CAD geometry, but reconstructing engineering models for the built environment demands semantic interpretation and consistent construction constraints beyond surface fitting. We formulate scene-level Scan-to-BIM (Building Information Modeling) as an agentic 3D coding task and introduce S2Bench, comprising public and proprietary scans of 128 real-world scenes across five domains, paired with expert-curated reference models spanning diverse spatial scales. A shared framework lets agents measure scans in Python, build class-labeled components in a…",
+  "authors": [
+   "Changyu Du",
+   "Stavros Nousias",
+   "Syed Salman Ahmed",
+   "Kai Dietmair",
+   "Mohammad Alrabab'h",
+   "André Borrmann"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
  },
  {
   "id": "965774fc95b0",
@@ -441,6 +1176,24 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-20T08:32:40+00:00"
+ },
+ {
+  "id": "3967d82c78f2",
+  "title": "From Observation to Explanation: Mechanistic Interpretability of LLM-Generated Code for Principled Repair",
+  "url": "https://arxiv.org/abs/2611.28153",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-19T19:33:15+00:00",
+  "summary": "Large language models (LLMs) have transformed software development, yet our understanding of how they generate code remains critically underdeveloped. We address this gap by triangulating evidence across three layers. Longitudinally, autonomous agent-attributed code is statistically indistinguishable from human code under a semantic modification definition (HR = 1.019, p = 0.490), yet attracts disproportionately corrective modifications in production (49.1% vs 37.9% human baseline). This finding demands a causal explanation. Empirically, existing benchmarks overestimate LLM capabilities: mode…",
+  "authors": [
+   "Musfiqur Rahman"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-24T10:55:45+00:00"
  },
  {
   "id": "3c3aa18781a8",
