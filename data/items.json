@@ -1,5 +1,318 @@
 [
  {
+  "id": "15aa96a95483",
+  "title": "anthropics/claude-code v2.1.332",
+  "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+  "source": "anthropics/claude-code",
+  "source_type": "release",
+  "track": "ai-coding",
+  "published": "2026-11-25T01:32:14+00:00",
+  "summary": "## What's changed - Added skills from MCP servers (beta). They show as `server:skill` in the `/` menu; other skills keep their names - Added a `PreSkillShellCommand` hook event that can refuse a skill or command's inline shell commands as it loads; on 2.1.331 and older, a settings file naming it opens a dialog at start - Added \"Always deliver\" to the prompt for held messages from other sessions - Added a footer line that stays while a flagged message has your session on a different model, until you pick one with `/model` - Added an OpenTelemetry `assistant_response` event for text Claude send…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "a49fafb33a11",
+  "title": "TransformerLensOrg/TransformerLens v4.4.1 – transformers v5.24.0 patch",
+  "url": "https://github.com/TransformerLensOrg/TransformerLens/releases/tag/v4.4.1",
+  "source": "TransformerLensOrg/TransformerLens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-24T23:31:13+00:00",
+  "summary": "`transformers` v5.24.0 introduced some changes that break our cache and a few other features. While we take time to properly adjust the repository for these changes, I am adding a ceiling the `transformers` version to ensure we are not implying support for a `transformers` version that we are not currently equipped for. ## What's Changed * Add a ceiling to `transformers` of 5.23.0 by @jlarson4 in https://github.com/TransformerLensOrg/TransformerLens/pull/2051 **Full Changelog**: https://github.com/TransformerLensOrg/TransformerLens/compare/v4.4.0...v4.4.1",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "8caf92805426",
+  "title": "Three LLM inflection points in twelve months",
+  "url": "https://simonwillison.net/2026/Nov/24/llm-inflection-points/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-24T23:02:07+00:00",
+  "summary": "I gave a keynote at the AI Engineer Code Summit a couple of weeks ago, constructed around the idea that there have been three significant inflection points in the abilities of LLMs and coding agents in the past twelve months. Here's the video of the talk. In this post I'm going to pull out the major inflection point theme and interrogate it more deeply. Coding agents in November 2025 Today, November 24th 2026, is the one year anniversary of the release of Claude Opus 4.5 . With hindsight, this was a consequential model. In the Opus 4.5 announcement, Anthropic said: Testers noted that Claude O…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "e79731761bf0",
+  "title": "astral-sh/uv 0.13.10",
+  "url": "https://github.com/astral-sh/uv/releases/tag/0.13.10",
+  "source": "astral-sh/uv",
+  "source_type": "release",
+  "track": "engineering",
+  "published": "2026-11-24T21:15:44+00:00",
+  "summary": "## Release Notes Released on 2026-11-24. This release addresses GHSA-vjvj-3m3f-fgmm. ### Enhancements - Validate that dependency requirements in `uv.lock` match the locked package versions ([astral-sh/uv#23238](https://github.com/astral-sh/uv/pull/23238)) - Explain why `uv.lock` needs to be updated when `--locked` rejects it ([astral-sh/uv#23251](https://github.com/astral-sh/uv/pull/23251)) - Report dependencies whose package entries are missing from `uv.lock` ([astral-sh/uv#23304](https://github.com/astral-sh/uv/pull/23304)) ### Python - Update managed CPython 3.11.18, 3.12.16, 3.13.18, 3.14…",
+  "authors": [],
+  "tags": [
+   "python-tooling"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "2b05320a1a9c",
+  "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+  "url": "https://arxiv.org/abs/2611.33148",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T18:58:53+00:00",
+  "summary": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL…",
+  "authors": [
+   "Dawid J. Kopiczko",
+   "Tijmen Blankevoort",
+   "Yuki M. Asano"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "2fb481c9fca1",
+  "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+  "url": "https://arxiv.org/abs/2611.33093",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T18:28:41+00:00",
+  "summary": "A language-model decoder carries state between decoding steps, and in hardware a wrong state update can leave the current token correct and corrupt the output several tokens later, so a design can pass output tests and still be wrong. AIChipBench asks what LLM coding agents need to build such hardware correctly. Agents implement quantized Qwen3.5, Gemma 3, Gemma 4, and Llama 3.2 decoders in synthesizable register-transfer-level (RTL) code against an executable integer reference that specifies the outputs and the stored state at every decoding step. They debug against public tests under fixed…",
+  "authors": [
+   "Guangyuan Wang",
+   "Chengran Li",
+   "Minchen Luo",
+   "Jichen Feng",
+   "Mengdi Wang",
+   "Yifan Zhang"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "2e24b076ea5b",
+  "title": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
+  "url": "https://arxiv.org/abs/2611.32973",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T17:07:54+00:00",
+  "summary": "Autonomous specification engineering requires coding agents to translate functional requirements into executable tests and use the results to discover and validate defects. However, existing benchmarks evaluate coding agents on explicitly specified test generation tasks, commonly providing an issue description, a designated test entry point, or files to inspect, leaving the ability to determine what to test and where to investigate insufficiently evaluated. Relying on such clues bypasses the challenge of mapping requirements to implementations and proactively uncovering unknown defects. We pr…",
+  "authors": [
+   "Xingjian Wang",
+   "Shijian Wang",
+   "Minghao Liu",
+   "Ji Zou",
+   "Zetao Yang",
+   "Xinping Lei",
+   "Yiming Liang",
+   "Shen Yan"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "c808d58c8ec4",
+  "title": "GPT 6.2 Astra Solves a Historical Mystery",
+  "url": "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-24T16:53:59+00:00",
+  "summary": "GPT 6.2 Astra Solves a Historical Mystery Here's an interesting case-study in using GPT-6.2 Astra for historical research, from history professor Mark Humphries: With only minimal prompting, GPT-6.2 Astra was able to autonomously identify the creator of an anonymous 1808 sketchbook held at Yale’s Beinecke Library . It did so extremely quickly (in just 22 minutes), using publicly available primary and secondary sources. To do so, it discovered a little known source in a paper archive, predicted that it would prove its hypothesis if examined and, in the end, it did. Not only that, but this new…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "73a85d8b0e3d",
+  "title": "Social Bias Neurons in Multilingual Language Models: A Mechanistic Interpretability Analysis",
+  "url": "https://arxiv.org/abs/2611.32685",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-24T14:25:15+00:00",
+  "summary": "Multilingual models exhibit social bias when processing inputs pertaining to societal stereotypes. We adapt emerging mechanistic interpretability methods to pinpoint and characterize model components that encode this bias. We conduct our analysis across three instruction-tuned models, four languages, and seven bias dimensions. Specifically, we leverage multilingual bias benchmarks in implementing two methods for identifying social bias neurons: activation probability entropy and integrated gap gradients. We find the latter method to be more effective, as the neurons it isolates (which are lar…",
+  "authors": [
+   "Lance Calvin Lim Gamboa",
+   "Yue Feng",
+   "Mark Lee"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "1b411de699fb",
+  "title": "MAGPIE: Agentic Multi-Reference Image Generation via Executable Scene Construction",
+  "url": "https://arxiv.org/abs/2611.32462",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T11:58:12+00:00",
+  "summary": "Multi-reference image generation requires a model to preserve the appearance of selected subjects while arranging them according to an instruction. Despite recent progress in reference-based generation and compositional control, reliably organizing selected subjects into the intended scene remains challenging. Although existing methods provide various forms of compositional guidance, the planned relationships are not always explicitly instantiated for inspection and refinement before image synthesis. To address this limitation, we introduce MAGPIE, which represents the intended composition as…",
+  "authors": [
+   "Yifan Dai",
+   "Daili Hua",
+   "Bohan Zeng",
+   "Yuran Wang",
+   "Jialing Liu",
+   "Bozhou Li",
+   "Chengzhuo Tong",
+   "Yang Shi"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "56549f038dc2",
+  "title": "Validating Multi-Model AI-Generated Acceptance Criteria in Requirements Engineering",
+  "url": "https://arxiv.org/abs/2611.32374",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T10:41:13+00:00",
+  "summary": "Large language models (LLMs) are increasingly used in software engineering to generate artifacts such as requirements, user stories, acceptance criteria, documentation, and code. Their use in requirements engineering raises important questions about correctness, traceability, and hallucination, especially because flawed specifications can affect later design, implementation, and verification activities. While much recent work on AI-assisted software engineering has focused on code generation and code-level validation, the validation of AI-generated specifications has received less attention.…",
+  "authors": [
+   "Mateen Ahmed Abbasi",
+   "Petri Ihantola",
+   "Tommi Mikkonen",
+   "Niko Mäkitalo"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "92e4c99e9fc2",
+  "title": "Part-Set Prototypes for Explainable Mountain Gazelles Sex Classification",
+  "url": "https://arxiv.org/abs/2611.32343",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-24T10:23:14+00:00",
+  "summary": "Self-explainable visual models for fine-grained recognition are often hindered by rigid geometric constraints that cannot capture diverse semantic shapes in unconstrained \"in-the-wild\" imagery. Real-world camera-trap data introduces challenges, including non-optimal poses, lighting variations, occlusions, animal camouflage, and environmental shortcuts. To address this, we introduce set prototypes, a general architecture where both part cardinality and unconstrained spatial layouts are mined directly from data. Our joint-matching formulation places parts simultaneously on a frozen DINOv3 token…",
+  "authors": [
+   "Tali Boneh Shitrit",
+   "Amir Kedem",
+   "Ilan Shimshoni",
+   "Anna Zamansky"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "b97e77b24cb8",
+  "title": "SkillCore: Internalizing Generalizable Skills via Scaffolding-Removed Fine-Tuning",
+  "url": "https://arxiv.org/abs/2611.32246",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T09:23:45+00:00",
+  "summary": "Runtime skills can improve agents' problem-solving capabilities by providing procedural guidance for tasks such as code review and debugging. However, these benefits reach only a minority of users, as most do not proactively invoke skills in practice. We argue that such generalizable procedures should become part of the model's capabilities rather than remain optional external add-ons, making them directly available without explicit skill loading. To this end, we present SkillCore, a data pipeline and supervised fine-tuning recipe for internalizing generalizable skills. We transform real agen…",
+  "authors": [
+   "Yi Liu",
+   "Changqing Ai",
+   "Peijie Dong",
+   "Xiankun Lin",
+   "Yongkang Yang",
+   "Zhezheng Hao",
+   "Xilin Xia",
+   "Hande Dong"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "d97086d8042b",
+  "title": "Online Environment Repair for Coding Agents",
+  "url": "https://arxiv.org/abs/2611.32037",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T06:21:42+00:00",
+  "summary": "Programmatic verifiers provide scalable reward signals for training coding agents with reinforcement learning, yet subtle harness defects and incomplete unit tests allow policies to earn full credit without solving the intended task. Existing training-time defenses intervene either by penalizing suspicious outputs or by filtering flagged tasks and rollouts. However, output penalties leave the underlying verifier exploitable, driving policies to disguise shortcuts under reasoning monitors or zeroing out valid solutions under detector false positives, whereas task and rollout filtering discards…",
+  "authors": [
+   "Sheng Lu",
+   "Rui Mao",
+   "Zewei Chen",
+   "Chihua Ying",
+   "Beiduo Chen",
+   "Dingxin Hu",
+   "Tinghao Yu"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "14666d317336",
+  "title": "Shuttle: Dependency-Attributed Workflow Evolution for Smart Contract Auditing",
+  "url": "https://arxiv.org/abs/2611.31929",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T04:31:14+00:00",
+  "summary": "In LLM-based smart contract auditing, detection quality depends on both model capability and workflow design. While coding agents can revise workflows from execution feedback, unconstrained rewrites rarely yield stable gains. Cross-function vulnerabilities require multi-step state tracking and boundary reasoning that coarse pipelines miss. End-to-end outcomes hide which step lost a clue, so direct rewrites regress existing hits or discard valid edits under coarse aggregate scoring. Repeatedly iterating on a small project set also adds case-specific heuristics that bloat prompts and hurt gener…",
+  "authors": [
+   "Yue Xue",
+   "Yi Rong",
+   "Ziqiao Kong",
+   "Ronghui Gu",
+   "Dan She",
+   "Yuannan Yang",
+   "Zhiju Yang",
+   "Yuqiang Sun"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "e7f9762065c2",
+  "title": "(No) Separation of Concerns: Philosophical Concerns about Agent Ethics and Implications for SE Practitioners",
+  "url": "https://arxiv.org/abs/2611.31927",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T04:29:40+00:00",
+  "summary": "The use of AI agents in software engineering (SE) are commonplace, with differing levels of autonomy, a myriad of capabilities, and ability to perform a variety of tasks. Philosophers have begun to examine the ethics of such agents, and SE researchers or practitioners could benefit from them; on the other hand, SE practitioners currently explore most of these concerns through the lens of principlism. We bridge this gap by reviewing the philosophical literature on AI agents indexed in PhilPapers, and translating its ethical concerns into a research agenda for SE researchers and into implicatio…",
+  "authors": [
+   "Marc Cheong",
+   "Sebastian Baltes",
+   "Joanne Byrne",
+   "Haoyu Gao",
+   "Raula Gaikovina Kula",
+   "Sarita Rosenstock",
+   "Christoph Treude",
+   "Mansooreh Zahedi"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
   "id": "dea2f8e3c06e",
   "title": "datasette-charts 0.2a0",
   "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
@@ -30,6 +343,26 @@
   "fetched_at": "2026-11-24T10:55:45+00:00"
  },
  {
+  "id": "7840c669cd04",
+  "title": "Spec-Test Coverage Gap: Detecting Overspecified Tests in SWE-Bench-Style Benchmarks",
+  "url": "https://arxiv.org/abs/2611.31839",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T02:33:36+00:00",
+  "summary": "SWE-bench-style benchmarks, such as SWE-bench Verified (Verified) and SWE-bench Pro (Pro), evaluate coding agents with tests taken from the change that originally fixed each issue. However, these tests can enforce details the task never states, causing correct alternative fixes to fail. Such overspecified tests have so far been found mainly through expensive expert review. To address this, we define the Spec-Test Coverage Gap (STCG), a 1-4 scale measuring overspecification, and score it with two LLM judges, Claude Opus 5.5 and GPT-6.1 Sol, which are given the specification and the test patch.…",
+  "authors": [
+   "Avi Aggarwal",
+   "Yiran Hu"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
   "id": "2c7d23e3a5c8",
   "title": "Comparing AI R&D compute caps and deployment lags",
   "url": "https://www.alignmentforum.org/posts/e758PJCpwAwyodvEj/comparing-ai-r-and-d-compute-caps-and-deployment-lags",
@@ -41,6 +374,44 @@
   "authors": [],
   "tags": [],
   "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "cfe6ef084774",
+  "title": "SPARQL-Planned Single-Hop Traversal over a Live Knowledge Graph for Multi-Hop Question Answering",
+  "url": "https://arxiv.org/abs/2611.31771",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T01:24:00+00:00",
+  "summary": "Semantic retrieval struggles with multi-hop question answering on both recall and precision: gold passages are buried among distractors that degrade the reader's answer, and retrieving them requires reasoning over the query rather than matching it. GraphRAG techniques expand semantic retrieval by connecting passages to graph nodes and performing one or more hops of expansion after initial retrieval. This improves recall, but multi-hop expansion becomes expensive and brings additional noise into the retrieved set. We break this tradeoff by \\emph{interleaving} dense retrieval with knowledge-gra…",
+  "authors": [
+   "Priyesh Vakharia",
+   "Masud Moshtaghi",
+   "Pratyay Banerjee",
+   "Nicholas Jedema",
+   "Amita Misra",
+   "Ankit Chadha"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "a81b0789d3c6",
+  "title": "Tokenization and Architecture Jointly Allocate Component Roles in Time Series Transformers",
+  "url": "https://arxiv.org/abs/2611.31730",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-24T00:36:28+00:00",
+  "summary": "Time series transformers have achieved strong forecasting performance, yet it remains unclear which of their components, attention or the feed-forward network (FFN), constructs temporal features, and how tokenization such as patching changes this. We propose a temporal probing framework that uses 15 token-level diagnostic tasks to measure feature construction as the gain in linear decodability of temporal properties from one sub-layer to the next (a matched MLP probe already saturates at the embedding). It targets models whose probed representations are read by a linear forecasting head. Appl…",
+  "authors": [
+   "Mingyu Kim",
+   "Doguk Kim"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
  },
  {
   "id": "efc98a45d931",
@@ -56,6 +427,25 @@
   "fetched_at": "2026-11-24T10:55:45+00:00"
  },
  {
+  "id": "3dddd1cf4201",
+  "title": "Reward Basis Decomposition for Interpreting Preference Heterogeneity",
+  "url": "https://arxiv.org/abs/2611.31640",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T22:29:04+00:00",
+  "summary": "Canonical reward models specify the optimization target for AI policies, so understanding the values they encode is important for ensuring AI alignment. Existing interpretability techniques interpret reward models with a single reward head, which cannot distinguish between the values that a population shares and those that vary among individuals. We introduce Reward Basis Decomposition (RBD), which splits per-user weights into a population term and a per-user term. This yields a shared population direction and individual user directions that are analyzed separately via concept alignment and s…",
+  "authors": [
+   "Mohamed I. Eldagla",
+   "Ifesi Onubogu",
+   "Prerana Rane",
+   "Harsh Sharma",
+   "Rachel Freedman"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
   "id": "800aeca2d315",
   "title": "anthropics/claude-code v2.1.331",
   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
@@ -69,6 +459,46 @@
    "agents"
   ],
   "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "1ba6d6502241",
+  "title": "Near-Zero Forgetting Is Not Enough: Out-of-Distribution Robustness in Continual Learning of Pretrained VLAs",
+  "url": "https://arxiv.org/abs/2611.31511",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T20:18:49+00:00",
+  "summary": "Recent work shows that pretrained Vision-Language-Action (VLA) models exhibit near-zero forgetting in specific continual learning settings with experience replay. However, robustness to domain shift of learned tasks remains unexplored. In this work, we study the robustness of Pi0 fine-tuned with experience replay under out-of-distribution (OOD) data using the LIBERO and LIBERO-Plus benchmarks. While the in-domain (ID) setup achieves near-zero catastrophic forgetting, OOD performance on previous tasks quickly collapses. Specifically, we show that during the continual learning process, the OOD…",
+  "authors": [
+   "Adrià Ruiz",
+   "Bartłomiej Twardowski",
+   "Tinne Tuytelaars",
+   "Sergi Masip"
+  ],
+  "tags": [
+   "evals"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "7d1e814a7f2c",
+  "title": "Below the Stopwatch: Checking the Performance Claims of Coding Agents in the Kernel",
+  "url": "https://arxiv.org/abs/2611.31460",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T19:31:41+00:00",
+  "summary": "Coding agents open many pull requests (PRs) that claim to make software faster. Most such claims also give a reason, such as \"cache the result\" or \"read the file once\". A stopwatch can show that code got faster, but not that it got faster for the stated reason. We present Below, a pipeline that checks these reasons at the kernel level. From 1,343 runtime-performance PRs in the AIDev dataset, Below extracts the mechanism each PR claims and maps it to the kernel and hardware signals that must change if the claim is true. A build agent that never sees the claim rebuilds the code before and after…",
+  "authors": [
+   "Yuvraj Sehgal",
+   "Sneh Patel",
+   "Mahsa Panahandeh",
+   "Naser Ezzati-Jivan"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
  },
  {
   "id": "5025ccb67bc6",
@@ -89,6 +519,27 @@
    "agents"
   ],
   "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "d98a48680bf6",
+  "title": "Detecting Harmful Short Videos in Toxic Diet Culture: A Governance-Ready Evidence Framework with Sparse Autoencoders",
+  "url": "https://arxiv.org/abs/2611.31354",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-23T18:52:18+00:00",
+  "summary": "Algorithmic content moderation is increasingly important for governing short-form video content, yet harmful-content detection research focuses primarily on prediction or limited explanations. This leaves a governance challenge underexplored: producing decision-linked evidence that supports the review and justification of moderation decisions. Using toxic diet culture as an empirical case, we conceptualize governance-ready evidence as computational traceability, evidence localization, policy grounding, and evidence inspectability. We develop the Sparse Autoencoder-based Policy-Aligned Contras…",
+  "authors": [
+   "Wenli Zhang",
+   "Shuang Geng",
+   "Jiaheng Xie",
+   "Zhonghan Xiang",
+   "Sudha Ram"
+  ],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
  },
  {
   "id": "f917c7915f41",
@@ -346,6 +797,30 @@
    "probing"
   ],
   "fetched_at": "2026-11-24T10:55:45+00:00"
+ },
+ {
+  "id": "577b60e5aeff",
+  "title": "Diffs Are Cheap, Show Me the Trajectory: An Empirical Study of Trajectory-Informed Code Review",
+  "url": "https://arxiv.org/abs/2611.31316",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-23T05:06:12+00:00",
+  "summary": "Code review typically starts from the final diff. However, the diff reveals little about how the code was developed. Coding-agent trajectories preserve intermediate decisions, failed attempts, and validation evidence that may assist code review. We systematically investigate whether and how these trajectories can help independent review agents identify problems in the resulting code, beyond inspecting the final diff and repository. We develop a procedure that generates review comments by comparing the initial and merged versions of pull requests, and assess it against withheld human review co…",
+  "authors": [
+   "Zijian Luo",
+   "Pengfei Gao",
+   "Dayi Lin",
+   "Zhiyu Fan",
+   "Yongqiang Tian",
+   "Alejandro Carderera de Diego",
+   "Judge Hiciano",
+   "Gemma Garriga"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-25T09:51:12+00:00"
  },
  {
   "id": "dbfc0ea91a02",
