@@ -1,5 +1,414 @@
 [
  {
+  "id": "51efa56d95be",
+  "title": "jbloomAus/SAELens v6.56.3",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.56.3",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-26T00:40:49+00:00",
+  "summary": "# v6.56.3 (2026-11-26) ## Fix * fix: apply cfg.seed in the SAE training runners (#800) ([`26b751b`](https://github.com/decoderesearch/SAELens/commit/26b751b686fed08cd67f7ec81926ab3f9e70ac71)) * fix: return the list URL from make_neuronpedia_list_with_features when open_browser=False (#806) ([`47f560a`](https://github.com/decoderesearch/SAELens/commit/47f560ac33f18b52baec818f247a9dca59f60d36)) * fix: eval cosine similarities are NaN for zero-norm vectors (#805) ([`3585afb`](https://github.com/decoderesearch/SAELens/commit/3585afb88af424a4bb21be5a5d21a42e4b2af6e0)) * fix: return a torch.device…",
+  "authors": [],
+  "tags": [
+   "pytorch",
+   "sae"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "2c33c3cedb65",
+  "title": "Quoting Scott Aaronson",
+  "url": "https://simonwillison.net/2026/Nov/25/scott-aaronson/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-25T23:26:32+00:00",
+  "summary": "It’s now obvious that we’ll be getting, not one-off solutions to this or that complexity question, but a whole new continent of mathematical truth, one that we’d previously only glimpsed through fog. Picture van Leeuwenhoek first training a microscope on pondwater, or Galileo first training his telescope on the stars. That might give you some idea of how our resolution into the complexity-theoretic universe, and the whole universe of mathematical truth beyond it, has now improved. — Scott Aaronson Tags: mathematics , llms , ai , generative-ai",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "ff694900d5a6",
+  "title": "jbloomAus/SAELens v6.56.2",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.56.2",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-25T22:57:31+00:00",
+  "summary": "# v6.56.2 (2026-11-25) ## Fix * fix: let BatchTopKTrainingSAE run on MPS (#802) ([`f9706dd`](https://github.com/decoderesearch/SAELens/commit/f9706dd3810b42ecf6b4a5313c7b6d206de65949))",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "58fc9fd4618c",
+  "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+  "url": "https://arxiv.org/abs/2611.34930",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T18:59:13+00:00",
+  "summary": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents. We introduce BioScore, a benchmark that quantifies how well an image encoder captures cell identities, with spatial transcriptomics of the same tissue as the reference. A sparse autoencoder splits the encoder's patch embeddings into sparse features, which we cluster into a fixed number of groups. BioScore then measures, for each of 52 cell identities defined b…",
+  "authors": [
+   "Paul Vilars",
+   "Vincent Quoc-Huy Trinh",
+   "Maria Vakalopoulou",
+   "Dimitris Samaras",
+   "Stergios Christodoulidis",
+   "Mahdi S. Hosseini"
+  ],
+  "tags": [
+   "evals",
+   "sae"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "6f1345c35847",
+  "title": "Enhancing Maritime Domain Awareness using Latent Space Representations",
+  "url": "https://arxiv.org/abs/2611.34899",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T18:51:36+00:00",
+  "summary": "This work presents a novel application of Earth Observation (EO) embeddings for Maritime Domain Awareness (MDA) from the perspective of the geospatial foundation model TerraMind. By operating directly on compressed latent-space representations rather than on the original Sentinel-1 imagery, this approach directly addresses the data gravity bottleneck that increasingly constrains operational EO processing, in line with the objectives of the Embed2Scale project. In particular, linear and non-linear probing of compressed embeddings, latent space representations of synthetic aperture radar (SAR)…",
+  "authors": [
+   "Rikard Vinge",
+   "Miguel A. Belenguer-Plomer",
+   "Isabelle Wittmann",
+   "Octavian Dumitru",
+   "Michele Lazzarini",
+   "Sergio Albani",
+   "Conrad M Albrecht"
+  ],
+  "tags": [
+   "probing"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "1edb70c33065",
+  "title": "How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches",
+  "url": "https://arxiv.org/abs/2611.34875",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T18:37:06+00:00",
+  "summary": "Agent patches are larger than developers', which is widely read as over-editing. But patch size does not say whether the extra edits are needed, what they are, or where they come from. We introduce Delta Residue Attribution (DRA), which replays agent trajectories, traces every block (unit) of the final patch to the step that wrote it, reverts each unit, and reruns the task tests to decide whether the unit is needed. We apply DRA to 7,660 resolved GitHub Copilot CLI trajectories from 18 frontier models on SWE-bench Verified (6,728) and DeepSWE (932), and grade developer patches using the same…",
+  "authors": [
+   "Aakash Goel",
+   "Benjamin Steenhoek",
+   "Yu Hu"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "cd16924426fb",
+  "title": "datasette-charts 0.3a0",
+  "url": "https://simonwillison.net/2026/Nov/25/datasette-charts/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-25T18:16:50+00:00",
+  "summary": "Release: datasette-charts 0.3a0 I added chart annotations to datasette-charts ! You can now render a chart and then annotate it with lines, shaded areas, labels, or a combination of the three. A chart with annotations looks like this: Here's that same chart in Datasette Lite , where you can tweak the annotations using the chart builder UI: If you also install Datasette Agent the agent can build annotated charts for you. Here's what I got on the agent.datasette.io demo for this prompt: Show a chart comparing Simon's tagged content about LLMs with his tagged content about Datasette, with annota…",
+  "authors": [],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "73a6964afff4",
+  "title": "When Every Rollout Fails: Splicing Learner-Conditioned Options into Long-Horizon Agent RL",
+  "url": "https://arxiv.org/abs/2611.34777",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T17:38:00+00:00",
+  "summary": "Group-based reinforcement learning with verifiable rewards often yields all-fail groups on long-horizon agent tasks: every sampled trajectory receives zero reward, leaving group-relative methods without a reward-based policy gradient. A common remedy supplies complete solutions from a stronger model, but full trajectories are expensive and expose the learner to long off-policy histories. We introduce SPLICE, which constructs local training targets from failed current-policy trajectories online. For each all-fail group, a proposal model selects a splice point in a current-policy trajectory and…",
+  "authors": [
+   "Haowen Hou",
+   "Yicheng Liu",
+   "Zhen Huang",
+   "Jiaqi Wang"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "eee7245816dc",
+  "title": "TASK Memory: Beyond Text-Only Memory with Activation Steering and Knowledge Editing against Memory Hallucination",
+  "url": "https://arxiv.org/abs/2611.34762",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T17:30:37+00:00",
+  "summary": "LLM agents increasingly rely on external memory, yet they still hallucinate about what they remember. Often the correct memory is retrieved and placed in the prompt, but the answer contradicts it or the memory is applied to the wrong question. We call these use-time memory hallucinations. Across five open models, we find that they arise from the conflict between parametric knowledge and external memory and take three forms: memory-ignoring, where the model returns to a stale fact in its weights (up to 46% of queries); memory-misapplying, where it attributes the memory to unrelated entities (u…",
+  "authors": [
+   "Jinkun Zhao",
+   "Wenjun Wu"
+  ],
+  "tags": [
+   "agents",
+   "steering"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "77ac846f9758",
+  "title": "Collect for Coverage, Replay with Evidence: Adaptive and Efficient On-Policy Distillation for Long-Horizon Agents",
+  "url": "https://arxiv.org/abs/2611.34756",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T17:27:31+00:00",
+  "summary": "Fully online on-policy distillation (OPD) is costly for long-horizon agents because each update depends on fresh environment rollouts. Prefix replay offers an efficient alternative by sampling current-student responses from stored histories, reducing idle time for long-tail rollouts and allowing each collected trajectory to support multiple updates. However, our analysis of the complete prefix replay pipeline identifies two limitations in long-horizon settings. In trajectory collection, teacher-only trajectories miss student-induced histories, while broader history coverage can reduce teacher…",
+  "authors": [
+   "Haowen Hou",
+   "Gen Li",
+   "Ruilin Li",
+   "Yicheng Liu",
+   "Zhen Huang",
+   "Shuai Dong",
+   "Congcong Wang",
+   "Kaiwen Tuo"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "ec337d4684bd",
+  "title": "safety-research/circuit-tracer v0.5.5",
+  "url": "https://github.com/decoderesearch/circuit-tracer/releases/tag/v0.5.5",
+  "source": "safety-research/circuit-tracer",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-25T16:31:00+00:00",
+  "summary": "This release adds some (limited) MPS support and adds compatibility with transformers v5.0.0! It also includes an important bugfix for those working with cached / local top-k transcoders. ## What's Changed * Read lazy decoder rows on CPU when the device is MPS by @natemacfadden in https://github.com/decoderesearch/circuit-tracer/pull/120 * Load transcoder weights on CPU when the device is MPS by @natemacfadden in https://github.com/decoderesearch/circuit-tracer/pull/121 * Add a --device option to the attribute CLI by @albertlieyingadrian in https://github.com/decoderesearch/circuit-tracer/pul…",
+  "authors": [],
+  "tags": [
+   "circuits",
+   "sae"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "5a23c7b4b65f",
+  "title": "Carrying Feature Ablations Across Sparse Autoencoder Seeds",
+  "url": "https://arxiv.org/abs/2611.34637",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T16:20:40+00:00",
+  "summary": "A vision encoder turns an image into one vector per patch, refined layer by layer. A sparse autoencoder (SAE) writes each vector of one layer as a sum of learned directions, most with a coefficient of zero. Researchers call each direction a feature and edit the encoder by removing one feature. An SAE trained from another random seed learns different features. Earlier work matches the two SAEs' features one to one by how closely their directions agree. Matched features can point alike yet respond to different image parts, so removing them may change the encoder differently. We remove a feature…",
+  "authors": [
+   "Karl Li"
+  ],
+  "tags": [
+   "patching",
+   "sae"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "725299da40be",
+  "title": "Evaluating More with Less: Black-Box Test Selection for AI Agents",
+  "url": "https://arxiv.org/abs/2611.34617",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T16:05:46+00:00",
+  "summary": "Agentic software systems are increasingly used in development, where changes to the model, prompt, scaffold, tools, or execution environment require repeated testing. Test case selection (TCS) can reduce testing costs while providing estimates of agent performance or exposing failures early. Although TCS has been studied for deep neural networks and LLM code models, prior work does not directly address agentic systems and often requires model information unavailable for proprietary agents. We present the first empirical study of black-box TCS for agentic software systems. We treat each benchm…",
+  "authors": [
+   "Ali Asgari",
+   "Mitchell Olsthoorn",
+   "Arie van Deursen",
+   "Annibale Panichella"
+  ],
+  "tags": [
+   "agents",
+   "testing"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "444aa49c1214",
+  "title": "Conditional Independence Graph Learning from Dependent Data Via Time-Delay Embedding",
+  "url": "https://arxiv.org/abs/2611.34616",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T16:03:46+00:00",
+  "summary": "We consider the problem of inferring the conditional independence graph (CIG) of a high-dimensional stationary multivariate Gaussian time series which could be short-range dependent (SRD) or long-range dependent (LRD). In a time series graph, each component of the vector series is represented by a distinct node, and associations between components are represented by edges between the corresponding nodes. We consider a time-domain approach based on time-delay embedding, casting the problem as one of multi-attribute graph estimation for random vectors where a vector is associated with each node…",
+  "authors": [
+   "Jitendra K. Tugnait"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "b2da78e39db7",
+  "title": "SmartLens: Turning AI Agent Changes into Learning, Review, and Risk Signals in the IDE",
+  "url": "https://arxiv.org/abs/2611.34377",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T13:42:16+00:00",
+  "summary": "Developers increasingly act as managers of AI agents: they hand tasks to AI coding agents and then have to understand, verify, ship, and learn from what the agents produce. IDEs and recent tools can show which committed lines were written by AI, but they do not attribute the pending changes of external agents, and they do not use attribution to help the developer review, learn, or judge risk. We present SmartLens, an IntelliJ IDEA plugin that attributes changes to an AI agent, the developer, or both. It combines this attribution with the Git history to support three goals: (i) Learn compares…",
+  "authors": [
+   "Vahid Etemadi",
+   "Gregorio Robles"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "c0939b57c855",
+  "title": "Single-Database Rewards Are Hackable: Counterfactual Execution for Trustworthy Text-to-SQL RL",
+  "url": "https://arxiv.org/abs/2611.34363",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T13:30:26+00:00",
+  "summary": "Reinforcement learning (RL) for text-to-SQL agents pays a query when its result matches the reference on one database. However, a wrong query can match by luck when the data lack the rows that expose its bug. We study a counterfactual-database (CF) reward that also runs the final query on a few hidden, code-generated copies of the database and pays only if all results match (strict form) or by the share matched (mean form). On 1,302 synthetic audit questions, the strict form lowers the share of buggy queries paid in full from 29.5% to 16.8% and of reward hacks from 54.1% to 1.9%, rejecting 0…",
+  "authors": [
+   "Shreshth Rai",
+   "Rishii Kumar Singh",
+   "Aksh Aggarwal"
+  ],
+  "tags": [
+   "agents"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "cb764f17a6ed",
+  "title": "Lightweight Reasoning Transfer via Chain-of-Thought Vector Projection",
+  "url": "https://arxiv.org/abs/2611.34183",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T11:11:31+00:00",
+  "summary": "Transferring reasoning capabilities from large language models to smaller ones often requires extensive teacher supervision or costly student adaptation. We study projected cross-model Chain-of-Thought (CoT) Vector transfer, a two-stage approach that keeps both models frozen. First, we learn a task-level CoT Vector in the teacher using dataset-provided solution traces and final-answer supervision. We then train a lightweight linear projector to map the fixed vector into a smaller student's residual space. Student-side training uses only final-answer cross-entropy on a small subset of task tra…",
+  "authors": [
+   "Yulin Qi",
+   "Shuo Xu",
+   "Shuxia Lin",
+   "Qingjian Ni",
+   "Xu Yang",
+   "Xin Geng"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "72f6324e3e1d",
+  "title": "CARROT: Competitive Adaptive Graph Clustering via Semi-Relaxed Optimal Transport",
+  "url": "https://arxiv.org/abs/2611.34012",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T08:59:46+00:00",
+  "summary": "Deep graph clustering (DGC) has emerged as a prominent paradigm for unsupervised attributed graph clustering. However, existing methods often struggle with two practical challenges encountered in real-world applications: the number of clusters $K$ is unknown a priori, and cluster sizes are frequently highly imbalanced. Methods relying on a pre-specified $K$ may fail to recover the underlying clustering structure when $K$ is misspecified, while many approaches implicitly favor balanced partitions, hindering the discovery of minority clusters. We propose CARROT, a Competitive Adaptive gRaph clu…",
+  "authors": [
+   "Ching Fan Chiang",
+   "Jia-Yu Pan",
+   "Wen-Chieh Lin"
+  ],
+  "tags": [],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "f6df3ac7e36a",
+  "title": "What Does Skill Lift Actually Measure? A Source-Code-Level Audit and Noise-Aware Reanalysis of SkillsBench",
+  "url": "https://arxiv.org/abs/2611.33943",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T08:02:04+00:00",
+  "summary": "Agent skills are directories of instructions, reference materials, and scripts loaded on demand by coding agents. According to SkillsBench, although human-curated skills can raise the passing rate by about 16.6 percentage points (pp) on average, they have actually reduced the results for some tasks. Later research has started to gate or eliminate skills according to the above per-task gains. We have audited the above benchmark at the source-code level and analysed 7,554 public trials to form 1,421 paired \"(configuration, task) cells\". Source-code audit identified two controlled-verified cases…",
+  "authors": [
+   "Haozhe Zhang",
+   "Zhen Long"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "277e31be3ca0",
+  "title": "Sparse-to-Sparse Feature Learning for Cross-Layer Analysis and Steering",
+  "url": "https://arxiv.org/abs/2611.33640",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T02:08:34+00:00",
+  "summary": "Understanding how models internally represent information is a central challenge in interpretation and control. Sparse autoencoders (SAEs) decompose dense hidden representations into sparse features, and cross-layer methods capture structure spanning multiple layers. However, existing objectives do not explicitly train the sparse code at one layer to predict the sparse code at the next layer. We propose sparse-to-sparse feature learning (S2S), where sparse features at each intermediate layer are trained to predict those of the immediately following layer, with the final layer anchored by an o…",
+  "authors": [
+   "Masahiro Kaneko",
+   "Ayana Niwa",
+   "Timothy Baldwin"
+  ],
+  "tags": [
+   "sae",
+   "steering"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "ef38228c8d40",
+  "title": "How Much Effort Does an AI Code Reviewer Need? Evidence from Claude 5.5 Models on Plausible-but-Wrong Patches",
+  "url": "https://arxiv.org/abs/2611.33639",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-25T02:07:31+00:00",
+  "summary": "AI coding agents write code faster than people can review it, so teams add AI reviewers. Reasoning models let such a reviewer trade cost for diligence through an effort setting. We asked how much effort a reviewer needs to catch plausible-but-wrong patches, which pass a benchmark's tests but fail stronger ones. Claude Opus 5.5 (preregistered), Sonnet 5.5 and Haiku 5.5 (exploratory) each reviewed the same 90 agent-written Django patches from SWE-bench Verified at low, medium and high effort. By strengthened SWE-ABS tests, 55 patches were wrong and 35 correct. In every model, high effort accept…",
+  "authors": [
+   "Zax Shen",
+   "Hanling Zhang",
+   "Zixu Wang"
+  ],
+  "tags": [
+   "agents",
+   "evals",
+   "testing"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
+  "id": "6213f1b53169",
+  "title": "Interpreting Speckle Effects Through Neuron Interventions",
+  "url": "https://arxiv.org/abs/2611.33632",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "interp",
+  "published": "2026-11-25T02:01:30+00:00",
+  "summary": "Speckle, the multiplicative noise inherent to synthetic aperture radar (SAR) imaging, reduces the performance of pretrained SAR models. We use interpretability methods to examine its effects inside pretrained vision models. We identify neurons that respond selectively to speckle and test whether correcting their activations improves reconstruction. We study SARMAE, an Earth observation model pretrained on a million-scale SAR dataset. Synthetic scenes with known reflectivity allow us to measure recovery precisely. The model contains 38 speckle-selective neurons that track speckle's value distr…",
+  "authors": [
+   "Shubham K. Singh",
+   "Hare Krishna"
+  ],
+  "tags": [
+   "testing"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
+ },
+ {
   "id": "15aa96a95483",
   "title": "anthropics/claude-code v2.1.332",
   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
@@ -39,6 +448,26 @@
    "agents"
   ],
   "fetched_at": "2026-11-25T09:51:12+00:00"
+ },
+ {
+  "id": "d373bb6885a0",
+  "title": "DevEx is for Humans, AX is for Agents: Measuring Context Health in Agentic Software Work",
+  "url": "https://arxiv.org/abs/2611.33480",
+  "source": "arXiv",
+  "source_type": "paper",
+  "track": "ai-coding",
+  "published": "2026-11-24T21:57:18+00:00",
+  "summary": "Coding agents succeed or fail in the context humans give them, yet most evaluations measure only output. Drawing on developer experience research, we introduce Agent Experience (AX), an instrument that scores session transcripts on four dimensions of the CAFE(S) framework: Clarity, Actionability, Fidelity, and Efficiency; Security, a gate rather than a friction dimension, is out of scope. A rubric-guided language model rates each dimension from 1 to 5 and explains what the human could have provided. We report on three studies that tested this model. In the Stack Overflow Developer Survey, res…",
+  "authors": [
+   "Gratiana Fu",
+   "Josh Beitler",
+   "Brian Houck"
+  ],
+  "tags": [
+   "agents",
+   "evals"
+  ],
+  "fetched_at": "2026-11-26T09:31:42+00:00"
  },
  {
   "id": "e79731761bf0",
