@@ -1,5 +1,33 @@
 [
  {
+  "id": "316e60a88e0f",
+  "title": "Quoting Jack Despain Zhou",
+  "url": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-26T15:09:31+00:00",
+  "summary": "Among the many already existing effects of AI has been a great de-individualization. I open a YouTube video, and I hear Claude. I sit in a conference presentation, and I hear Claude. I open my email inbox, and I find pitches and articles from ostensibly serious people with ostensibly serious credentials attached to ostensibly serious institutions who want to publish things attached to their reputations and mine, and I see Claude . — Jack Despain Zhou , Spitting in the Face of Glaude Tags: ai-misuse , claude , generative-ai , ai , llms",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-27T09:40:45+00:00"
+ },
+ {
+  "id": "ec16ddcaa46b",
+  "title": "jbloomAus/SAELens v6.56.4",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.56.4",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-26T13:04:39+00:00",
+  "summary": "# v6.56.4 (2026-11-26) ## Documentation * docs: fix dead TransformerLens Main Demo links (#809) ([`e3a8a21`](https://github.com/decoderesearch/SAELens/commit/e3a8a21be0d723d8a092b1ca3caf52db93dd16fe)) ## Fix * fix: train TopK SAEs with sparse activations when rescaling by decoder norm (#801) ([`22f7d1e`](https://github.com/decoderesearch/SAELens/commit/22f7d1efffb12e6ed5601de290ca189af80e4a55))",
+  "authors": [],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-27T09:40:45+00:00"
+ },
+ {
   "id": "51efa56d95be",
   "title": "jbloomAus/SAELens v6.56.3",
   "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.56.3",
