@@ -1,5 +1,48 @@
 [
  {
+  "id": "c91c032e5231",
+  "title": "datasette-charts 0.4a0",
+  "url": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+  "source": "Simon Willison",
+  "source_type": "blog",
+  "track": "ai-coding",
+  "published": "2026-11-27T23:57:17+00:00",
+  "summary": "Release: datasette-charts 0.4a0 The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn't actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up with a bunch of friction points in the design. This release addresses those, which should make building additional chart plugins a whole lot more ergonomic. I've also added a website for the plugin, at charts.datasette.io . The new website includes a tutorial for plugin authors , and a gallery showing all of the core ch…",
+  "authors": [],
+  "tags": [],
+  "fetched_at": "2026-11-28T08:55:20+00:00"
+ },
+ {
+  "id": "eb7ae482c673",
+  "title": "jbloomAus/SAELens v6.56.5",
+  "url": "https://github.com/decoderesearch/SAELens/releases/tag/v6.56.5",
+  "source": "jbloomAus/SAELens",
+  "source_type": "release",
+  "track": "interp",
+  "published": "2026-11-27T23:47:04+00:00",
+  "summary": "# v6.56.5 (2026-11-27) ## Documentation * docs: show how to fine-tune a pretrained SAE from Hugging Face (#808) ([`c06ff2f`](https://github.com/decoderesearch/SAELens/commit/c06ff2fe567e4d002936c1ae74a23ad267e00c28)) * docs: show how to steer with multiple SAE features (#807) ([`4fe97de`](https://github.com/decoderesearch/SAELens/commit/4fe97defaa6b8c6e880caeba42369dccade523cb)) ## Fix * fix: save the SAE and trainer state when LanguageModelSAETrainingRunner is interrupted (#811) ([`c46c3e5`](https://github.com/decoderesearch/SAELens/commit/c46c3e52bf566c40ee297de0b8aaa0d192e31fbc)) * fix: sc…",
+  "authors": [],
+  "tags": [
+   "sae"
+  ],
+  "fetched_at": "2026-11-28T08:55:20+00:00"
+ },
+ {
+  "id": "bd99a4d0212a",
+  "title": "I don’t expect superposition in transformer MLP neurons",
+  "url": "https://www.alignmentforum.org/posts/o9dPGxEbpQrnasgDB/i-don-t-expect-superposition-in-transformer-mlp-neurons",
+  "source": "Alignment Forum",
+  "source_type": "blog",
+  "track": "interp",
+  "published": "2026-11-27T12:44:01+00:00",
+  "summary": "I currently believe that in a typical (well trained and under-parametrized) transformer model, there is something like superposition-type compression in the residual stream, but not in the MLP neurons. By \"superposition-type compression\", I mean some way of storing extra features using the fact that you can have mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; border-collapse: collapse; word-wrap: normal; word-spacing: normal; white-space: nowrap; direct…",
+  "authors": [],
+  "tags": [
+   "superposition"
+  ],
+  "fetched_at": "2026-11-28T08:55:20+00:00"
+ },
+ {
   "id": "316e60a88e0f",
   "title": "Quoting Jack Despain Zhou",
   "url": "https://simonwillison.net/2026/Nov/26/jack-despain-zhou/",
